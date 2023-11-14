@@ -1,0 +1,164 @@
+@import "~@styles/variables.less";
+.inset {
+    position: relative;
+
+    margin-bottom: 260px;
+
+    @media (max-width: @break-point-xl) {
+        margin-bottom: 133px;
+    }
+    @media (max-width: @break-point-lg) {
+        margin-bottom: 92px;
+    }
+    @media (max-width: @break-point-md) {
+        margin-bottom: 133px;
+    }
+    @media (max-width: @break-point-sm) {
+        margin-bottom: 63px;
+    }
+
+    .header-nav {
+        padding-top: 32px; // no design
+        background: @black;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0 8px;
+
+        &__item {
+            width: 100%;
+            color: @gray_2;
+            cursor: pointer;
+            border-bottom: 2px solid @gray_2;
+            font-family: "CoFo Pixel";
+            transition: border-color 0.5s ease, color 0.5s ease;
+
+            &{#hover({
+                color: @red;
+                border-bottom: 2px solid @red;});
+            }
+            &--active {
+                color: @red;
+                border-bottom: 2px solid @red;
+            }
+            @media (min-width: @break-point-xl) {
+                font-size: 36px;
+                line-height: 44px;
+                padding-bottom: 12px;
+            }
+            @media (max-width: @break-point-xl) {
+                font-size: 28px;
+                line-height: 32px;
+                padding-bottom: 12px;
+            }
+            @media (max-width: @break-point-lg) {
+                font-size: 20px;
+                line-height: 24px;
+                padding-bottom: 9px;
+            }
+            @media (max-width: @break-point-md) {
+                font-size: 16px;
+                line-height: 20px;
+                padding-bottom: 7px;
+                letter-spacing: -0.02em;
+            }
+        }
+        .incubation {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0 8px;
+            font-family: "CoFo Pixel";
+
+            &:hover * {
+                color: red;
+            }
+            &__item {
+                color: @gray_2;
+                cursor: pointer;
+                padding-bottom: 12px;
+                border-bottom: 2px solid @gray_2;
+                transition: border-color 0.5s ease, color 0.5s ease;
+
+                &_left {
+                    @media (max-width: @break-point-xl) {
+                        width: 134px;
+                    }
+                    @media (max-width: @break-point-lg) {
+                        width: 99px;
+                    }
+                    @media (max-width: @break-point-md) {
+                        width: 77px;
+                    }
+                    @media (max-width: @break-point-sm) {
+                        width: 72px;
+                    }
+                }
+                &{#hover({
+                    color: @red;
+                    border-bottom: 2px solid @red;});
+                }
+                &--double {
+                    color: @red;
+                }
+                &--active {
+                    color: @red;
+                    border-bottom: 2px solid @red;
+                }
+                @media (min-width: @break-point-xl) {
+                    font-size: 36px;
+                    line-height: 44px;
+                    padding-bottom: 12px;
+                }
+                @media (max-width: @break-point-xl) {
+                    font-size: 28px;
+                    line-height: 32px;
+                    padding-bottom: 12px;
+                }
+                @media (max-width: @break-point-lg) {
+                    font-size: 20px;
+                    line-height: 24px;
+                    padding-bottom: 9px;
+                }
+                @media (max-width: @break-point-md) {
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding-bottom: 7px;
+                }
+            }
+            @media (max-width: @break-point-xl) {
+                gap: 0 2px;
+            }
+            @media (max-width: @break-point-lg) {
+                gap: 0 4px;
+            }
+            @media (max-width: @break-point-md) {
+            }
+            @media (max-width: @break-point-sm) {
+                gap: 0 8px;
+            }
+        }
+        @media (max-width: @break-point-xl) {
+            max-width: 1086px;
+            gap: 0 2px;
+        }
+        @media (max-width: @break-point-lg) {
+            max-width: 824px;
+            gap: 0 4px;
+        }
+        @media (max-width: @break-point-md) {
+            max-width: 648px;
+        }
+        @media (max-width: @break-point-sm) {
+            max-width: 328px;
+            grid-template-columns: 168px 1fr;
+            gap: 11px 8px;
+        }
+    }
+}
+.tab-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

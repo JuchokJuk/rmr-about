@@ -1,0 +1,89 @@
+@import '~@styles/variables.less';
+
+
+.register {
+    width: 100%;
+    background: @blue;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: @white;
+    
+
+    @media (min-width: @break-point-xl) {
+        padding: 80px;
+        margin-bottom: @padding-pink_1920;
+    }
+    
+    @media (max-width: @break-point-xl) {
+        padding: 64px;
+        margin-bottom: @padding-pink_1366;
+    }
+    
+    @media (max-width: @break-point-lg) {
+        padding: 48px;
+        margin-bottom: @padding-pink_1024;
+    }
+
+    @media (max-width: @break-point-md) {
+        padding: 24px;
+        margin-bottom: @padding-violet_375;
+    }
+    
+    @media (max-width: @break-point-sm) {
+        padding: 24px;
+        margin-bottom: @padding-violet_375;
+    }
+}
+
+.register__caption {
+
+    @media (min-width: @break-point-xl) {
+        margin-bottom: 48px;
+    }
+    
+    @media (max-width: @break-point-xl) {
+        margin-bottom: 32px;
+    }
+    
+    @media (max-width: @break-point-lg) {
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-bottom: 24px;
+    }
+    
+    @media (max-width: @break-point-sm) {
+        margin-bottom: 24px;
+    }
+}
+
+.register__btn {
+    color: white;
+    background-color: @red;
+    padding: 12px 28px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    .noHighlight();
+
+
+    @media (max-width: @break-point-lg) {
+        width: auto;
+        padding: 12px 28px;
+
+    }
+
+    @media (max-width: @break-point-md) {
+        width: 100%;
+        padding: 12px 28px;
+    }
+    
+    @media (max-width: @break-point-sm) {
+        width: 100%;
+        padding: 12px 28px;
+    }
+}

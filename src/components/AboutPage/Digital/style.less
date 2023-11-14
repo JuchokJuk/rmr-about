@@ -1,0 +1,405 @@
+@import "~@styles/variables.less";
+.digitalization {
+    display: flex;
+    justify-content: center;
+    &__content {
+        @media (min-width: @break-point-xl) {
+            margin: 0 0 200px 0;
+        }
+        @media (max-width: @break-point-xl) {
+            max-width: 1086px;
+            margin: 0 0 114px 0;
+        }
+        @media (max-width: @break-point-lg) {
+            max-width: 824px;
+            margin: 0 0 102px 0;
+        }
+        @media (max-width: @break-point-md) {
+            max-width: 648px;
+            margin: 0 0 99px 0;
+        }
+        @media (max-width: @break-point-sm) {
+            max-width: 328px;
+            margin: 0 0 103px 0;
+        }
+    }
+    &__name {
+        color: @white;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        &--span {
+            font-family: "CoFo Pixel";
+            color: @red;
+            @media (max-width: @break-point-md) {
+                letter-spacing: -0.9px;
+            }
+        }
+        @media (min-width: @break-point-xl) {
+            font-size: 100px;
+            line-height: 100px;
+            margin: 0 0 59px 0;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 72px;
+            line-height: 76px;
+            margin: 0 0 42px 0;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 60px;
+            line-height: 60px;
+            margin: 0 0 37px 0;
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 48px;
+            line-height: 48px;
+            margin: 0 0 23px 0;
+            letter-spacing: -0.001em;
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 32px;
+            line-height: 36px;
+            margin: 0 0 18px 0;
+            letter-spacing: -0.02em;
+        }
+    }
+    &__startupText {
+        color: @white;
+        @media (min-width: @break-point-xl) {
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: 102px;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 87px;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 55px;
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 63px;
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 54px;
+            letter-spacing: -0.001em;
+        }
+    }
+    .own {
+        color: @white;
+        &__name {
+            color: @red;
+            letter-spacing: -0.02em;
+            @media (min-width: @break-point-xl) {
+                font-size: 60px;
+                line-height: 72px;
+                margin-bottom: 70px;
+            }
+            @media (max-width: @break-point-xl) {
+                font-size: 44px;
+                line-height: 52px;
+                margin-bottom: 45px;
+            }
+            @media (max-width: @break-point-lg) {
+                font-size: 36px;
+                line-height: 44px;
+                margin-bottom: 30px;
+            }
+            @media (max-width: @break-point-md) {
+                font-size: 32px;
+                line-height: 40px;
+                margin-bottom: 32px;
+                letter-spacing: -0.001em;
+            }
+            @media (max-width: @break-point-sm) {
+                font-size: 26px;
+                line-height: 32px;
+                margin-bottom: 23px;
+                letter-spacing: -0.02em;
+            }
+        }
+        &__wrapper {
+            display: grid;
+            @media (min-width: @break-point-xl) {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 95px 30px;
+            }
+            @media (max-width: @break-point-xl) {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 52px 16px;
+            }
+            @media (max-width: @break-point-lg) {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px 20px;
+            }
+            @media (max-width: @break-point-md) {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px 20px;
+            }
+            @media (max-width: @break-point-sm) {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 30px 0;
+            }
+        }
+        &__cart {
+            &--caption {
+                @media (min-width: @break-point-xl) {
+                    margin-top: 12px;
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+                @media (max-width: @break-point-xl) {
+                    margin-top: 17px;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+                @media (max-width: @break-point-lg) {
+                    margin-top: 16px;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                @media (max-width: @break-point-sm) {
+                    margin-top: 5px;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+            &--captionHumex {
+                @media (min-width: @break-point-xl) {
+                    margin-left: 6px;
+                }
+            }
+            &--firmware {
+                @media (max-width: @break-point-lg) {
+                    margin-bottom: 1px;
+                }
+            }
+        }
+        &__support {
+            color: @red;
+            letter-spacing: -0.02em;
+            @media (min-width: @break-point-xl) {
+                font-size: 60px;
+                line-height: 72px;
+                margin: 120px 0 80px 0;
+            }
+            @media (max-width: @break-point-xl) {
+                font-size: 44px;
+                line-height: 52px;
+                margin: 72px 0 58px 0;
+            }
+            @media (max-width: @break-point-lg) {
+                font-size: 36px;
+                line-height: 44px;
+                margin: 49px 0 30px 0;
+            }
+            @media (max-width: @break-point-md) {
+                font-size: 32px;
+                line-height: 40px;
+                margin: 59px 0 30px 0;
+                letter-spacing: -0.001em;
+            }
+            @media (max-width: @break-point-sm) {
+                font-size: 26px;
+                line-height: 32px;
+                margin: 46px 0 22px 0;
+                letter-spacing: -0.02em;
+            }
+        }
+        &__icon {
+            &--rdl {
+                @media (min-width: @break-point-xl) {
+                    height: 72px;
+                }
+                @media (max-width: @break-point-xl) {
+                    height: 60px;
+                }
+                @media (max-width: @break-point-lg) {
+                    height: 52px;
+                }
+                @media (max-width: @break-point-md) {
+                    height: 52px;
+                }
+                @media (max-width: @break-point-sm) {
+                    height: 45px;
+                }
+            }
+            &--verno {
+                @media (min-width: @break-point-xl) {
+                    height: 80px;
+                    width: 279px;
+                    margin: -5px 0 -1px -15px;
+                }
+                @media (max-width: @break-point-xl) {
+                    height: 60px;
+                    width: 212px;
+                    margin-left: -10px;
+                }
+                @media (max-width: @break-point-lg) {
+                    height: 52px;
+                    width: 172px;
+                    margin-left: -9px;
+                }
+                @media (max-width: @break-point-md) {
+                    height: 52px;
+                    width: 172px;
+                    margin-left: -8px;
+                }
+                @media (max-width: @break-point-sm) {
+                    height: 44px;
+                    width: 151px;
+                    margin-left: -7px;
+                }
+            }
+            &--humex {
+                @media (min-width: @break-point-xl) {
+                    height: 75px;
+                    width: 305px;
+                    margin: -2px 0 0 -5px;
+                }
+                @media (max-width: @break-point-xl) {
+                    height: 60px;
+                    width: 240px;
+                    margin-left: -6px;
+                }
+                @media (max-width: @break-point-lg) {
+                    height: 52px;
+                    width: 174px;
+                    margin: 1px 0 0 2px;
+                }
+                @media (max-width: @break-point-md) {
+                    height: 52px;
+                    width: 172px;
+                    margin-left: 1px;
+                }
+                @media (max-width: @break-point-sm) {
+                    height: 44px;
+                    width: 153px;
+                    margin: 2px 0 0 -2px;
+                }
+            }
+            &--hitch {
+                @media (min-width: @break-point-xl) {
+                    height: 72px;
+                    width: 265px;
+                    margin: -3px 0 3px -5px;
+                }
+                @media (max-width: @break-point-xl) {
+                    height: 60px;
+                    width: 212px;
+                }
+                @media (max-width: @break-point-lg) {
+                    height: 53px;
+                    width: 174px;
+                    margin: 2px 0 -1px 0;
+                }
+                @media (max-width: @break-point-sm) {
+                    height: 44px;
+                    width: 128px;
+                    margin: -4px 0 4px 1px;
+                }
+            }
+            &--firmware {
+                font-family: "CoFo Pixel";
+                @media (min-width: @break-point-xl) {
+                    font-size: 72px;
+                    line-height: 52px;
+                    margin: 5px 0 30px 0;
+                }
+                @media (max-width: @break-point-xl) {
+                    font-size: 48px;
+                    line-height: 52px;
+                    margin: 5px 0 24px 0;
+                }
+                @media (max-width: @break-point-lg) {
+                    font-size: 38px;
+                    line-height: 38px;
+                    margin: 15px 0 -8px 0;
+                }
+                @media (max-width: @break-point-md) {
+                    font-size: 38px;
+                    line-height: 38px;
+                    margin: 15px 0 20px 0;
+                }
+                @media (max-width: @break-point-sm) {
+                    font-size: 32px;
+                    line-height: 38px;
+                    margin: 4px 0 12px 0;
+                }
+            }
+            &--solvery {
+                @media (min-width: @break-point-xl) {
+                    height: 40px;
+                    margin: 0 0 5px -2px;
+                }
+                @media (max-width: @break-point-xl) {
+                    height: 40px;
+                    width: 275px;
+                    margin: -2px 0 14px -23px;
+                }
+                @media (max-width: @break-point-lg) {
+                    height: 57px;
+                    width: 180px;
+                    margin: -1px 0 -3px -1px;
+                }
+                @media (max-width: @break-point-md) {
+                    height: 52px;
+                    margin: 3px 0 -2px -2px;
+                }
+                @media (max-width: @break-point-sm) {
+                    height: 44px;
+                    width: 155px;
+                    margin-bottom: 2px;
+                }
+            }
+            &--presentum {
+                @media (min-width: @break-point-xl) {
+                    height: 36px;
+                    margin: 8px 0 1px 2px;
+                }
+                @media (max-width: @break-point-xl) {
+                    height: 36px;
+                    margin: 6px 0 10px 1px;
+                }
+                @media (max-width: @break-point-lg) {
+                    height: 52px;
+                    width: 226px;
+                    margin: 6px 0 -5px 2px;
+                }
+                @media (max-width: @break-point-md) {
+                    height: 52px;
+                    width: 226px;
+                    margin: 7px 0 -6px 2px;
+                }
+
+                @media (max-width: @break-point-sm) {
+                    height: 44px;
+                    width: 154px;
+                    margin: 7px 0 -5px 0px;
+                }
+            }
+        }
+
+        &__cartNamePresentum {
+            font-size: 44px;
+            line-height: 52px;
+            letter-spacing: -0.02em;
+            padding: 5px 0 35px 0;
+        }
+        .solvery {
+            @media (max-width: @break-point-md) {
+                width: 203px;
+            }
+            @media (max-width: @break-point-sm) {
+                width: 300px;
+                margin-bottom: -9px;
+            }
+        }
+    }
+}

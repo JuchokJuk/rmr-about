@@ -1,0 +1,61 @@
+@import "~@styles/variables.less";
+.mobile-menu {
+    overflow: hidden;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 30px 24px;
+    border-bottom: 1px solid @white;
+    display: flex;
+    flex-direction: column;
+    background: @black;
+    opacity: 0;
+    z-index: -1;
+    transition-duration: 0.4s;
+    transform-origin: top;
+    transform: scaleY(0);
+    will-change: transform;
+    &__header {
+        top: 132px;
+    }
+    &--active {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    &__link {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        color: @white;
+        transition: color 0.2s;
+        &--active {
+            color: @red;
+            mix-blend-mode: difference;
+        }
+        & {
+            #hover({
+            color: @red;
+            mix-blend-mode: difference;});
+        }
+    }
+    &__btn {
+        width: 142px;
+        height: 48px;
+        border: 3px solid @white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        line-height: 20px;
+        color: @white;
+        margin-top: 24px;
+        transition: color 0.2s, border-color 0.2s;
+        & {
+            #hover({
+            color: red;
+            border-color: @red;
+            mix-blend-mode: difference;});
+        }
+    }
+}

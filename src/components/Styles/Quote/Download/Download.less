@@ -1,0 +1,185 @@
+@import '~@styles/variables.less';
+
+// Цитаты с Файлом
+.file-size-title {
+    color: #7F7F7F;
+
+    @media (min-width: @break-point-xl) {
+        margin-top: @padding-red_1920;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-top: @padding-red_1366;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-top: @padding-red_1024;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-top: @padding-red_375;
+    }
+}
+
+.download-quote_sticky {
+    position: sticky;
+    top: 0px;
+} 
+
+.quote-download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: none;
+    border: 3px solid #000000;
+    user-select: none;
+    box-shadow: 0px 0px 0px transparent;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.4s, border-color 0.4s, background-color 0.1s ease-in;
+    .noHighlight();
+
+    //
+    @media (min-width: @break-point-xl) {
+        margin-top: @padding-orange_1920;
+        padding: 16px 25px;
+        font-size: 18px;
+        line-height: 24px;
+        width: 131px;
+        height: 56px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-top: @padding-red_1366;
+        width: 115px;
+        height: 48px;
+        padding: 12px 25px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-top: @padding-orange_1024;
+        width: 115px;
+        height: 48px;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 9px 23px;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-top: @padding-yellow_375;
+        width: 92px;
+        height: 40px;
+        padding: 6px 14px;
+        font-size: 16px;
+        line-height: 24px;
+        border: 2px solid #000000;
+    }
+
+    &{#hover({
+        border-color: @red;
+        color: @red});
+    }
+
+    &:active {
+        background-color: @red;
+        color: white;
+    }
+}
+
+.quote_sticky {
+    position: sticky;
+    position: -webkit-sticky;
+
+    @media (min-width: @break-point-xl) {
+        top: 120px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        top: 100px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        top: 100px;
+    }
+
+    @media (max-width: @break-point-md) {
+        top: 100px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        top: 100px;
+    } 
+}
+
+div.quote_disable-top-margin {
+    margin-top: 0px;
+}
+
+.quote-block {
+    border-left: 4px solid @red;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    //
+    @media (min-width: @break-point-xl) {
+        padding-left: 32px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        padding-left: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 16px;
+        line-height: 24px;
+        border-left: 3px solid @red;
+    }
+
+    @media (max-width: @break-point-md) {
+        padding-left: 24px;
+        border-left: 2px solid @red;
+    }
+
+    @media (max-width: @break-point-sm) {
+        padding-left: 24px;
+        border-left: 2px solid @red;
+    }
+
+    .quote-content {
+        padding: 0px;
+        margin: 0px;
+        //
+        @media (min-width: @break-point-xl) {
+            font-size: 56px;
+            line-height: 72px;
+            letter-spacing: -0.02em;
+        }
+    
+        @media (max-width: @break-point-xl) {
+            font-size: 40px;
+            line-height: 48px;
+            letter-spacing: -0.02em;
+            padding-left: 23px;
+        }
+    
+        @media (max-width: @break-point-lg) {
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.02em;
+        }
+    
+        @media (max-width: @break-point-md) {
+            font-size: 26px;
+            line-height: 32px;
+        }
+    
+        @media (max-width: @break-point-sm) {
+            font-size: 26px;
+            line-height: 32px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@import "~@styles/variables.less";
+
+// 1920+
+
+.respond-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: @black;
+    box-shadow: inset 0 0 0 3px @black;
+    transition: color 0.2s ease-in, box-shadow 0.2s ease-in;
+    cursor: pointer;
+    &{#hover({
+        color: @red;
+        box-shadow: inset 0 0 0 3px @red;});
+    }
+    .BTN();
+    @media (min-width: @break-point-xl) {
+        padding: 20px 40px;
+        letter-spacing: 0.01em;
+    }
+    @media (max-width: @break-point-xl) {
+        padding: 14px 32px 18px 32px;
+    }
+    @media (max-width: @break-point-lg) {
+        padding: 13px 21px 11px 20px;
+    }
+
+    @media (max-width: @break-point-md) {
+        padding: 13px 20px 11px 20px;
+    }
+    @media (max-width: @break-point-sm) {
+        padding: 13px 24.5px 15px 24.5px;
+    }
+}

@@ -1,0 +1,49 @@
+@import '~@styles/variables.less';
+
+.icon {
+  background: @gray_1;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid @white;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  right: 3px;
+  flex-shrink: 0;
+
+  @media (max-width: @break-point-xl) {
+    width: 54px;
+    height: 54px;
+  }
+  @media (max-width: @break-point-lg) {
+    width: 38px;
+    height: 38px;
+  }
+  //@media (max-width: @break-point-md) {  }
+  @media (max-width: @break-point-sm) {
+    width: 54px;
+    height: 54px;
+  }
+
+  &__content {
+    width: 70px;
+    height: 70px;
+    @media (max-width: @break-point-xl) {
+      width: 54px;
+      height: 54px;
+    }
+    @media (max-width: @break-point-lg) {
+      width: 38px;
+      height: 38px;
+    }
+    //@media (max-width: @break-point-md) {  }
+    @media (max-width: @break-point-sm) {
+      width: 54px;
+      height: 54px;
+    }
+  }
+
+}

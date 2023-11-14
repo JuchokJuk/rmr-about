@@ -1,0 +1,153 @@
+@import "~@styles/variables.less";
+.layout3 {
+    .r-header {
+        background: @white;
+        .r-header__content {
+            box-shadow: 0px 1px 0px 0px #222;
+            .r-logo__name {
+                color: @black;
+                &--span {
+                    mix-blend-mode: normal;
+                }
+            }
+            .domain__name--span {
+                color: @black;
+            }
+            .domain__icon {
+                fill: @black;
+                & {
+                    #hover({
+                    fill: @red;
+                    mix-blend-mode: normal;});
+                }
+            }
+            .domain__block {
+                background: @white;
+            }
+            .domain__option {
+                color: @black;
+                & {
+                    #hover({
+                    color: @red;
+                    mix-blend-mode: normal;});
+                }
+            }
+            .control__link {
+                color: @black;
+                &--active {
+                    color: @red;
+                    mix-blend-mode: normal;
+                }
+                & {
+                    #hover({
+                    color: @red;
+                    mix-blend-mode: normal;});
+                }
+            }
+            .control__search {
+                fill: @black;
+                & {
+                    #hover({
+                    fill: red;
+                    mix-blend-mode: normal;});
+                }
+            }
+            .control__btn {
+                border-color: @black;
+                color: @black;
+                & {
+                    #hover({
+                    color: @red;
+                    border-color: @red;
+                    mix-blend-mode: normal;});
+                }
+            }
+            .control__mobile {
+                fill: @black;
+                & {
+                    #hover({
+                    fill: @red;
+                    mix-blend-mode: normal;});
+                }
+            }
+            .control__mobileClose {
+                fill: @black;
+                & {
+                    #hover({
+                    fill: @red;
+                    mix-blend-mode: normal;});
+                }
+            }
+        }
+        .mobile-menu {
+            background: @white;
+            .mobile-menu__link {
+                color: @black;
+                &--active {
+                    color: @red;
+                    mix-blend-mode: normal;
+                }
+            }
+            .mobile-menu__btn {
+                border-color: @black;
+                color: black;
+            }
+        }
+    }
+
+    //footer
+    .rfooter {
+        background: @white;
+        color: @black;
+        border-top: 1px solid @black;
+        .firstBlock__privacy {
+            color: @black;
+            & {
+                #hover({
+                color: @red;});
+            }
+        }
+        .firstBlock__help--email {
+            color: @black;
+            & {
+                #hover({
+                color: @red;});
+            }
+        }
+        .firstBlock__icon {
+            fill: @black;
+        }
+        .secondBlock__link {
+            color: @black;
+            & {
+                #hover({
+                color: @red;});
+            }
+            &--active {
+                color: @red;
+            }
+        }
+        .contacts__email {
+            color: @black;
+            & {
+                #hover({
+                color: @red;});
+            }
+        }
+        .contacts__phone {
+            color: @black;
+        }
+        .rfooter__develop {
+            a {
+                color: @black;
+            }
+            &--icon {
+                fill: @black;
+                & {
+                    #hover({
+                    fill: red;});
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+@import "~@styles/variables.less";
+.success {
+    position: fixed;
+    background: @green_gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    fill: @black;
+    color: @black;
+    opacity: 1;
+    visibility: visible;
+    transition: ease-in 0.3s;
+    z-index: 10;
+    svg {
+        cursor: pointer;
+        @media (min-width: @break-point-xl) {
+            width: 24.5px;
+        }
+        @media (max-width: @break-point-xl) {
+            width: 17.5px;
+        }
+        @media (max-width: @break-point-lg) {
+            width: 15.75px;
+        }
+        @media (max-width: @break-point-md) {
+            width: 14px;
+        }
+        @media (max-width: @break-point-md) {
+            margin-top: 2px;
+        }
+
+        transition: fill 0.2s ease-in;
+        & {
+            #hover({
+            fill: @red;});
+        }
+    }
+
+    @media (min-width: @break-point-xl) {
+        font-size: 24px;
+        line-height: 36px;
+        padding: 16px 28px;
+        width: 1098px;
+        bottom: 42px;
+        left: calc((100vw - 1098px) / 2);
+    }
+    @media (max-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 15px 24px;
+        width: 718px;
+        bottom: 32px;
+        left: calc((100vw - 718px) / 2);
+    }
+    @media (max-width: @break-point-lg) {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 13px 24px;
+        width: 684px;
+        bottom: 28px;
+        left: calc((100vw - 684px) / 2);
+    }
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 10px 24px;
+        width: 648px;
+        bottom: 20px;
+        left: calc((100vw - 648px) / 2);
+    }
+    @media (max-width: @break-point-sm) {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 18px 14px;
+        width: 328px;
+        bottom: 7px;
+        left: calc((100vw - 328px) / 2);
+        align-items: flex-start;
+    }
+    &--none {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

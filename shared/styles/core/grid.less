@@ -1,0 +1,278 @@
+@import '~@styles/variables.less';
+
+// Test Color
+.blue {
+    background-color: blue;
+    height: 100px;
+    color: white;
+    padding: 20px;
+}
+
+.grid-container {
+    margin: 0 auto;
+
+    @media (min-width: @break-point-xl) {
+        width: 1312px;
+    }
+    @media (max-width: @break-point-xl) {
+        width: 936px;
+    }
+    @media (max-width: @break-point-lg) {
+        width: 704px;
+    }
+    @media (max-width: @break-point-md) {
+        width: 680px;
+    }
+    @media (max-width: @break-point-sm) {
+        width: 328px;
+    }
+
+    &--vacancy {
+        @media (min-width: @break-point-xl) {
+            width: 936px;
+        }
+
+        .grid-row {
+            @media (min-width: @break-point-xl) {
+                width: 936px;
+            }
+
+            .create-columns-vacancy(6);
+        }
+    }
+}
+
+.grid-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: @break-point-xl) {
+        width: 1312px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        width: 936px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        width: 704px;
+    }
+
+    @media (max-width: @break-point-md) {
+        width: 680px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        width: 328px;
+        //margin-left: 0;
+        margin-right: 0;
+    }  
+
+    & > .grid-row {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+.md-colums(@index) when (@index = 1) {
+    width: @sm-column-width + @sm-gutter;
+    padding-right: @sm-paddings;
+    padding-left: @sm-paddings;
+    margin-right: @sm-gutter;
+}
+
+.md-colums(@index) when (@index = 2) {
+    width: (@sm-column-width * 2 ) + (@sm-gutter);
+    padding-right: @sm-paddings;
+    padding-left: @sm-paddings;
+    margin-right: @sm-gutter;
+}
+
+.md-colums(@index) when (@index = 3) {
+    width: (@sm-column-width * 2 ) + (@sm-gutter);
+    padding-right: @sm-paddings;
+    padding-left: @sm-paddings;
+    margin-right: @sm-gutter;
+}
+
+.md-colums(@index) when (@index = 4) {
+    width: (@sm-column-width * 2 ) + (@sm-gutter);
+    padding-right: @sm-paddings;
+    padding-left: @sm-paddings;
+    margin-right: @sm-gutter;
+}
+
+.md-colums(@index) when (@index >= 5) {
+    width: (@sm-column-width * 4 ) + (@sm-gutter * 3);
+    padding-right: @sm-paddings;
+    padding-left: @sm-paddings;
+    margin-right: @sm-gutter;
+}
+
+.create-columns(@index) when (@index > 0) {
+    .grid-col-@{index} {
+
+        @media (min-width: @break-point-xl) {
+            width: ( @xl-column-width * @index) + (@xl-gutter * (@index - 1) );
+            padding-left: @xl-paddings;
+            padding-right: @xl-paddings;
+            margin-right: @xl-gutter;
+        }
+
+        @media (max-width: @break-point-xl) {
+            width: (@lg-column-width * @index ) + (@lg-gutter * (@index - 1));
+            padding-right: @lg-paddings;
+            padding-left: @lg-paddings;
+            margin-right: @lg-gutter;
+        }
+
+        @media (max-width: @break-point-lg) {
+            width: (@md-column-width * @index ) + (@md-gutter * (@index - 1));
+            padding-right: @md-paddings;
+            padding-left: @md-paddings;
+            margin-right: @md-gutter;
+        }
+        @media (max-width: @break-point-md) {
+            .md-colums(@index);
+
+            // TODO: Нужно придумать что-то получше.
+            &:nth-child(2n) {
+                margin-right: 0px;
+            }
+        }
+
+        @media (max-width: @break-point-sm) {
+            width: (@xs-column-width * 2 ) + @xs-gutter;
+            padding-right: @xs-paddings;
+            padding-left: @xs-paddings;
+            margin-left: 0;
+            margin-right: 0;
+        }   
+    
+        &:first-child {
+            padding-left: 0px;
+            margin-left: 0px;
+
+            @media (min-width: @break-point-xl) {
+                padding-left: @xl-paddings;
+                margin-left: 0px;
+            }
+
+            @media (max-width: @break-point-xl) {
+                padding-left: @lg-paddings;
+                margin-left: 0px;
+            }
+            
+            @media (max-width: @break-point-lg) {
+                padding-left: @md-paddings;
+                margin-left: 0px;
+            }
+
+            @media (max-width: @break-point-md) {
+                padding: 0px;
+            }
+
+            @media (max-width: @break-point-sm) {
+                padding-left: 0px;
+                margin-left: 0px;
+            } 
+        }
+    
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        & > .grid-row > .grid-col-@{index} {
+            padding-left: 0px;
+            padding-right: 0px;
+            flex-flow: row nowrap;
+        } 
+    }
+    .create-columns(@index - 1);
+}
+
+.create-columns(6);
+
+.create-columns-vacancy(@index) when (@index > 0) {
+    .grid-col-@{index} {
+
+        @media (min-width: @break-point-xl) {
+            width: (@lg-column-width * @index ) + (@lg-gutter * (@index - 1));
+            padding-right: @lg-paddings;
+            padding-left: @lg-paddings;
+            margin-right: @lg-gutter;
+        }
+
+        @media (max-width: @break-point-xl) {
+            width: (@lg-column-width * @index ) + (@lg-gutter * (@index - 1));
+            padding-right: @lg-paddings;
+            padding-left: @lg-paddings;
+            margin-right: @lg-gutter;
+        }
+
+        @media (max-width: @break-point-lg) {
+            width: (@md-column-width * @index ) + (@md-gutter * (@index - 1));
+            padding-right: @md-paddings;
+            padding-left: @md-paddings;
+            margin-right: @md-gutter;
+        }
+
+        @media (max-width: @break-point-md) {
+            .md-colums(@index);
+
+            // TODO: Нужно придумать что-то получше.
+            &:nth-child(2n) {
+                margin-right: 0px;
+            }
+        }
+
+        @media (max-width: @break-point-sm) {
+            width: (@xs-column-width * 2) + @xs-gutter;
+            padding-right: @xs-paddings;
+            padding-left: @xs-paddings;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &:first-child {
+            padding-left: 0px;
+            margin-left: 0px;
+
+            @media (min-width: @break-point-xl) {
+                padding-left: @lg-paddings;
+                margin-left: 0px;
+            }
+
+            @media (max-width: @break-point-xl) {
+                padding-left: @lg-paddings;
+                margin-left: 0px;
+            }
+
+            @media (max-width: @break-point-lg) {
+                padding-left: @md-paddings;
+                margin-left: 0px;
+            }
+
+            @media (max-width: @break-point-md) {
+                padding: 0px;
+            }
+
+            @media (max-width: @break-point-sm) {
+                padding-left: 0px;
+                margin-left: 0px;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        &>.grid-row>.grid-col-@{index} {
+            padding-left: 0px;
+            padding-right: 0px;
+            flex-flow: row nowrap;
+        }
+    }
+
+    .create-columns-vacancy(@index - 1);
+}

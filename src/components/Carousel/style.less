@@ -1,0 +1,239 @@
+@import "~@styles/variables.less";
+.carousel {
+    width: 100%;
+    position: relative;
+    &__viewport {
+        overflow: hidden;
+        width: 100%;
+        @media (min-width: @break-point-xl) {
+            padding-left: calc((100vw - 1664px) / 2);
+            padding-right: calc((100vw - 1664px) / 2);
+        }
+        @media (max-width: @break-point-xl) {
+            padding-left: calc((100vw - 1086px) / 2);
+            padding-right: calc((100vw - 1086px) / 2);
+        }
+        @media (max-width: @break-point-lg) {
+            padding-left: calc((100vw - 824px) / 2);
+            padding-right: calc((100vw - 824px) / 2);
+        }
+        @media (max-width: @break-point-md) {
+            padding-left: calc((100vw - 648px) / 2);
+            padding-right: calc((100vw - 648px) / 2);
+        }
+        @media (max-width: @break-point-sm) {
+            padding-left: calc((100vw - 328px) / 2);
+            padding-right: calc((100vw - 328px) / 2);
+        }
+    }
+    &__viewport.is-draggable {
+        cursor: move;
+        cursor: grab;
+    }
+
+    &__viewport.is-dragging {
+        cursor: grabbing;
+    }
+    &__container {
+        display: flex;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    &__btnNext,
+    &__btnPrev {
+        position: absolute;
+        border-radius: 50%;
+        background: @black;
+        border: 1px solid @white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: border-color 0.2s ease-in;
+        svg {
+            fill: @white;
+            transition: fill 0.2s ease-in;
+        }
+        &:hover {
+            border-color: red;
+            svg {
+                fill: @red;
+            }
+        }
+
+        &:disabled {
+            display: none;
+        }
+        @media (min-width: @break-point-xl) {
+            width: 64px;
+            height: 64px;
+            top: 185px;
+            svg {
+                width: 22px;
+                height: 28px;
+            }
+        }
+        @media (max-width: @break-point-xl) {
+            width: 52px;
+            height: 52px;
+            top: 150px;
+            svg {
+                width: 22px;
+                height: 28px;
+            }
+        }
+        @media (max-width: @break-point-lg) {
+            width: 48px;
+            height: 48px;
+            svg {
+                width: 22px;
+                height: 28px;
+            }
+        }
+        @media (max-width: @break-point-md) {
+            width: 40px;
+            height: 40px;
+            top: 110px;
+            svg {
+                width: 14px;
+                height: 18px;
+            }
+        }
+        @media (max-width: @break-point-sm) {
+        }
+    }
+    &__btnPrev {
+        position: absolute;
+        @media (min-width: @break-point-xl) {
+            left: 200px;
+        }
+        @media (max-width: @break-point-xl) {
+            left: 60px;
+        }
+        @media (max-width: @break-point-md) {
+            left: 28px;
+        }
+        @media (max-width: @break-point-sm) {
+            left: 24px;
+        }
+    }
+    &__btnNext {
+        position: absolute;
+        svg {
+            transform: rotate(180deg);
+        }
+        @media (min-width: @break-point-xl) {
+            right: 200px;
+        }
+        @media (max-width: @break-point-xl) {
+            right: 60px;
+        }
+        @media (max-width: @break-point-md) {
+            right: 28px;
+        }
+        @media (max-width: @break-point-sm) {
+            right: 23px;
+        }
+    }
+    /*  &__progress {
+        position: relative;
+        background-color: #333;
+        margin-top: 23px;
+        height: 2px;
+        overflow: hidden;
+        @media (min-width: @break-point-xl) {
+            left: calc((100vw - 1664px) / 2);
+            max-width: 1664px;
+        }
+        @media (max-width: @break-point-xl) {
+            left: calc((100vw - 1086px) / 2);
+            max-width: 1086px;
+        }
+        @media (max-width: @break-point-lg) {
+            left: calc((100vw - 824px) / 2);
+            max-width: 824px;
+        }
+        @media (max-width: @break-point-md) {
+            left: calc((100vw - 648px) / 2);
+            max-width: 648px;
+        }
+        @media (max-width: @break-point-sm) {
+            left: calc((100vw - 328px) / 2);
+            max-width: 328px;
+        }
+    }
+    &__progress__bar {
+        position: absolute;
+        background-color: @red;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+    } */
+
+    &__dots {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        @media (min-width: @break-point-xl) {
+            left: calc((100vw - 1664px) / 2);
+            max-width: 1664px;
+            height: 12px;
+            margin-top: 40px;
+        }
+        @media (max-width: @break-point-xl) {
+            left: calc((100vw - 1086px) / 2);
+            max-width: 1086px;
+            height: 12px;
+            margin-top: 30px;
+        }
+        @media (max-width: @break-point-lg) {
+            left: calc((100vw - 824px) / 2);
+            max-width: 824px;
+            height: 20px;
+            margin-top: 19px;
+        }
+        @media (max-width: @break-point-md) {
+            left: calc((100vw - 648px) / 2);
+            max-width: 648px;
+            height: 20px;
+            margin-top: 22px;
+        }
+        @media (max-width: @break-point-sm) {
+            left: calc((100vw - 328px) / 2);
+            max-width: 328px;
+            height: 24px;
+            margin-top: -4px;
+        }
+    }
+
+    &__dot {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__dot:after {
+        background-color: #333;
+        width: 100%;
+        height: 2px;
+        content: "";
+        @media (max-width: @break-point-sm) {
+            height: 1px;
+        }
+    }
+
+    &__dot.is-selected:after {
+        background-color: @red;
+        opacity: 1;
+        height: 2px;
+        @media (max-width: @break-point-sm) {
+            height: 1px;
+        }
+    }
+}

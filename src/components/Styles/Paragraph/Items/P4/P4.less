@@ -1,0 +1,44 @@
+@import '~@styles/variables.less';
+
+@p4-xl-font-size: 34px;
+@p4-lg-font-size: 34px;
+@p4-md-font-size: 24px;
+@p4-sm-font-size: 24px;
+@p4-xs-font-size: 18px;
+
+@p4-xl-lineheight: 40px;
+@p4-lg-lineheight: 40px;
+@p4-md-lineheight: 32px;
+@p4-sm-lineheight: 32px;
+@p4-xs-lineheight: 27px;
+
+.paragraph-4 {
+  padding: 0;
+  margin: 0;
+  word-break: break-word;
+
+
+  @media (min-width: @break-point-xl) {
+    font-size: @p4-xl-font-size;
+    line-height: @p4-xl-lineheight;
+    letter-spacing: -0.02em;
+  }
+  @media (max-width: @break-point-xl) {
+    font-size: @p4-lg-font-size;
+    line-height: @p4-lg-lineheight;
+    letter-spacing: -0.02em;
+  }
+  @media (max-width: @break-point-lg) {
+    font-size: @p4-md-font-size;
+    line-height: @p4-md-lineheight;
+    letter-spacing: 0;
+  }
+  @media (max-width: @break-point-md) {
+    font-size: @p4-sm-font-size;
+    line-height: @p4-sm-lineheight;
+  }
+  @media (max-width: @break-point-sm) {
+    font-size: @p4-xs-font-size;
+    line-height: @p4-xs-lineheight;
+  }
+}

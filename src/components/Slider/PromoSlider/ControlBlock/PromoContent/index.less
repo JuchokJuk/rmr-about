@@ -1,0 +1,110 @@
+@import '~@styles/variables.less';
+
+.p-slider__content {
+    color: @white;
+    position: relative;
+    top: 1px;
+    overflow: hidden;
+
+    &{#hover({
+        cursor: pointer;});
+    }
+
+    @media (min-width: @break-point-xl) {
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -0.01em;
+        max-height: 175px;
+        padding: 0px 48px;
+        margin-bottom: 24px;
+    }
+    
+    @media (max-width: @break-point-xl) {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: -0.01em;
+        max-height: 125px;
+        padding: 0px 32px;
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 28px;
+        line-height: 32px;  
+        letter-spacing: -0.01em;
+        max-height: 100px;
+        padding: 0px 24px;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 26px;
+        line-height: 32px;
+        letter-spacing: unset;
+        max-height: 100px;
+
+        padding: 0px 24px;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 26px;
+        line-height: 32px;
+        letter-spacing: unset;
+
+        padding: 0px 24px;
+        margin-bottom: 16px;
+    }
+}
+
+.p-slider__sub-content {
+    color: @white;
+    overflow: hidden;
+
+    & .author__position {
+        color: @white;
+    }
+
+    @media (min-width: @break-point-xl) {
+        font-size: 26px;
+        line-height: 40px;
+        letter-spacing: unset;
+        max-width: 460px;
+        max-height: 120px;
+        padding: 0px 48px;
+    }
+    
+    @media (max-width: @break-point-xl) {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        max-width: 312px;
+        max-height: 70px;
+        padding: 0px 32px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 12px;
+        line-height: 16px;
+        max-width: 223px;
+        padding: 0px 24px;
+        max-height: 65px;
+        letter-spacing: unset;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: unset;
+        max-height: 70px;
+        padding: 0px 24px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: unset;
+        max-height: 70px;
+        padding: 0px 24px;
+    }
+}

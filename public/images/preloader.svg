@@ -1,0 +1,21 @@
+<svg id="ez968lzq6ui91" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="2 0 32 32" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="32" height="32">
+	<style>
+	<![CDATA[#ez968lzq6ui92_to {animation: ez968lzq6ui92_to__to 800ms linear infinite normal forwards}
+	@keyframes ez968lzq6ui92_to__to {0% {transform: translate(26px,16px);
+	animation-timing-function: cubic-bezier(0.420000,0,0.580000,1)} 83.333333% {transform: translate(34px,16px)} 100% {transform: translate(34px,16px)} }#ez968lzq6ui92 {animation: ez968lzq6ui92_c_o 800ms linear infinite normal forwards}@keyframes ez968lzq6ui92_c_o { 0% {opacity: 1} 16.666667% {opacity: 1;
+	animation-timing-function: cubic-bezier(0.420000,0,0.580000,1)} 50% {opacity: 0} 100% {opacity: 0} }#ez968lzq6ui93_to {animation: ez968lzq6ui93_to__to 800ms linear infinite normal forwards}@keyframes ez968lzq6ui93_to__to { 0% {transform: translate(18px,16px);
+	animation-timing-function: cubic-bezier(0.420000,0,0.580000,1)} 83.333333% {transform: translate(26px,16px)} 100% {transform: translate(26px,16px)} }#ez968lzq6ui94_to {animation: ez968lzq6ui94_to__to 800ms linear infinite normal forwards}@keyframes ez968lzq6ui94_to__to { 0% {transform: translate(10px,16px);animation-timing-function: cubic-bezier(0.420000,0,0.580000,1)} 83.333333% {transform: translate(18px,16px)} 100% {transform: translate(18px,16px)} }#ez968lzq6ui95_to {animation: ez968lzq6ui95_to__to 800ms linear infinite normal forwards}@keyframes ez968lzq6ui95_to__to { 0% {transform: translate(2px,16px);animation-timing-function: cubic-bezier(0.420000,0,0.580000,1)} 83.333333% {transform: translate(10px,16px)} 100% {transform: translate(10px,16px)} }#ez968lzq6ui95 {animation: ez968lzq6ui95_c_o 800ms linear infinite normal forwards}@keyframes ez968lzq6ui95_c_o { 0% {opacity: 0} 33.333333% {opacity: 0;animation-timing-function: cubic-bezier(0.420000,0,0.580000,1)} 66.666667% {opacity: 1} 100% {opacity: 1} }]]>	
+	</style>
+	<g id="ez968lzq6ui92_to" transform="translate(26,16)">
+		<path id="ez968lzq6ui92" d="M24,18L24,14L28,14L28,18L24,18Z" transform="translate(-26,-16)" fill="#000000"/>
+	</g>
+	<g id="ez968lzq6ui93_to" transform="translate(18,16)">
+		<path id="ez968lzq6ui93" d="M16,18L16,14L20,14L20,18L16,18Z" transform="translate(-18,-16)" fill="#000000"/>
+	</g>
+	<g id="ez968lzq6ui94_to" transform="translate(10,16)">
+		<path id="ez968lzq6ui94" d="M12,14L8,14L8,18L12,18L12,14Z" transform="translate(-10,-16)" fill="#000000"/>
+	</g>
+	<g id="ez968lzq6ui95_to" transform="translate(2,16)">
+		<path id="ez968lzq6ui95" d="M4,18L4,14L0,14L0,18L4,18Z" transform="translate(-2,-16)" opacity="0" fill="#000000"/>
+	</g>
+</svg>

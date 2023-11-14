@@ -1,0 +1,221 @@
+@import "~@styles/variables.less";
+.article-main {
+  z-index: 1;
+  position: relative;
+}
+.conditions {
+  display: flex;
+  flex-direction: row;
+
+  transform-style: preserve-3d;
+  position: relative;
+
+  @media (min-width: @break-point-xl) {
+    margin-top: @padding-pink_1920;
+  }
+
+  @media (max-width: @break-point-xl) {
+    margin-top: @padding-pink_1366;
+  }
+
+  @media (max-width: @break-point-lg) {
+    margin-top: @padding-pink_1024;
+  }
+
+  @media (max-width: @break-point-md) {
+    margin-top: @padding-violet_375;
+  }
+
+  @media (max-width: @break-point-sm) {
+    flex-direction: column;
+  }
+
+  & &__list {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @break-point-xl) {
+      flex: 0 0 576px;
+    }
+
+    @media (max-width: @break-point-xl) {
+      flex: 0 0 408px;
+    }
+
+    @media (max-width: @break-point-lg) {
+      flex: 0 0 312px;
+    }
+
+    @media (max-width: @break-point-md) {
+      flex: 0 0 328px;
+    }
+
+    @media (max-width: @break-point-sm) {
+      flex-basis: content;
+    }
+
+    .list-item {
+      @media (min-width: @break-point-xl) {
+        padding: 32px 0;
+      }
+
+      @media (max-width: @break-point-xl) {
+        padding: 24px 0;
+      }
+
+      @media (max-width: @break-point-lg) {
+        padding: 16px 0;
+      }
+
+      @media (max-width: @break-point-md) {
+        padding: 16px 0;
+      }
+
+      &__header {
+        @media (min-width: @break-point-xl) {
+          margin-bottom: @padding-red_1920;
+        }
+
+        @media (max-width: @break-point-xl) {
+          margin-bottom: @padding-red_1366;
+        }
+
+        @media (max-width: @break-point-lg) {
+          margin-bottom: @padding-red_1024;
+        }
+
+        @media (max-width: @break-point-md) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+.conditions__header {
+  @media (min-width: @break-point-xl) {
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: @break-point-xl) {
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: @break-point-lg) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: @break-point-md) {
+    margin-bottom: 16px;
+  }
+}
+
+.conditions__image {
+  height: 604px;
+  @media (max-width: @break-point-xl) {
+    height: 412px;
+  }
+  @media (max-width: @break-point-lg) {
+    height: 303px;
+  }
+  @media (max-width: @break-point-md) {
+    height: 284px;
+  }
+  @media (max-width: @break-point-sm) {
+    height: 0;
+  }
+  &-wrapper{
+    position: absolute;
+    overflow: hidden;
+    width: 706px;
+    height: 666px;
+    top: -23px;
+    right: -20px;
+
+    @media (max-width: @break-point-xl) {
+      width: 503px;
+      height: 468px;
+      top: -16px;
+    }
+
+    @media (max-width: @break-point-lg) {
+      width: 351px;
+      height: 320px;
+      top: -9px;
+    }
+
+    @media (max-width: @break-point-md) {
+      width: 345px;
+      height: 315px;
+      top: -41px;
+    }
+
+    @media (max-width: @break-point-sm) {
+      width: 222px;
+      height: 196px;
+      top: -140px;
+    }
+  }
+
+  span {
+    position: absolute;
+
+    width: 686px;
+    height: 666px;
+    left: 30px;
+
+    @media (max-width: @break-point-xl) {
+      width: 483px;
+      height: 468px;
+      left: 20px;
+    }
+
+    @media (max-width: @break-point-lg) {
+      width: 331px;
+      height: 320px;
+     left: -11px;
+    }
+
+    @media (max-width: @break-point-md) {
+      width: 325px;
+      height: 315px;
+      left: 0px;
+    }
+
+    @media (max-width: @break-point-sm) {
+      width: 202px;
+      height: 196px;
+      left: 27px;
+      transform: translateZ(-1px);
+      z-index: -1;
+    }
+
+    img{
+      object-fit: contain;
+    }
+  }
+}
+
+.conditions__list_indented {
+  // 1920+
+  margin-right: 96px;
+
+  @media (max-width: @break-point-xl) {
+    // 1366 - 1919.98
+    margin-right: 72px;
+  }
+
+  @media (max-width: @break-point-lg) {
+    // 1024 - 1365.98
+    margin-right: 48px;
+  }
+
+  @media (max-width: @break-point-md) {
+    // 768 - 1023.98
+    margin-right: 24px;
+  }
+
+  @media (max-width: @break-point-sm) {
+    // 375 - 767.98
+    margin-right: 0px;
+  }
+}

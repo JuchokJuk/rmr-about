@@ -1,0 +1,15 @@
+@import "~@styles/variables.less";
+
+.horizontal-scroll {
+    overflow-x: hidden;
+    position: relative;
+    &__content {
+        position: absolute;
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 0;
+        height: 100vh;
+        will-change: left;
+    }
+}

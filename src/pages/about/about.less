@@ -1,0 +1,55 @@
+@import "~@styles/variables.less";
+
+[data-color-scheme="dark"] {
+    color-scheme: dark;
+}
+
+[data-color-scheme="light"] {
+    color-scheme: light;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.about {
+    overflow-x: hidden;
+    width: 100%;
+    background: @black;
+    position: relative;
+    &__mailingList {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background: none;
+        margin: 0;
+        @media (max-width: @break-point-sm) {
+            background: @blue;
+        }
+        &--content {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            background: @blue;
+            @media (min-width: @break-point-xl) {
+                margin-bottom: 132px;
+                max-width: 1664px;
+            }
+            @media (max-width: @break-point-xl) {
+                max-width: 1086px;
+                margin-bottom: 80px;
+            }
+            @media (max-width: @break-point-lg) {
+                max-width: 824px;
+                margin-bottom: 88px;
+            }
+            @media (max-width: @break-point-md) {
+                max-width: 648px;
+                margin-bottom: 74px;
+            }
+            @media (max-width: @break-point-sm) {
+                max-width: 375px;
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,416 @@
+@import "~@styles/variables.less";
+
+.rfooter {
+    width: 100%;
+    border-top: 1px solid @white;
+    display: flex;
+    justify-content: center;
+    background: @black;
+    color: @white;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease-in;
+    &.loading {
+        opacity: 0;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width: 1664px;
+        width: 100%;
+
+        @media (min-width: @break-point-xl) {
+            margin: 52px auto 42px auto;
+            height: 220px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            margin: 46px 140px 61px 140px;
+            height: 220px;
+        }
+        @media (max-width: @break-point-lg) {
+            margin: 35px 100px 57px 100px;
+            height: 180px;
+        }
+
+        @media (max-width: @break-point-md) {
+            margin: 57px 60px 60px 60px;
+            height: 305px;
+        }
+
+        @media (max-width: @break-point-sm) {
+            margin: 72px 23px 50px 23px;
+            height: 510px;
+            max-width: 327px;
+        }
+
+        .firstBlock {
+            max-width: 351px;
+            font-weight: 400;
+            &__privacy {
+                color: @white;
+                z-index: 10;
+                transition: color 0.2s ease-in;
+
+                // bg gradient to underline
+                text-decoration: underline;
+                text-underline-offset: 1px;
+                text-decoration-thickness: 1px;
+
+                & {
+                    #hover({
+                    color: @red;});
+                }
+                @media (max-width: @break-point-lg) {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+                @media (max-width: @break-point-md) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+            &__help {
+                line-height: 25px;
+                &--email {
+                    position: relative;
+                    cursor: pointer;
+                    transition: color 0.2s ease-in;
+                    color: @white;
+                    // bg gradient to underline
+                    text-decoration: underline;
+                    text-underline-offset: 1px;
+                    text-decoration-thickness: 1px;
+
+                    & {
+                        #hover({
+                        color: @red;});
+                    }
+                }
+                @media (min-width: @break-point-xl) {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 16px 0 47px 0;
+                }
+                @media (max-width: @break-point-xl) {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 8px 0 52px 0;
+                }
+                @media (max-width: @break-point-lg) {
+                    font-size: 12px;
+                    line-height: 16px;
+                    margin: 12px 0 60px 0;
+                }
+                @media (max-width: @break-point-md) {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 12px 0 110px 0;
+                }
+                @media (max-width: @break-point-sm) {
+                    margin: 12px 0 65px 0;
+                }
+            }
+            &__robot {
+                font-family: "CoFo Pixel";
+                @media (min-width: @break-point-xl) {
+                    margin-bottom: 5px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                @media (max-width: @break-point-xl) {
+                    margin-bottom: 3px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                @media (max-width: @break-point-lg) {
+                    font-size: 12px;
+                    line-height: 16px;
+                    margin-bottom: 3.75px;
+                }
+                @media (max-width: @break-point-md) {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+                @media (max-width: @break-point-sm) {
+                    font-size: 16px;
+                    margin-bottom: 7px;
+                }
+            }
+            &__copyright {
+                display: flex;
+                align-items: center;
+                @media (max-width: @break-point-lg) {
+                    font-size: 12px;
+                }
+                @media (max-width: @break-point-md) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                @media (max-width: @break-point-sm) {
+                    margin-bottom: 5px;
+                }
+            }
+            &__icon {
+                width: 28px;
+                fill: @white;
+                @media (max-width: @break-point-lg) {
+                    width: 20px;
+                    height: 17px;
+                }
+                @media (max-width: @break-point-md) {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+            @media (max-width: @break-point-lg) {
+                max-width: 237px;
+            }
+            @media (max-width: @break-point-md) {
+                max-width: 290px;
+                margin-right: 0px;
+            }
+            @media (max-width: @break-point-sm) {
+                max-width: 327px;
+                margin: 0;
+                order: 1;
+            }
+        }
+        .secondBlock {
+            display: flex;
+            &__navigation {
+                display: flex;
+                @media (max-width: @break-point-md) {
+                    order: 1;
+                    margin-bottom: 36px;
+                }
+                @media (max-width: @break-point-sm) {
+                    order: 1;
+                    margin-bottom: 60px;
+                }
+            }
+
+            &__left {
+                display: flex;
+                flex-direction: column;
+                @media (min-width: @break-point-xl) {
+                    margin: 0 0 0 74px;
+                }
+                @media (max-width: @break-point-xl) {
+                    margin: 0 0 0 16px;
+                }
+                @media (max-width: @break-point-lg) {
+                    margin: 0 0 0 45px;
+                }
+                @media (max-width: @break-point-md) {
+                    margin: 0;
+                }
+            }
+
+            &__right {
+                display: flex;
+                flex-direction: column;
+                @media (min-width: @break-point-xl) {
+                    margin: 0 0 0 349px;
+                }
+                @media (max-width: @break-point-xl) {
+                    margin: 0 0 0 111px;
+                }
+                @media (max-width: @break-point-lg) {
+                    margin: 0 0 0 86px;
+                }
+                @media (max-width: @break-point-md) {
+                    margin: 0 0 0 95px;
+                }
+                @media (max-width: @break-point-sm) {
+                    margin: 0 0 0 105px;
+                }
+            }
+
+            &__link {
+                color: @white;
+                margin-bottom: 15px;
+                font-weight: 400;
+                line-height: 24px;
+                transition: color 0.2s ease-in;
+                & {
+                    #hover({
+                    color: @red;});
+                }
+                @media (min-width: @break-point-xl) {
+                    margin-bottom: 15px;
+                }
+                @media (max-width: @break-point-xl) {
+                    margin-bottom: 8px;
+                }
+                @media (max-width: @break-point-lg) {
+                    font-size: 12px;
+                    margin-bottom: 0px;
+                }
+                @media (max-width: @break-point-md) {
+                    font-size: 16px;
+                    margin-bottom: 12px;
+                }
+            }
+            &__link--active {
+                color: @red;
+            }
+            @media (min-width: @break-point-xl) {
+                margin: 0 0 70px 0;
+            }
+            @media (max-width: @break-point-xl) {
+                margin: 0 0 85px 0;
+            }
+            @media (max-width: @break-point-lg) {
+                margin: 0 0 85px 0;
+            }
+            @media (max-width: @break-point-md) {
+                flex-direction: column;
+                margin: 0 30px 37px auto;
+            }
+            @media (max-width: @break-point-sm) {
+                margin: 0;
+            }
+        }
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            &__email {
+                color: @white;
+                font-size: 26px;
+                position: relative;
+                cursor: pointer;
+                transition: color 0.2s ease-in;
+
+                // bg gradient to underline
+                text-decoration: underline;
+                text-underline-offset: 1.5px;
+                text-decoration-thickness: 1.5px;
+
+                & {
+                    #hover({
+                    color: @red;});
+                }
+                @media (max-width: @break-point-lg) {
+                    font-size: 20px;
+                }
+                @media (max-width: @break-point-md) {
+                    font-size: 26px;
+                }
+            }
+
+            &__phone {
+                color: @white;
+                @media (min-width: @break-point-xl) {
+                    margin-top: 20px;
+                }
+                @media (max-width: @break-point-xl) {
+                    margin-top: 14px;
+                }
+                @media (max-width: @break-point-lg) {
+                    font-size: 12px;
+                    margin-top: 5px;
+                }
+                @media (max-width: @break-point-md) {
+                    font-size: 16px;
+                    margin: 13px 0 30px 0;
+                }
+                @media (max-width: @break-point-sm) {
+                    font-size: 16px;
+                    margin: 7px 0 30px 0;
+                }
+            }
+            @media (min-width: @break-point-xl) {
+                margin: -10px 110px 0 auto;
+            }
+            @media (max-width: @break-point-xl) {
+                margin: -10px 67px 0 auto;
+            }
+            @media (max-width: @break-point-lg) {
+                margin: -2px 45px 0 auto;
+                font-size: 20px;
+            }
+            @media (max-width: @break-point-md) {
+                margin: -8px 0 0 0;
+            }
+        }
+        @media (min-width: @break-point-xl) {
+            max-width: 1664px;
+        }
+        @media (max-width: @break-point-xl) {
+            max-width: 1086px;
+        }
+        @media (max-width: @break-point-lg) {
+            max-width: 824px;
+        }
+        @media (max-width: @break-point-md) {
+            max-width: 648px;
+        }
+        @media (max-width: @break-point-sm) {
+            max-width: 327px;
+        }
+    }
+    &__develop {
+        display: flex;
+        justify-content: flex-end;
+        a {
+            display: flex;
+            align-items: center;
+            color: @white;
+            @media (min-width: @break-point-xl) {
+                margin-right: 220px;
+            }
+            @media (max-width: @break-point-xl) {
+                margin-right: 176px;
+            }
+            @media (max-width: @break-point-lg) {
+                font-size: 12px;
+                margin-right: 125px;
+            }
+            @media (max-width: @break-point-md) {
+                font-size: 16px;
+                margin-right: 118px;
+            }
+            @media (max-width: @break-point-sm) {
+                margin: 0;
+            }
+        }
+
+        &--icon {
+            cursor: pointer;
+            fill: @white;
+            transition: fill 0.2s ease-in;
+            padding-top: 2px;
+            width: 68px;
+            @media (max-width: @break-point-lg) {
+                width: 56px;
+            }
+            @media (max-width: @break-point-md) {
+                width: 68px;
+                padding-top: 2px;
+            }
+        }
+        &--icon {
+            #hover({
+            fill: @red;});
+        }
+        @media (min-width: @break-point-xl) {
+            width: calc(100% - 351px);
+        }
+        @media (max-width: @break-point-xl) {
+            width: calc(100% - 351px);
+        }
+        @media (max-width: @break-point-lg) {
+            width: calc(100% - 236.5px);
+        }
+        @media (max-width: @break-point-md) {
+            width: calc(100% - 334px);
+        }
+        @media (max-width: @break-point-sm) {
+            width: 200px;
+            order: 1;
+            justify-content: flex-start;
+        }
+    }
+}

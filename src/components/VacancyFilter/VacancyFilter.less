@@ -1,0 +1,47 @@
+@import "~@styles/variables.less";
+
+.vacancy-tags {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .noHighlight();
+
+    a {
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+.vacancy-tags__tag_universal {
+    border-radius: 32px;
+    @media (min-width: @break-point-xl) {
+        padding: 6px 16px;
+        margin: 0 8px 16px 0;
+    }
+
+    @media (max-width: @break-point-xl) {
+        padding: 6px 12px;
+        letter-spacing: 0.01em;
+        margin: 0 8px 12px 0;
+    }
+
+    @media (max-width: @break-point-lg) {
+        padding: 4px 10px;
+        letter-spacing: 0;
+        margin: 0 6px 8px 0;
+    }
+
+    @media (max-width: @break-point-md) {
+        padding: 4px 10px;
+        margin: 0 8px 8px 0;
+    }
+    @media (max-width: @break-point-sm) {
+        padding: 6px 13px;
+        margin: 0 8px 8px 0;
+    }
+}

@@ -1,0 +1,52 @@
+@import '~@styles/variables.less';
+
+.article-image__cover {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .noHighlight();
+    cursor: zoom-in;
+
+    span {
+        width: inherit;
+        height: inherit;
+    }
+
+    & img {
+        width: inherit;
+        height: inherit;
+        display: block;
+        object-fit: cover;
+    }
+
+    @media (min-width: @break-point-xl) {
+        width: 1248px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        width: 888px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        width: 672px;
+    }
+
+    @media (max-width: @break-point-md) {
+        width: 680px;
+        & > img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    @media (max-width: @break-point-sm) {
+        width: 328px;
+        //height: 184px;
+        & > img {
+            width: 100%;
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import '~@styles/variables.less';
+
+.link-slider__content {
+
+    word-break: break-word;
+    overflow: hidden;
+
+    @media (min-width: @break-point-xl) {
+        max-height: 200px;
+        margin-top: 32px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        max-height: 116px;
+        margin-top: 23px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        max-height: 80px;
+        margin-top: 16px;
+    }
+
+    @media (max-width: @break-point-md) {
+        max-height: 77px;
+        margin-top: 24px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        max-height: 77px;
+        margin-top: 24px;
+    }
+}

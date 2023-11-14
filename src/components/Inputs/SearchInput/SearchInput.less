@@ -1,0 +1,186 @@
+@import '~@styles/variables.less';
+
+.search-input-wrap {
+    display: flex;
+    position: relative;
+
+    @media (min-width: @break-point-xl) {
+        margin-top: 79px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-top: 64px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-top: 48px;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-top: 88px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        margin-top: 84px;
+    }
+
+    .search-input {
+        color:@black;
+        width: 100%;
+        border: none;
+        margin: 0;
+        border-bottom: 1px solid;
+        border-color: @gray_2;
+        transition: border-color .3s ease-in;
+        outline: none;
+        background: transparent;
+
+        &{#hover({
+            border-color: @black;});
+        }
+
+        &:focus {
+            border-color: @black;
+        }
+
+        @media (min-width: @break-point-xl) {
+            height: 81px;
+            font-size: 48px;
+            line-height: 56px;
+            padding-bottom: 23px;
+            letter-spacing: -0.01em;
+            padding-right: 150px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            height: 61px;
+            font-size: 34px;
+            line-height: 40px;
+            padding-bottom: 19px;
+            letter-spacing: -0.01em;
+            padding-right: 135px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            height: 53px;
+            font-size: 28px;
+            line-height: 32px;
+            padding-bottom: 19px;
+            letter-spacing: -0.01em;
+            padding-right: 116px;
+        }
+
+        @media (max-width: @break-point-md) {
+            height: 53px;
+            font-size: 28px;
+            line-height: 32px;
+            padding-bottom: 19px;
+            letter-spacing: -0.01em;
+            padding-right: 116px;
+        }
+
+        @media (max-width: @break-point-sm) {
+            height: 45px;
+            font-size: 24px;
+            line-height: 32px;
+            padding-bottom: 11px;
+            letter-spacing: initial;
+            padding-right: 32px;
+        }
+    }
+
+    .input-controls {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        right: 0;
+
+        &--hidden {
+            display: none;
+        }
+
+        @media (min-width: @break-point-xl) {
+            top: 16px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            top: 4px;
+        }
+
+        &__clear {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            @media (min-width: @break-point-xl) {
+                margin-right: 24px;
+            }
+
+            @media (max-width: @break-point-xl) {
+                margin-right: 24px;
+            }
+
+            @media (max-width: @break-point-lg) {
+                margin-right: 19px;
+            }
+
+            @media (max-width: @break-point-md) {
+                margin-right: 19px;
+            }
+
+            @media (max-width: @break-point-sm) {
+                margin-right: 0;
+            }
+
+            svg path {
+                fill: @black;
+                transition: fill 0.2s ease-in;
+            }
+
+            &{#hover({
+                cursor: pointer;
+
+                svg path {
+                    fill: @red;
+                }});
+            }
+        }
+
+        &__submit {
+            transition: color 0.2s ease-in;
+
+            @media (min-width: @break-point-xl) {
+                font-size: 32px;
+                line-height: 48px;
+            }
+
+            @media (max-width: @break-point-xl) {
+                font-size: 28px;
+                line-height: 40px;
+                letter-spacing: -0.02em;
+            }
+
+            @media (max-width: @break-point-lg) {
+                font-size: 22px;
+                line-height: 32px;
+                letter-spacing: initial;
+            }
+
+            @media (max-width: @break-point-md) {
+                font-size: 22px;
+                line-height: 32px;
+                letter-spacing: initial;
+            }
+
+            @media (max-width: @break-point-sm) {
+                display: none;
+            }
+
+            &{#hover({
+                cursor: pointer;
+                color: @red;});
+            }
+        }
+    }
+}

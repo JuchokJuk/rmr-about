@@ -1,0 +1,97 @@
+@import '~@styles/variables.less';
+@import '../../../../node_modules/swiper/components/effect-fade/effect-fade.less';
+@import 'Controls/StyleArrows/index.less';
+@import 'Controls/StyleDots/StyleDot/index.less';
+@import 'Controls/StyleDots/index.less';
+@import './Controls/index.less';
+
+
+.stylepage-slider {
+
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: @break-point-xl) {
+        width: 1248px;
+        max-height: 704px;
+    }
+    @media (max-width: @break-point-xl) {
+        width: 888px;
+        max-height: 496px;
+    }
+    @media (max-width: @break-point-lg) {
+        width: 672px;
+        max-height: 376px;
+    }
+    @media (max-width: @break-point-md) {
+        width: 680px;
+        max-height: 384px;
+    }
+    @media (max-width: @break-point-sm) {
+        width: 328px;
+        max-height: 184px;
+    }
+
+}
+
+.stylepage-slider__slide {
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    background-color: white;
+
+    & > .preloader-wrap {
+        width: 100%;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+
+}
+
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    width: inherit;
+    height: inherit;
+}
+
+.swiper-container-vertical > .swiper-wrapper {
+    flex-direction: column;
+}
+
+.stylepage-slider__caption {
+
+    position: relative;
+    top: -1px;
+    color: @black_5;
+
+    @media (min-width: @break-point-xl) {
+        margin-top: @padding-orange_1920;
+        top: -1px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-top: @padding-orange_1366;
+        top: -1px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-top: @padding-orange_1024;
+        top: -1px;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-top: @padding-yellow_375;
+        top: 0px;
+    }
+}

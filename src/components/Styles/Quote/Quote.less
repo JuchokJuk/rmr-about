@@ -1,0 +1,108 @@
+@import '~@styles/variables.less';
+
+@import './Download/Download.less';
+
+.quote {
+    border-left: 4px solid @red;
+    display: block;
+    flex-direction: row;
+
+    @media (min-width: @break-point-xl) {
+        padding-left: 64px;
+    }
+    
+    @media (max-width: @break-point-xl) {
+        padding-left: 48px;
+    }
+    
+    @media (max-width: @break-point-lg) {
+        padding-left: 24px;
+        border-left: 3px solid @red;
+    }
+
+    @media (max-width: @break-point-md) {
+        padding-left: 24px;
+        border-left: 2px solid @red;
+    }
+    
+    @media (max-width: @break-point-sm) {
+        padding-left: 24px;
+        border-left: 2px solid @red;
+    }
+
+    .quote__title {
+        padding: 0px;
+        margin: 0px;
+        position: relative;
+
+
+        @media (min-width: @break-point-xl) {
+            font-size: 44px;
+            line-height: 52px;
+            letter-spacing: -0.02em;
+            top: -1px;
+        }
+        
+        @media (max-width: @break-point-xl) {
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.02em;
+            top: 0px;
+        }
+        
+        @media (max-width: @break-point-lg) {
+            font-size: 28px;
+            line-height: 36px;
+            letter-spacing: -0.02em;
+        }
+
+        @media (max-width: @break-point-md) {
+            font-size: 26px;
+            line-height: 32px;
+            letter-spacing: unset;
+
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 26px;
+            line-height: 32px;
+        }
+    }
+
+    .quote__content {
+        word-break: break-word;
+        @media (min-width: @break-point-xl) {
+            margin: @padding-yellow_1920 0px;
+        }
+        
+        @media (max-width: @break-point-xl) {
+            margin: @padding-orange_1366 0px;
+        }
+        
+        @media (max-width: @break-point-lg) {
+            margin: @padding-yellow_1024 0px;
+        }
+
+        @media (max-width: @break-point-md) {
+            margin: @padding-yellow_375 0px;
+        }     
+    }
+
+    .quote__author {
+        @media (min-width: @break-point-xl) {
+            padding-bottom: 16px;
+        }
+        
+        @media (max-width: @break-point-xl) {
+            padding-bottom: 0px;
+        }   
+
+    }
+
+    .quote__field:first-child {
+        margin-top: 0px;
+    }
+
+    .quote__field:last-child {
+        margin-bottom: 0px;
+    }
+}

@@ -1,0 +1,167 @@
+@import "~@styles/variables.less";
+.awards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &__content {
+        @media (min-width: @break-point-xl) {
+            margin-bottom: 292px;
+        }
+        @media (max-width: @break-point-xl) {
+            max-width: 1086px;
+            margin-bottom: 194px;
+        }
+        @media (max-width: @break-point-lg) {
+            max-width: 824px;
+            margin-bottom: 71px;
+        }
+        @media (max-width: @break-point-md) {
+            max-width: 648px;
+            margin-bottom: 122px;
+        }
+        @media (max-width: @break-point-sm) {
+            max-width: 328px;
+            margin-bottom: 93px;
+        }
+    }
+    &__name {
+        color: @white;
+        letter-spacing: -0.02em;
+        &--red {
+            font-family: "CoFo Pixel";
+            color: @red;
+        }
+        @media (min-width: @break-point-xl) {
+            font-size: 100px;
+            line-height: 100px;
+            margin-bottom: 114px;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 72px;
+            line-height: 76px;
+            margin-bottom: 81px;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 60px;
+            line-height: 60px;
+            margin-bottom: 60px;
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 48px;
+            line-height: 48px;
+            margin-bottom: 62px;
+            letter-spacing: -0.009em;
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 32px;
+            line-height: 36px;
+            margin-bottom: 38px;
+            letter-spacing: -0.02em;
+        }
+    }
+    &__wrapper {
+        display: grid;
+        @media (min-width: @break-point-xl) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 80px 30px;
+            margin-bottom: 80px;
+        }
+        @media (max-width: @break-point-xl) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 47px 17px;
+            margin-bottom: 86px;
+        }
+        @media (max-width: @break-point-lg) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px 20px;
+            margin-bottom: 40px;
+        }
+        @media (max-width: @break-point-md) {
+        }
+        @media (max-width: @break-point-sm) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 29px 0;
+            margin-bottom: 29px;
+        }
+    }
+    .awards-card {
+        &__name {
+            color: @white;
+        }
+        @media (min-width: @break-point-xl) {
+            font-size: 36px;
+            line-height: 44px;
+            letter-spacing: -0.001em;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 28px;
+            line-height: 32px;
+            letter-spacing: -0.01em;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: -0.001em;
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: -0.001em;
+        }
+        @media (max-width: @break-point-sm) {
+        }
+        &__caption {
+            color: @black_5;
+            @media (min-width: @break-point-xl) {
+                font-size: 24px;
+                line-height: 32px;
+                margin: 24px 0 0 0;
+                letter-spacing: -0.001em;
+            }
+            @media (max-width: @break-point-xl) {
+                font-size: 18px;
+                line-height: 28px;
+                margin: 21px 0 0 0;
+                letter-spacing: -0.001em;
+            }
+            @media (max-width: @break-point-lg) {
+                font-size: 16px;
+                line-height: 20px;
+                margin: 12px 0 0 0;
+            }
+            @media (max-width: @break-point-md) {
+            }
+            @media (max-width: @break-point-sm) {
+                margin: 3px 0 0 0;
+            }
+        }
+    }
+    &__extra {
+        color: @white;
+        @media (min-width: @break-point-xl) {
+            font-size: 36px;
+            line-height: 44px;
+            letter-spacing: -0.001em;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 28px;
+            line-height: 32px;
+            letter-spacing: -0.01em;
+        }
+        @media (max-width: @break-point-lg) {
+            letter-spacing: -0.001em;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        @media (max-width: @break-point-md) {
+            letter-spacing: -0.001em;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        @media (max-width: @break-point-sm) {
+            letter-spacing: -0.001em;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}

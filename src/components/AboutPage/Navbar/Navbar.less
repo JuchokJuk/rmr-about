@@ -1,0 +1,269 @@
+@import "~@styles/variables.less";
+
+.navbar {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    border-left: 1px solid @white;
+    background: @black;
+    z-index: 11;
+    transition: right 0.5s;
+    
+    // overflow: hidden;
+
+    @media (min-width: @break-point-xl) {
+        width: 569px;
+        right: -569px;
+        /* height: calc(100vh - 80px); */
+        top: 81px;
+        padding: 66px 0 0 56px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        width: 308px;
+        right: -308px;
+        top: 80px;
+        padding: 44px 0 0 32px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        width: 291px;
+        right: -291px;
+        /* max-height: calc(100vh - 69px);
+        height: 100%; */
+        top: 69px;
+        padding: 32px 0 0 32px;
+    }
+
+    @media (max-width: @break-point-md) {
+        width: 291px;
+        right: -291px;
+        /* max-height: calc(100vh - 73px);
+        height: 100%; */
+        top: 73px;
+        padding: 32px 0 0 24px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        width: 351px;
+        right: -351px;
+        /*   max-height: calc(100vh - 61px);
+        height: 100%; */
+        top: 61px;
+        padding: 20.44px 0 0 24px;
+    }
+
+    &__btn-placer {
+        @media (min-width: @break-point-xl) {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 56px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            width: 52px;
+            height: 52px;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            width: 48px;
+            height: 48px;
+        }
+
+        @media (max-width: @break-point-md) {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 27px;
+        }
+
+        @media (max-width: @break-point-md) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__btn-container {
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
+        mask-image: radial-gradient(white,black);
+        border-radius: 50%;
+        background: @black;
+        position: fixed;
+        transition: right 0.5s;
+
+        right: 200px;
+
+        @media (max-width: @break-point-xl) {
+            right: 60px;
+        }
+
+        @media (max-width: @break-point-md) {
+            right: 28px;
+        }
+
+        @media (max-width: @break-point-sm) {
+            right: 23px;
+        }
+
+        @media (min-width: @break-point-xl) {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 56px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            width: 52px;
+            height: 52px;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            width: 48px;
+            height: 48px;
+        }
+
+        @media (max-width: @break-point-md) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__btn {
+        transform: translate3d(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width: @break-point-xl) {
+            width: 64px;
+            height: 64px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            width: 52px;
+            height: 52px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            width: 48px;
+            height: 48px;
+        }
+
+        @media (max-width: @break-point-md) {
+            width: 40px;
+            height: 40px;
+        }
+
+        border-radius: 50%;
+        border: 1px solid @white;
+        cursor: pointer;
+        fill: white;
+
+        transition: fill 0.2s ease-in-out,
+        border-color 0.2s ease-in-out;
+
+        svg {
+            margin-right: 2px;
+            transform: rotateY(180deg);
+            transition: transform 0.5s ease, margin 0.5s ease;
+            width: 50px;
+            height: 50px;
+
+            @media (max-width: @break-point-xl) {
+                width: 40px;
+                height: 40px;
+            }
+
+            @media (max-width: @break-point-md) {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        &{#hover({
+            mix-blend-mode: difference;
+            fill: red;
+            border-color: red;});
+        }
+    }
+
+    &--active {
+        right: 0%;
+
+        .navbar__btn-container {
+            right: 185px;
+
+            @media (min-width: @break-point-xl) {
+                right: 449px;
+            }
+
+            @media (max-width: @break-point-xl) {
+                right: 222px;
+            }
+
+            @media (max-width: @break-point-lg) {
+                right: 210px;
+            }
+
+            @media (max-width: @break-point-md) {
+                right: 226px;
+            }
+
+            @media (max-width: @break-point-sm) {
+                right: 286px;
+            }
+
+            svg {
+                margin-right: -2px;
+                transform: rotateY(0deg);
+            }
+        }
+    }
+
+    .panel {
+        &__item {
+            color: @white;
+            cursor: pointer;
+            transition: color 0.2s;
+
+            &{#hover({
+                color: @red;
+                mix-blend-mode: difference;});
+            }
+
+            @media (min-width: @break-point-xl) {
+                font-size: 24px;
+                line-height: 32px;
+                margin-bottom: 32px;
+            }
+
+            @media (max-width: @break-point-xl) {
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 24px;
+            }
+
+            @media (max-width: @break-point-lg) {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 16px;
+            }
+
+            @media (max-width: @break-point-md) {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 24px;
+            }
+
+            @media (max-width: @break-point-sm) {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 16px;
+            }
+
+            &--active {
+                color: @red;
+                mix-blend-mode: difference;
+            }
+        }
+    }
+}

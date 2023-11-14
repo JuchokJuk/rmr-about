@@ -1,0 +1,54 @@
+@import '~@styles/variables.less';
+
+
+.card-slider-dots__dot:first-child {
+    margin-left: 0px;
+}
+
+.card-slider-dots__dot:last-child {
+    margin-right: 0px;
+}
+
+.card-slider-dots__dot {
+    width: 8px;
+    height: 8px;
+    border: 1px solid @white;
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: transparent;
+    .noHighlight();
+
+
+    //
+    @media (min-width: @break-point-xl) {
+        margin: 0px 12px 0px 0px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin: 0px 12px 0px 0px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin: 0px 12px 0px 0px;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin: 0px 6px 0px 0px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        margin: 0px 6px 0px 0px;
+    }
+}
+
+
+.card-slider-dots__dot{#hover({
+    border: 1px solid @white;});
+}
+
+.card-slider-dots__dot_active {
+    background-color: @white;
+    border: 1px solid @white;
+}
+

@@ -1,0 +1,33 @@
+@import '~@styles/variables.less';
+
+.contactBlock {
+  z-index: 1;
+  @media (min-width: @break-point-xl) {
+    width: 576px;
+  }
+
+  @media (max-width: @break-point-xl) {
+    width: 408px;
+  }
+  @media (max-width: @break-point-lg) {
+    width: 313px;
+  }
+
+  @media (max-width: @break-point-md) {
+    width: 327px;
+  }
+
+  @media (max-width: @break-point-sm) {
+    width: 100%;
+  }
+
+  &__contact {
+    margin-bottom: 8px;
+    transition: color .3s ease-in;
+
+    &{#hover({
+      color: @gray;});
+    }
+  }
+
+}

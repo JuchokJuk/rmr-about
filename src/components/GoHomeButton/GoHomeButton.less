@@ -1,0 +1,93 @@
+@import '~@styles/variables.less';
+
+.go-home {
+    cursor: pointer;
+    color: @gray;
+    transition: color 0.2s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    @media (min-width: @break-point-xl) {
+        margin-bottom: @padding-violet_1920;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-bottom: @padding-violet_1366;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-bottom: @padding-violet_1024;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-bottom: @padding-green_375;
+    }
+
+    &__arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: @break-point-xl) {
+            height: 40px;
+            width: 40px;
+            margin-right: @padding-red_1920;
+        }
+
+        @media (max-width: @break-point-xl) {
+            height: 32px;
+            width: 32px;
+            margin-right: @padding-red_1366;
+        }
+
+        @media (max-width: @break-point-lg) {
+            height: 28px;
+            width: 28px;
+            margin-right: @padding-red_1024;
+        }
+
+        @media (max-width: @break-point-md) {
+            height: 32px;
+            width: 32px;
+            margin-right: @padding-red_375;
+        }
+
+        svg {
+            path {
+                fill: @gray;
+                transition: fill 0.2s ease-in;
+            }
+
+            @media (min-width: @break-point-xl) {
+                transform: scale(1.25);
+            }
+
+            @media (max-width: @break-point-xl) {
+                transform: scale(1);
+            }
+
+            @media (max-width: @break-point-lg) {
+                transform: scale(0.875);
+            }
+
+            @media (max-width: @break-point-md) {
+                transform: scale(1);
+            }
+        }
+    }
+
+    &{#hover({
+        color: @red;
+
+        svg path {
+            fill: @red;
+        }});
+    }
+
+    &--no-margin {
+        padding: 0;
+        margin: 0;
+    }
+}

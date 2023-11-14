@@ -1,0 +1,79 @@
+@import '~@styles/variables.less';
+
+
+.case-slide__content {
+    position: absolute;
+
+    @media (min-width: @break-point-xl) {
+        width: 337px;
+        height: 464px;
+        top: 48px;
+        left: 48px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        width: 244px;
+        height: 352px;
+        top: 24px;
+        left: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        width: 192px;
+        height: 320px;
+        top: 24px;
+        left: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        width: 305px;
+        height: 392px;
+        top: 24px;
+        left: 24px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        width: 280px;
+        height: auto;
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+}
+
+
+.case-slide__logo {
+    width: 30%;
+
+    @media (min-width: @break-point-xl) {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-bottom: 32px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        margin-bottom: 16px;
+    }
+
+    span {
+        width: 100%;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+.case-slide__logo-width-locker {
+    max-width: 300px;
+}

@@ -1,0 +1,92 @@
+@import "~@styles/variables.less";
+
+.field-check {
+    display: flex;
+    &__input {
+        min-width: 20px;
+        height: 20px;
+        border: 2px solid @white;
+        margin: 0;
+        cursor: pointer;
+        transition: border-color ease-in 0.2s;
+        position: relative;
+        &:hover {
+            border-color: @red;
+        }
+        &::after {
+            opacity: 0;
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: url("/images/Input/newCheck.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.2s;
+        }
+
+        &:checked::after {
+            opacity: 1;
+            transition: all 0.2s;
+        }
+        &:checked {
+            border-color: @red;
+        }
+        @media (min-width: @break-point-xl) {
+            margin: 8px 16px 0 0;
+        }
+        @media (max-width: @break-point-xl) {
+            margin: 4px 16px 0 0;
+        }
+        @media (max-width: @break-point-lg) {
+            margin: 4px 12px 0 0;
+        }
+        @media (max-width: @break-point-md) {
+            margin: 4px 12px 0 0;
+        }
+        @media (max-width: @break-point-sm) {
+            margin: 0px 16px 0 0;
+        }
+    }
+    &__label {
+        @media (min-width: @break-point-xl) {
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        @media (max-width: @break-point-xl) {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        @media (max-width: @break-point-lg) {
+            margin-top: 3px;
+            margin-bottom: 1px;
+        }
+        @media (max-width: @break-point-md) {
+            margin-top: 3px;
+            margin-bottom: 1px;
+        }
+        @media (max-width: @break-point-sm) {
+            margin-top: 1px;
+            margin-bottom: 3px;
+        }
+        color: @white;
+        &--link {
+            color: @white;
+
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-thickness: 1px;
+            transition: color ease-in 0.3s;
+            text-decoration-skip-ink: none;
+            text-decoration-skip: none;
+
+            transition: color ease-in 0.3s;
+
+            &:hover {
+                color: @red;
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+@import "@styles/variables.less";
+
+.year-text {
+    color: @white;
+    display: flex;
+    justify-content: space-between;
+    &__title {
+        @media (min-width: @break-point-xl) {
+            font-size: 24px;
+            line-height: 36px;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 16px;
+        }
+    }
+    &__description {
+        @media (min-width: @break-point-xl) {
+            max-width: 1099px;
+        }
+        @media (max-width: @break-point-xl) {
+            max-width: 719px;
+        }
+        @media (max-width: @break-point-lg) {
+            max-width: 542px;
+        }
+        @media (max-width: @break-point-md) {
+            max-width: 425px;
+        }
+        @media (max-width: @break-point-sm) {
+            max-width: 100%;
+        }
+    }
+    &__paragraph {
+        @media (min-width: @break-point-xl) {
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: 12px;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 12px;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 8px;
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 12px;
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 8px;
+        }
+    }
+    @media (min-width: @break-point-xl) {
+        padding-top: 34px;
+    }
+    @media (max-width: @break-point-xl) {
+        padding-top: 24px;
+    }
+    @media (max-width: @break-point-lg) {
+        padding-top: 19px;
+    }
+    @media (max-width: @break-point-md) {
+        padding-top: 15px;
+    }
+    @media (max-width: @break-point-sm) {
+        padding-top: 20px;
+        flex-direction: column;
+    }
+}

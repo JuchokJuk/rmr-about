@@ -1,0 +1,137 @@
+@import '~@styles/variables.less';
+
+.errorPage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (min-width: @break-point-xl) {
+        margin-top: 160px;
+        margin-bottom: 256px;
+        height: 160px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-top: 134px;
+        margin-bottom: 202px;
+        height: 128px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-top: 105px;
+        margin-bottom: 151px;
+        height: 104px;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-top: 172px;
+        margin-bottom: 275px;
+        height: 80px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        margin-top: 120px;
+        margin-bottom: 181px;
+        height: 112px;
+    }
+
+    &__title {
+        z-index: 1;
+        font-family: "CoFo Pixel";
+        @media (min-width: @break-point-xl) {
+            font-size: 88px;
+            line-height: 96px;
+            letter-spacing: -0.02em;
+        }
+
+        @media (max-width: @break-point-xl) {
+            font-size: 66px;
+            line-height: 72px;
+            letter-spacing: -0.02em;
+        }
+
+        @media (max-width: @break-point-lg) {
+            font-size: 50px;
+            line-height: 56px;
+            letter-spacing: normal;
+        }
+
+        @media (max-width: @break-point-md) {
+            font-size: 36px;
+            line-height: 40px;
+        }
+    }
+
+    &__text {
+        z-index: 1;
+        @media (min-width: @break-point-xl) {
+            font-size: 32px;
+            line-height: 48px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            font-size: 28px;
+            line-height: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        @media (max-width: @break-point-lg) {
+            font-size: 22px;
+            line-height: 32px;
+            letter-spacing: normal;
+        }
+
+        @media (max-width: @break-point-md) {
+            font-size: 18px;
+            line-height: 32px;
+        }
+
+        a {
+            color: @red;
+            border-bottom: 1px solid @red;
+        }
+
+        &__click {
+            cursor: pointer;
+            transition: color .3s ease-in;
+            &{#hover({
+                color: @red;});
+            }
+        }
+    }
+
+    &__face {
+        z-index: 0;
+        position: absolute;
+
+        @media (min-width: @break-point-xl) {
+            transform: scale(1.5);
+            bottom: -39px;
+            left: 200px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            transform: scale(1.5);
+            bottom: -45px;
+            left: 100px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            transform: scale(1);
+            bottom: -35px;
+            left: 103px;
+        }
+
+        @media (max-width: @break-point-md) {
+            transform: scale(0.875);
+            bottom: -35px;
+            left: 78px;
+        }
+
+        @media (max-width: @break-point-sm) {
+            bottom: -3px;
+            right: 75px;
+            left: unset;
+        }
+    }
+}

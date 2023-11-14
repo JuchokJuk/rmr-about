@@ -1,0 +1,53 @@
+@import '~@styles/variables.less';
+
+.wide-separator {
+    height: 1px;
+    background-color: #CCCCCC;
+
+    @media (min-width: @break-point-xl) {
+        margin-top: @padding-pink_1920;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-top: @padding-pink_1366;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-top: @padding-pink_1024;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-top: @padding-violet_375;
+    }
+}
+
+.wide-separator_header {
+    @media (min-width: @break-point-xl) {
+        margin-bottom: @padding-violet_1920;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-bottom: @padding-violet_1366;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-bottom: @padding-violet_1024;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-bottom: @padding-violet_375;
+    }
+}
+
+.true-separator {
+    @media (max-width: @break-point-sm) {
+        height: 1px;
+        background-color: @gray_4;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+}

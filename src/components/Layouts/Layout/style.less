@@ -1,0 +1,30 @@
+@import "~@styles/variables.less";
+
+.width-control-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .width-control {
+        width: 1664px;
+        @media (max-width: @break-point-xl) {
+            width: 1086px;
+        }
+        @media (max-width: @break-point-lg) {
+            width: 824px;
+        }
+        @media (max-width: @break-point-md) {
+            width: 648px;
+        }
+        @media (max-width: @break-point-sm) {
+            width: 328px;
+        }
+    }
+}
+.vertical-centered {
+    height: 100%;
+    .width-control {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}

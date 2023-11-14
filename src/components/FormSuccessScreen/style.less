@@ -1,0 +1,164 @@
+@import "~@styles/variables.less";
+
+.form-success-screen {
+    color: white;
+    background: @blue;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: @break-point-xl) {
+        padding: 112px 140px;
+        height: 644px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        padding: 80px 92px;
+        height: 520px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        padding: 64px 70px;
+        height: 440px;
+    }
+
+    @media (max-width: @break-point-md) {
+        padding: 64px 56px;
+        height: 456px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        padding: 24px;
+        height: 456px;
+    }
+
+    .white-icon {
+        fill: @white;
+        transition: fill 0.4s ease;
+        #hover({
+            fill: @red;
+        })
+    }
+
+    &__footer {
+        &__thanks {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            @media (min-width: @break-point-xl) {
+                margin-bottom: @padding-orange_1920;
+            }
+
+            @media (max-width: @break-point-xl) {
+                margin-bottom: @padding-orange_1366;
+            }
+
+            @media (max-width: @break-point-lg) {
+                margin-bottom: @padding-orange_1024;
+            }
+
+            @media (max-width: @break-point-md) {
+                margin-bottom: @padding-orange_375;
+            }
+
+            @media (max-width: @break-point-sm) {
+                margin-bottom: @padding-orange_375;
+            }
+
+            &__text-wrapper {
+                @media (min-width: @break-point-xl) {
+                    padding-top: 3px;
+                    padding-bottom: 1px;
+                }
+
+                @media (max-width: @break-point-xl) {
+                    padding-top: 3px;
+                    padding-bottom: 1px;
+                }
+
+                @media (max-width: @break-point-lg) {
+                    padding-top: 3px;
+                    padding-bottom: 1px;
+                }
+
+                @media (max-width: @break-point-md) {
+                    padding-top: 5px;
+                    padding-bottom: 3px;
+                }
+
+                @media (max-width: @break-point-sm) {
+                    padding-top: 2px;
+                    padding-bottom: 0px;
+                }
+            }
+
+            &__icon {
+                fill: @red;
+
+                @media (min-width: @break-point-xl) {
+                    margin-left: 8px;
+
+                    width: 40px;
+                    height: 40px;
+                }
+
+                @media (max-width: @break-point-xl) {
+                    margin-left: 8px;
+
+                    width: 32px;
+                    height: 32px;
+                }
+
+                @media (max-width: @break-point-lg) {
+                    margin-left: 8px;
+
+                    width: 28px;
+                    height: 28px;
+                }
+
+                @media (max-width: @break-point-md) {
+                    margin-left: 8px;
+
+                    width: 28px;
+                    height: 28px;
+                }
+
+                @media (max-width: @break-point-sm) {
+                    margin-left: 4px;
+
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+        &__message-wrapper{
+            @media (min-width: @break-point-xl) {
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
+
+            @media (max-width: @break-point-xl) {
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+
+            @media (max-width: @break-point-lg) {
+                padding-top: 3px;
+                padding-bottom: 1px;
+            }
+
+            @media (max-width: @break-point-md) {
+                padding-top: 3px;
+                padding-bottom: 1px;
+            }
+
+            @media (max-width: @break-point-sm) {
+                padding-top: 1px;
+                padding-bottom: 3px;
+            }
+        }
+    }
+}

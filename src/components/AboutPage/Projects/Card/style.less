@@ -1,0 +1,146 @@
+@import "~@styles/variables.less";
+.card-carousel {
+    position: relative;
+    &__img {
+        @media (min-width: @break-point-xl) {
+            width: 533px;
+            height: 439px;
+        }
+        @media (max-width: @break-point-xl) {
+            width: 443px;
+            height: 364px;
+        }
+        @media (max-width: @break-point-lg) {
+            width: 332px;
+            height: 273px;
+        }
+        @media (max-width: @break-point-md) {
+            width: 314px;
+            height: 260px;
+        }
+        @media (max-width: @break-point-sm) {
+            width: 328px;
+            height: 267px;
+        }
+    }
+    .directions {
+        display: flex;
+        flex-wrap: wrap;
+        &__text {
+            color: @black_5;
+            position: relative;
+            display: flex;
+            align-items: center;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background: @black_5;
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+            @media (min-width: @break-point-xl) {
+                font-size: 24px;
+                line-height: 32px;
+                margin-right: 29px;
+                &::after {
+                    right: -15px;
+                }
+            }
+            @media (max-width: @break-point-xl) {
+                font-size: 18px;
+                line-height: 24px;
+                margin-right: 28px;
+                &::after {
+                    right: -16px;
+                }
+            }
+            @media (max-width: @break-point-lg) {
+                font-size: 16px;
+                line-height: 20px;
+                margin-right: 21px;
+                &::after {
+                    width: 4px;
+                    height: 4px;
+                    right: -13px;
+                }
+                margin-bottom: 4px;
+            }
+            @media (max-width: @break-point-md) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    &__name {
+        color: @white;
+        transition: color 0.2s ease-in;
+        @media (min-width: @break-point-xl) {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 16px;
+            letter-spacing: -0.002em;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 12px;
+            letter-spacing: -0.001em;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 11px;
+            letter-spacing: -0.001em;
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 12px;
+        }
+    }
+    &__description {
+        color: @white;
+        transition: color 0.2s ease-in;
+        .SH3();
+        @media (min-width: @break-point-xl) {
+            margin: 26px 0 18px 0;
+        }
+        @media (max-width: @break-point-xl) {
+            margin: 20px 0 12px 0;
+            letter-spacing: -0.01em;
+        }
+        @media (max-width: @break-point-lg) {
+            margin: 13px 0 11px 0;
+            letter-spacing: -0.001em;
+        }
+        @media (max-width: @break-point-md) {
+            margin: 17px 0 12px 0;
+        }
+    }
+    @media (min-width: @break-point-xl) {
+        width: 543px;
+        margin-left: 32px;
+    }
+    @media (max-width: @break-point-xl) {
+        width: 443px;
+        margin-left: 16px;
+    }
+    @media (max-width: @break-point-lg) {
+        width: 332px;
+        margin-left: 20px;
+    }
+    @media (max-width: @break-point-md) {
+        width: 314px;
+        margin-left: 20px;
+    }
+    @media (max-width: @break-point-sm) {
+        width: 328px;
+        margin-left: 24px;
+    }
+}

@@ -1,0 +1,30 @@
+version: "3.7"
+
+
+
+services:
+  &service $CI_PROJECT_NAME:
+    image: $CI_REGISTRY_IMAGE:$CI_ENVIRONMENT_NAME
+    hostname: *service
+    env_file:
+      - tmp_artf/.env
+    command: /scripts/run-node-cluster.sh
+    ports:
+      - 3000:3000
+    deploy:
+      placement:
+        constraints: [node.labels.app == $CI_PROJECT_NAMESPACE]
+      replicas: $SWARM_INSTANCE_COUNT
+      restart_policy:
+        condition: any
+      update_config:
+        parallelism: 1
+        order: start-first
+        failure_action: rollback
+        delay: 30s
+    logging:
+      options:
+        max-size: '10m'
+        max-file: '1'
+
+

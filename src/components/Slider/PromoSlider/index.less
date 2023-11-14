@@ -1,0 +1,82 @@
+@import '~@styles/variables.less';
+@import 'ControlBlock/index.less';
+@import 'ControlBlock/PromoArrows/index.less';
+@import 'ControlBlock/PromoContent/index.less';
+@import 'ControlBlock/PromoDots/index.less';
+
+
+.promoslider {
+    margin: 0 auto;
+    position: relative;
+
+    @media (min-width: @break-point-xl) {
+        width: 1248px;
+    }
+    @media (max-width: @break-point-xl) {
+        width: 888px;
+    }
+    @media (max-width: @break-point-lg) {
+        width: 672px;
+    }
+    @media (max-width: @break-point-md) {
+        width: 680px;
+    }
+    @media (max-width: @break-point-sm) {
+        width: 328px;
+    }
+}
+
+.p-slider__slide {
+    & > .preloader-wrap {
+        width: 100%;
+        display: block;
+    }
+    background: @white;
+    cursor: pointer;
+}
+
+.p-block-slider {
+
+    position: relative;
+
+    ///
+    @media (min-width: @break-point-xl) {
+        width: 1248px;
+        height: 624px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        width: 888px;
+        height: 448px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        width: 672px;
+        height: 336px;
+    }
+
+    @media (max-width: @break-point-md) {
+        width: 680px;
+        height: 344px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        width: 328px;
+        height: 176px;
+    }
+}
+
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    width: inherit;
+    height: inherit;
+}
+
+.swiper-container-vertical > .swiper-wrapper {
+    flex-direction: column;
+}

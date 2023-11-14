@@ -1,0 +1,167 @@
+@import "~@styles/variables.less";
+.task-form__divider {
+    width: 100%;
+    height: 1px;
+    background: @white;
+}
+.task-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__content {
+        width: 100%;
+        @media (min-width: @break-point-xl) {
+            max-width: 1098px;
+        }
+        @media (max-width: @break-point-xl) {
+            max-width: 718px;
+        }
+        @media (max-width: @break-point-lg) {
+            max-width: 543px;
+        }
+        @media (max-width: @break-point-md) {
+            max-width: 426px;
+        }
+        @media (max-width: @break-point-sm) {
+            max-width: 328px;
+        }
+    }
+
+    &__name {
+        color: @white;
+        letter-spacing: -0.02em;
+
+        @media (min-width: @break-point-xl) {
+            font-size: 60px;
+            line-height: 72px;
+            margin-bottom: 40px;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 44px;
+            line-height: 52px;
+            margin-bottom: 45px;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 13px;
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 26px;
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 30px;
+            line-height: 36px;
+            margin-bottom: 12px;
+            letter-spacing: -0.001em;
+        }
+    }
+
+    &__field {
+        @media (min-width: @break-point-xl) {
+            margin-bottom: 32px;
+        }
+        @media (max-width: @break-point-xl) {
+            margin-bottom: 36px;
+        }
+        @media (max-width: @break-point-lg) {
+            margin-bottom: 12px;
+        }
+        @media (max-width: @break-point-md) {
+            margin-bottom: 24px;
+        }
+        @media (max-width: @break-point-sm) {
+            margin-bottom: 16px;
+        }
+    }
+    &__fileDrop {
+        @media (min-width: @break-point-xl) {
+            margin-bottom: 32px;
+        }
+        @media (max-width: @break-point-xl) {
+            margin-bottom: 36px;
+        }
+        @media (max-width: @break-point-lg) {
+            margin: 16px 0 12px 0;
+        }
+        @media (max-width: @break-point-md) {
+            margin: 0 0 24px 0;
+        }
+        @media (max-width: @break-point-sm) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__phone {
+        @media (min-width: @break-point-xl) {
+            margin-bottom: 5px;
+        }
+        @media (max-width: @break-point-xl) {
+            margin-bottom: 12px;
+        }
+        @media (max-width: @break-point-lg) {
+            margin-bottom: 5px;
+        }
+        @media (max-width: @break-point-md) {
+            margin-bottom: 4px;
+        }
+        @media (max-width: @break-point-md) {
+            margin-bottom: 4px;
+        }
+    }
+
+    &__privacy {
+        @media (min-width: @break-point-xl) {
+            margin: 44px 0 16px 0;
+        }
+        @media (max-width: @break-point-xl) {
+            margin: 44px 0 16px 0;
+        }
+        @media (max-width: @break-point-lg) {
+            margin: 36px 0 16px 0;
+        }
+        @media (max-width: @break-point-md) {
+            margin: 32px 0 16px 0;
+        }
+        @media (max-width: @break-point-sm) {
+            margin: 29px 0 16px 0;
+        }
+    }
+    &__news {
+        @media (min-width: @break-point-xl) {
+            margin: 0 0 44px 0;
+        }
+        @media (max-width: @break-point-xl) {
+            margin: 0 0 44px 0;
+        }
+        @media (max-width: @break-point-lg) {
+            margin: 0 0 20px 0;
+        }
+        @media (max-width: @break-point-md) {
+            margin: 0 0 28px 0;
+        }
+    }
+
+    /*  .checkbox .checkbox__marker-icon--svg {
+        background-color: @black;
+    } */
+
+    @media (min-width: @break-point-xl) {
+        margin: 139px 0 135px 0;
+    }
+    @media (max-width: @break-point-xl) {
+        margin: 142px 0 139px 0;
+    }
+    @media (max-width: @break-point-lg) {
+        margin: 65px 0 62px 0;
+    }
+    @media (max-width: @break-point-md) {
+        margin: 76px 0 77px 0;
+    }
+    @media (max-width: @break-point-sm) {
+        margin: 75px 0 77px 0;
+    }
+}

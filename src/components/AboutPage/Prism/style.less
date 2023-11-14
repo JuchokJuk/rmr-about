@@ -1,0 +1,174 @@
+@import "~@styles/variables.less";
+.prism {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &__content {
+        @media (min-width: @break-point-xl) {
+            margin: 185px 0 130px 0;
+        }
+        @media (max-width: @break-point-xl) {
+            margin: 95px 0 112px 0;
+            max-width: 1086px;
+        }
+        @media (max-width: @break-point-lg) {
+            margin: 99px 0 55px 0;
+            max-width: 824px;
+        }
+        @media (max-width: @break-point-md) {
+            margin: 87px 0 69px 0;
+            max-width: 648px;
+        }
+        @media (max-width: @break-point-sm) {
+            margin: 58px 0 55px 0;
+            max-width: 328px;
+        }
+    }
+    &__name {
+        color: @white;
+        letter-spacing: -0.02em;
+        @media (min-width: @break-point-xl) {
+            font-size: 100px;
+            line-height: 100px;
+            margin-bottom: 83px;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 72px;
+            line-height: 76px;
+            margin-bottom: 64px;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 60px;
+            line-height: 60px;
+            margin-bottom: 58px;
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 48px;
+            line-height: 48px;
+            margin-bottom: 39px;
+            letter-spacing: -0.002em;
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 32px;
+            line-height: 36px;
+            margin-bottom: 38px;
+            letter-spacing: -0.02em;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        @media (min-width: @break-point-xl) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 41px 33px;
+        }
+        @media (max-width: @break-point-xl) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px 18px;
+        }
+        @media (max-width: @break-point-lg) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px 20px;
+        }
+        @media (max-width: @break-point-md) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px 20px;
+        }
+        @media (max-width: @break-point-sm) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 34px 0;
+        }
+    }
+    &__nameCart {
+        color: @red;
+        letter-spacing: -0.002em;
+        display: flex;
+        &{#hover({
+            .prism__nameCart--arrow{
+                transform: translateX(6px);
+            }});
+        }
+        &--arrow {
+            transition: transform 0.2s ease;
+
+            @media (min-width: @break-point-xl) {
+                height: 36px;
+                width: 30px;
+                margin: 11px 0 0 17px;
+            }
+            @media (max-width: @break-point-xl) {
+                height: 27px;
+                width: 25px;
+                margin: 8px 0 0 12px;
+            }
+            @media (max-width: @break-point-lg) {
+                height: 20px;
+                width: 19px;
+                margin: 2px 0 0 11px;
+            }
+            @media (max-width: @break-point-md) {
+                height: 17px;
+                width: 16px;
+                margin: 3px 0 0 14px;
+            }
+            @media (max-width: @break-point-sm) {
+                height: 17px;
+                width: 16px;
+                margin: 3px 0 0 11px;
+            }
+        }
+        @media (min-width: @break-point-xl) {
+            font-size: 44px;
+            line-height: 52px;
+            letter-spacing: 2%;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.02em;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: -0.01em;
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 20px;
+            line-height: 22px;
+            letter-spacing: 0.01px;
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 20px;
+            line-height: 22px;
+            letter-spacing: -0.001em;
+        }
+    }
+    &__aboutCart {
+        color: @white;
+        @media (min-width: @break-point-xl) {
+            font-size: 24px;
+            line-height: 36px;
+            margin-top: 19px;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 18px;
+            line-height: 28px;
+            margin-top: 6px;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 7px;
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 14px;
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 16px;
+            line-height: 20px;
+            margin-top: 8px;
+        }
+    }
+}

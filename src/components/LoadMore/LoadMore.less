@@ -1,0 +1,81 @@
+@import '~@styles/variables.less';
+
+
+.load-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    .noHighlight();
+
+    transition: color .3s ease-in-out,
+    fill .3s ease-in-out;
+
+    span {
+        font-family: 'CoFo Pixel';
+
+        @media (min-width: @break-point-xl) {
+            font-size: 36px;
+            line-height: 60px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            font-size: 36px;
+            line-height: 60px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        
+        @media (max-width: @break-point-md) {
+            font-size: 26px;
+            line-height: 32px;
+        }
+    }
+
+    .loader-svg {
+        .noHighlight();
+        path {
+            fill: currentColor;
+        }
+        @media (min-width: @break-point-xl) {
+            margin-left: 14px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            margin-left: 14px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            margin-left: 8px;
+        }
+        
+        @media (max-width: @break-point-md) {
+            margin-left: 15px;
+        }
+
+        &.loading {
+            animation: spin 0.7s linear infinite;
+        }
+    }
+
+    &{#hover({
+        cursor: pointer;
+        color: @red;
+        svg path{
+            fill: currentColor;
+        }});
+    }
+}
+
+
+@keyframes spin 
+{ 
+    100% 
+    { 
+        transform: rotate(360deg); 
+        transform-origin: center center;
+    }
+}

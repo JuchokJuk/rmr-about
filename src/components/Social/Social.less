@@ -1,0 +1,124 @@
+@import '~@styles/variables.less';
+
+.social_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    .noHighlight();
+
+
+    @media (min-width: @break-point-xl) {
+        width: 180px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        width: 140px;
+        height: 25px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        width: 125px;
+    }
+
+    @media (max-width: @break-point-md) {
+        width: 160px;
+        height: 32px;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        
+        @media (min-width: @break-point-xl) {
+            width: 32px;
+            height: 32px;
+        }
+        
+        @media (max-width: @break-point-xl) {
+            width: auto;
+            height: 24px;
+        }
+        
+        @media (max-width: @break-point-md) {
+            width: 32px;
+            height: 32px;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .noHighlight();
+        }
+        
+        svg {
+            @media (max-width: @break-point-xl) {
+                transform: scale(0.75);
+            }
+
+            @media (max-width: @break-point-md) {
+                transform: none;
+            }
+        }
+
+        svg path {
+            transition: fill 0.2s ease-in;
+        }
+
+        &--fb {
+            &{#hover({
+                svg path {
+                    fill: #348BFB;
+                }});
+                
+            }
+        }
+
+        &--ig {
+            &{#hover({
+                svg path {
+                    fill: #E3447A;
+                }});
+                
+            }
+        }
+
+        &--tg {
+            &{#hover({
+                svg path {
+                    fill: #32A9E6;
+                }});
+                
+            }
+        }
+
+        &--in {
+            &{#hover({
+                svg path {
+                    fill: #1664BD;
+                }});
+                
+            }
+        }
+
+        &--be {
+            &{#hover({
+                svg path {
+                    fill: #105DFB
+                }});
+                
+            }
+        }
+
+        
+    }
+
+    &.vertical {
+        flex-direction: column;
+        height: 150px;
+        width: 32px;
+    }
+}

@@ -1,0 +1,26 @@
+@import '~@styles/variables.less';
+
+.stylepage-slider__dots {
+    display: flex;
+    position: relative;
+    //
+    @media (min-width: @break-point-xl) {
+        margin-left: 40px;
+    }
+    
+    @media (max-width: @break-point-xl) {
+        margin-left: 24px;
+    }
+    
+    @media (max-width: @break-point-lg) {
+        margin-left: 16px;
+    }
+    
+    @media (max-width: @break-point-md) {
+        margin-left: 0px;
+    }
+    
+    @media (max-width: @break-point-sm) {
+        margin-left: 0px;
+    }
+}

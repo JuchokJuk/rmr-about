@@ -1,0 +1,152 @@
+@import '~@styles/variables.less';
+@import 'LinkArrows/index.less';
+@import './ControlBlock/index.less';
+@import 'LinkDots/index.less';
+@import 'LinkDots/LinkDot/index.less';
+@import 'LinkHeading/index.less';
+@import './SlideContent/SlideContent.less';
+
+.card-slider__tag_white {
+    box-shadow: inset 0 0 0 1px @white;
+    color: @white;
+}
+
+.card-slider-field {
+    @media (min-width: @break-point-xl) {
+        margin-bottom: @padding-orange_1920;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-bottom: @padding-orange_1366;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-bottom: @padding-orange_1024;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-bottom: @padding-yellow_375;
+    }
+}
+
+.card-slider-wraper {
+    position: relative;
+    flex-direction: column;
+    flex-shrink: 0;
+    grid-column-end: span 2;
+    grid-row-end: span 20;
+
+    @media (min-width: @break-point-xl) {
+        width: 864px;
+        height: 560px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        width: 616px;
+        height: 408px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        width: 464px;
+        height: 360px;
+    }
+
+    @media (max-width: @break-point-md) {
+        width: 680px;
+        height: 392px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        width: 328px;
+        height: auto;
+    }
+}
+
+.card-slider {
+    margin: 0 auto;
+    position: relative;
+
+    //
+    @media (min-width: @break-point-xl) {
+        width: 864px;
+        height: 560px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        width: 616px;
+        height: 408px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        width: 464px;
+        height: 360px;
+    }
+
+    @media (max-width: @break-point-md) {
+        width: 680px;
+        height: 392px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        width: 328px;
+        height: auto;
+    }
+}
+
+.card-slider__slide {
+    display: flex;
+    background-size: cover;
+    box-sizing: border-box;
+    background-color: white;
+    position: relative;
+
+    @media (min-width: @break-point-xl) {
+        width: 864px;
+        height: 560px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        width: 616px;
+        height: 408px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        width: 464px;
+        height: 360px;
+    }
+
+    @media (max-width: @break-point-md) {
+        width: 680px;
+        height: 392px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        width: 328px;
+        height: auto;
+        padding: 24px;
+    }
+
+    .card-slider__place {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    width: inherit;
+    height: inherit;
+}
+
+.swiper-container-vertical > .swiper-wrapper {
+    flex-direction: column;
+}

@@ -1,0 +1,360 @@
+@import "~@styles/variables.less";
+
+// 1920+
+
+.share-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    box-sizing: border-box;
+    color: @black;
+    box-shadow: inset 0 0 0 3px @black;
+    transition: color 0.2s ease-in, box-shadow 0.2s ease-in;
+    cursor: pointer;
+
+    & {
+        #hover({
+        color: @red;
+        box-shadow: inset 0 0 0 3px @red;});
+    }
+
+    .BTN();
+
+    @media (min-width: @break-point-xl) {
+        padding: 20px 40px;
+        letter-spacing: 0.01em;
+    }
+    @media (max-width: @break-point-xl) {
+        padding: 14px 32px 18px 32px;
+    }
+    @media (max-width: @break-point-lg) {
+        padding: 13px 20px 11px 20px;
+    }
+
+    @media (max-width: @break-point-md) {
+        padding: 13px 20px 11px 20px;
+    }
+    @media (max-width: @break-point-sm) {
+        padding: 13px 32.5px 15px 32.5px;
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.tooltip {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 72px;
+    .tooltip__triangle {
+        margin-top: -1px;
+        * {
+            fill: @blue;
+        }
+    }
+}
+
+.tooltip_on-left {
+    align-items: flex-start;
+    left: 0;
+
+    .tooltip__triangle {
+        margin-left: 24px;
+        margin-top: -7px;
+        width: 33px;
+        height: 24px;
+    }
+}
+.tooltip_on-right {
+    align-items: flex-end;
+    right: 0;
+    .tooltip__triangle {
+        margin-right: 67px;
+    }
+}
+
+.tooltip__content {
+    display: flex;
+    padding: 20px 28px;
+    background: @blue;
+    color: @white;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    .noHighlight();
+}
+
+.social-item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    border: 1px solid @white;
+    border-radius: 50%;
+    transition: border-color 0.2s ease-in;
+    cursor: pointer;
+
+    svg {
+        fill: @white;
+        width: 25px;
+        height: 25px;
+        transition: fill 0.2s ease-in;
+    }
+    svg * {
+        transition: fill 0.2s ease-in;
+    }
+    & {
+        #hover({
+        border-color: @red;
+        svg * {
+            fill: @red;
+        }});
+    }
+}
+
+.divider {
+    width: 1px;
+    margin-right: 24px;
+    margin-left: 24px;
+    background: @gray_2;
+}
+
+.copy {
+    .BTN ();
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    cursor: pointer;
+    transition: color ease-in 0.2s;
+    &:hover {
+        color: @red;
+    }
+}
+
+.checkmarkSvg svg {
+    height: 16px;
+}
+
+.checkMarkSvg_indented {
+    margin-left: 1em;
+}
+
+.social-item:last-child {
+    margin-right: 0;
+}
+.copied {
+    color: @white !important;
+    cursor: default !important;
+}
+
+.hidden {
+    display: none;
+}
+.fade-in {
+    animation: fadeIn 0.1s ease-in;
+}
+.fade-out {
+    animation: fadeOut 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: @break-point-xl) {
+    // 1366 - 1919.98
+    .tooltip_on-left {
+        .tooltip__triangle {
+            margin-left: 24px;
+            margin-top: -7px;
+            width: 33px;
+            height: 24px;
+        }
+    }
+    .tooltip {
+        bottom: 56px;
+        &__content {
+            padding: 16px 24px;
+        }
+    }
+    .copy {
+        letter-spacing: 0;
+        padding-bottom: 3px;
+    }
+    .checkmarkSvg svg {
+        height: 12px;
+    }
+    .social-item {
+        width: 32px;
+        height: 32px;
+        svg {
+            width: 19px;
+            height: 19px;
+        }
+    }
+    .divider {
+        margin-right: 19px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: @break-point-lg) {
+    // 1024 - 1365.98
+    .tooltip_on-left {
+        .tooltip__triangle {
+            margin-left: 20px;
+            margin-top: -5px;
+            width: 27.5px;
+            height: 20px;
+        }
+    }
+    .tooltip {
+        bottom: 44px;
+        &__content {
+            padding: 16px 20px;
+        }
+    }
+    .copy {
+        letter-spacing: 0;
+        padding: 0;
+    }
+    .checkmarkSvg svg {
+        height: 12px;
+    }
+    .social-item {
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+        svg {
+            width: 17px;
+            height: 17px;
+        }
+    }
+    .divider {
+        margin-right: 15px;
+        margin-left: 16px;
+    }
+}
+
+@media (max-width: @break-point-md) {
+    // 768 - 1023.98
+    .tooltip_on-left {
+        .tooltip__triangle {
+            margin-left: 16px;
+            margin-top: -5px;
+            width: 30px;
+            height: 22px;
+        }
+    }
+    .tooltip_on-right {
+        .tooltip__triangle {
+            margin-right: 26px;
+        }
+    }
+
+    .tooltip {
+        bottom: 43px;
+        &__content {
+            padding: 20px 20px 24px 20px;
+        }
+    }
+
+    .checkmarkSvg svg {
+        height: 14.666px;
+    }
+
+    .social-item {
+        width: 36px;
+        height: 36px;
+        margin-right: 16px;
+        svg {
+            width: 23px;
+            height: 23px;
+        }
+    }
+
+    .divider {
+        height: 1px;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 19px;
+        margin-bottom: 20px;
+    }
+
+    .tooltip__content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: @break-point-sm) {
+    // 0 - 767.98
+    .tooltip_on-right {
+        .tooltip__triangle {
+            margin-right: 16px;
+            margin-top: -5px;
+            width: 30px;
+            height: 22px;
+        }
+    }
+    .tooltip {
+        bottom: 47px;
+        &__content {
+            padding: 20px 20px 24px 20px;
+        }
+    }
+
+    .checkmarkSvg svg {
+        height: 14.666px;
+    }
+
+    .social-item {
+        width: 36px;
+        height: 36px;
+        margin-right: 16px;
+        svg {
+            width: 23px;
+            height: 23px;
+        }
+    }
+
+    .divider {
+        height: 1px;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 19px;
+        margin-bottom: 20px;
+    }
+
+    .tooltip__content {
+        flex-direction: column;
+    }
+}

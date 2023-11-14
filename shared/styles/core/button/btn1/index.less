@@ -1,0 +1,30 @@
+@import './_vars.less';
+
+.btn-1 {
+
+    border: none;
+    text-align: center;
+    background: transparent;
+    
+
+    @media (min-width: @break-point-xl) {
+        font-size: @btn1-xl-font-size;
+        line-height: @btn1-xl-lineheight;
+    }
+    @media (max-width: @break-point-xl) {
+        font-size: @btn1-lg-font-size;
+        line-height: @btn1-lg-lineheight;
+    }
+    @media (max-width: @break-point-lg) {
+        font-size: @btn1-md-font-size;
+        line-height: @btn1-md-lineheight;
+    }
+    @media (max-width: @break-point-md) {
+        font-size: @btn1-sm-font-size;
+        line-height: @btn1-sm-lineheight;
+    }
+    @media (max-width: @break-point-sm) {
+        font-size: @btn1-xs-font-size;
+        line-height: @btn1-xs-lineheight;
+    }
+}

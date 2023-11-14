@@ -1,0 +1,72 @@
+@import '~@styles/variables.less';
+
+// SLIDER
+.link-slider__controls {
+    width: 576px;
+    height: 640px;
+    background: @link_controls_color;
+    position: absolute;
+    z-index: 100;
+    user-select: none;
+
+    @media (min-width: @break-point-xl) {
+        width: 576px;
+        height: 640px;
+        right: 32px;
+        top: 32px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        width: 408px;
+        height: 456px;
+        right: 24px;
+        top: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        width: 312px;
+        height: 336px;
+        position: absolute;
+        right: 16px;
+        top: 16px;
+    }
+
+    @media (max-width: @break-point-md) {
+        width: 328px;
+        height: 392px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    @media (max-width: @break-point-sm) {
+        width: 328px;
+        height: 392px;
+        position: relative;
+    }
+}
+
+.link-slider__controls-slide {
+    width: 100%;
+    box-sizing: border-box;
+    
+    @media (min-width: @break-point-xl) {
+        padding: 0px 48px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        padding: 0px 32px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        padding: 0px 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        padding: 0px 24px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        padding: 0px 24px;
+    }
+}

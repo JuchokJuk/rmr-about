@@ -1,0 +1,16 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="32" cy="32" r="32" fill="#FF0000"/>
+    <path d="M22.6667 22.6665H30.6667V25.3332H22.6667V22.6665Z" fill="white"/>
+    <path d="M22.6667 33.3332H20V25.3332H22.6667V33.3332Z" fill="white"/>
+    <path d="M25.3333 35.9998H22.6667V33.3332H25.3333V35.9998Z" fill="white"/>
+    <path d="M28 38.6665H25.3333V35.9998H28V38.6665Z" fill="white"/>
+    <path d="M30.6667 41.3332H28V38.6665H30.6667V41.3332Z" fill="white"/>
+    <path d="M33.3333 41.3332V43.9998H30.6667V41.3332H33.3333Z" fill="white"/>
+    <path d="M36 38.6665V41.3332H33.3333V38.6665H36Z" fill="white"/>
+    <path d="M38.6667 35.9998V38.6665H36V35.9998H38.6667Z" fill="white"/>
+    <path d="M41.3333 33.3332V35.9998H38.6667V33.3332H41.3333Z" fill="white"/>
+    <path d="M41.3333 25.3332V27.9998V33.3332H44V25.3332H41.3333Z" fill="white"/>
+    <path d="M33.3333 25.3332V22.6665C36 22.6665 38.6667 22.6665 41.3333 22.6665V25.3332H33.3333Z" fill="white"/>
+    <path d="M33.3333 25.3332V27.9998H30.6667V25.3332H33.3333Z" fill="white"/>
+</svg>

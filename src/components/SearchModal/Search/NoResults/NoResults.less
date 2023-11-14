@@ -1,0 +1,115 @@
+@import '~@styles/variables.less';
+
+.noresults {
+    position: relative;
+    @media (max-width: @break-point-xl) {
+        margin-left: 24px;
+    }
+    @media (max-width: @break-point-lg) {
+        margin-left: 12px;
+    }
+    @media (max-width: @break-point-md) {
+        margin-left: 0;
+    }
+
+    &__top {
+        font-family: "CoFo Pixel", serif;
+        letter-spacing: -0.01em;
+        z-index: 300;
+
+        @media (min-width: @break-point-xl) {
+            font-size: 48px;
+            line-height: 56px;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            font-size: 34px;
+            line-height: 40px;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            font-size: 28px;
+            line-height: 32px;
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: @break-point-md) {
+            font-size: 28px;
+            line-height: 32px;
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: @break-point-sm) {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 12px;
+            letter-spacing: 0;
+        }
+    }
+
+    &__bottom {
+        position: relative;
+        z-index: 10;
+
+        @media (min-width: @break-point-xl) {
+            font-size: 32px;
+            line-height: 48px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            font-size: 22px;
+            line-height: 24px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            font-size: 22px;
+            line-height: 24px;
+        }
+
+        @media (max-width: @break-point-md) {
+            font-size: 22px;
+            line-height: 24px;
+        }
+
+        @media (max-width: @break-point-sm) {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+
+        @media (min-width: @break-point-xl) {
+            transform: scale(1.5);
+            left: 417px;
+            top: 102px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            transform: scale(1.5);
+            left: 216px;
+            top: 75px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            transform: scale(1);
+            left: 200px;
+            top: 49px;
+        }
+
+        @media (max-width: @break-point-md) {
+            transform: scale(1);
+            left: 200px;
+            top: 49px;
+        }
+
+        @media (max-width: @break-point-sm) {
+            transform: scale(0.875);
+            left: 165px;
+            top: 51px;
+        }
+    }
+}

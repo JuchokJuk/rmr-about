@@ -1,0 +1,368 @@
+@import '~@styles/variables.less';
+@import './MenuStep/MenuStep.less';
+@import './CloseStep/CloseStep.less';
+@import './FormStep/FormStep.less';
+
+.contact {
+    height: 100%;
+    color: @white;
+    display: flex;
+    flex-direction: column;
+    background-color: @blue;
+    overflow-x: hidden;
+
+    overflow-y: overlay;
+
+    &__transparency-top {
+        flex-shrink: 0;
+        pointer-events: none;
+        z-index: 1;
+        position: sticky;
+        top: 0;
+        width: 100%;
+
+        background: linear-gradient(180deg, #06163E 0%, rgba(6, 22, 62, 0.5) 80%, rgba(6, 22, 62, 0) 100%);
+
+        @media (min-width: @break-point-xl) {
+            height: 230px;
+            margin-bottom: -230px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            height: 180px;
+            margin-bottom: -180px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            height: 140px;
+            margin-bottom: -140px;
+        }
+
+        @media (max-width: @break-point-md) {
+            height: 120px;
+            margin-bottom: -120px;
+        }
+    }
+
+    &__transparency-bottom {
+        flex-shrink: 0;
+        pointer-events: none;
+        z-index: 1;
+        position: sticky;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(6, 22, 62, 0) 0%, rgba(6, 22, 62, 0.5) 20%, #06163E 100%);
+
+        @media (min-width: @break-point-xl) {
+            height: 220px;
+            margin-top: -220px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            height: 152px;
+            margin-top: -152px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            height: 96px;
+            margin-top: -96px;
+        }
+
+        @media (max-width: @break-point-md) {
+            height: 92px;
+            margin-top: -92px;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.25) !important;
+    }
+
+    &__controls {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: row;
+
+        pointer-events: none;
+
+        @media (min-width: @break-point-xl) {
+            height: 230px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            height: 180px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            height: 140px;
+        }
+
+        @media (max-width: @break-point-md) {
+            height: 120px;
+        }
+    }
+
+    &__back {
+        pointer-events: all;
+        cursor: pointer;
+        color: @white;
+        transition: color 0.2s ease-in-out;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        height: fit-content;
+
+        & {
+            #hover({
+                color: @red;
+
+                svg {
+                    fill: @red;
+                }
+            });
+        }
+
+        &.disabled {
+            cursor: not-allowed;
+
+            color: @gray_4;
+
+            svg {
+                fill: @gray_4;
+            }
+
+            & {
+                #hover({
+                    color: @gray_4;
+                    svg {
+                        fill: @gray_4;
+                    }
+                });
+            }
+        }
+
+
+        @media (min-width: @break-point-xl) {
+            margin-top: 80px;
+            margin-left: 80px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            margin-top: 60px;
+            margin-left: 60px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+
+        @media (max-width: @break-point-md) {
+            margin-top: 32px;
+            margin-left: 32px;
+        }
+
+        @media (max-width: @break-point-sm) {
+            margin-top: 24px;
+            margin-left: 24px;
+        }
+
+        &__arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media (min-width: @break-point-xl) {
+                height: 40px;
+                width: 40px;
+                margin-right: @padding-red_1920;
+            }
+
+            @media (max-width: @break-point-xl) {
+                height: 32px;
+                width: 32px;
+                margin-right: @padding-red_1366;
+            }
+
+            @media (max-width: @break-point-lg) {
+                height: 28px;
+                width: 28px;
+                margin-right: @padding-red_1024;
+            }
+
+            @media (max-width: @break-point-md) {
+                height: 28px;
+                width: 28px;
+                margin-right: @padding-red_375;
+            }
+
+            @media (max-width: @break-point-sm) {
+                height: 32px;
+                width: 32px;
+            }
+
+            svg {
+                transition: fill 0.2s ease-in;
+                fill: @white;
+
+
+                @media (min-width: @break-point-xl) {
+                    transform: scale(1.25);
+                }
+
+                @media (max-width: @break-point-xl) {
+                    transform: scale(1);
+                }
+
+                @media (max-width: @break-point-lg) {
+                    transform: scale(0.875);
+                }
+
+                @media (max-width: @break-point-sm) {
+                    transform: scale(1);
+                }
+            }
+        }
+
+    }
+
+    &__button {
+        pointer-events: all;
+        position: absolute;
+        cursor: pointer;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        .noHighlight();
+
+        @media (min-width: @break-point-xl) {
+            width: 40px;
+            height: 40px;
+
+            top: 80px;
+            right: 80px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            width: 32px;
+            height: 32px;
+
+            top: 60px;
+            right: 60px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            width: 28px;
+            height: 28px;
+
+            top: 40px;
+            right: 40px;
+        }
+
+        @media (max-width: @break-point-md) {
+            width: 28px;
+            height: 28px;
+
+            top: 32px;
+            right: 32px;
+        }
+
+        @media (max-width: @break-point-sm) {
+            width: 32px;
+            height: 32px;
+
+            top: 24px;
+            right: 24px;
+        }
+
+        & {
+            #hover({
+                .cross {
+                    fill: @red;
+                }
+            });
+        }
+
+        &.disabled {
+            cursor: not-allowed;
+
+            .cross {
+                fill: @gray_4;
+            }
+
+            & {
+                #hover({
+                    .cross {
+                        fill: @gray_4;
+                    }
+                });
+            }   
+        }
+
+        .cross {
+            width: 100%;
+            height: 100%;
+            .noHighlight();
+            transition: fill 0.1s ease-in;
+            fill: @white;
+        }
+    }
+
+
+
+    &__content {
+        margin: 0 auto;
+
+        @media (min-width: @break-point-xl) {
+            width: 1380px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            width: 900px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            width: 684px;
+        }
+
+        @media (max-width: @break-point-md) {
+            width: calc(100vw - 44px * 2);
+            margin: 0px 44px;
+        }
+
+        @media (max-width: @break-point-sm) {
+            width: calc(100vw - 24px * 2);
+            margin: 0px 24px;
+        }
+    }
+
+    .fade-enter {
+        opacity: 0;
+    }
+
+    .fade-exit {
+        opacity: 1;
+    }
+
+    .fade-enter-active {
+        opacity: 1;
+    }
+
+    .fade-exit-active {
+        opacity: 0;
+    }
+
+    .fade-enter-active,
+    .fade-exit-active {
+        transition: opacity 0.3s;
+    }
+}

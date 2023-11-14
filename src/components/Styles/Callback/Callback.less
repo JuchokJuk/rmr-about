@@ -1,0 +1,46 @@
+@import '~@styles/variables.less';
+
+
+.callback {
+    width: 100%;
+    background: @blue;
+    cursor: pointer;
+
+    @media (min-width: @break-point-xl) {
+        padding: 80px;
+    }
+    
+    @media (max-width: @break-point-xl) {
+        padding: 64px;
+    }
+    
+    @media (max-width: @break-point-lg) {
+        padding: 48px;
+    }
+
+    @media (max-width: @break-point-md) {
+        padding: 24px;
+    }
+    
+    @media (max-width: @break-point-sm) {
+        padding: 24px;
+    }
+
+
+}
+
+.callback__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: @white;
+
+    &{#hover({
+        color: @red;});
+    }
+}
+
+.callback__icon {
+    margin-lefT: 15px;
+    .noHighlight();
+}

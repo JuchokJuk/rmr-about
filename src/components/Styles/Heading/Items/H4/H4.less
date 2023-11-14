@@ -1,0 +1,47 @@
+@import '~@styles/variables.less';
+
+@h4-xl-size: 44px;
+@h4-lg-size: 32px;
+@h4-md-size: 28px;
+@h4-sm-size: 22px;
+@h4-xs-size: 22px;
+
+@h4-xl-lineheight: 52px;
+@h4-lg-lineheight: 40px;
+@h4-md-lineheight: 32px;
+@h4-sm-lineheight: 32px;
+@h4-xs-lineheight: 32px;
+
+.h4_c {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+
+    @media (min-width: @break-point-xl) {
+        font-size: @h4-xl-size;
+        line-height: @h4-xl-lineheight;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: @h4-lg-size;
+        line-height: @h4-lg-lineheight;
+        letter-spacing: -0.02em;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: @h4-md-size;
+        line-height: @h4-md-lineheight;
+        letter-spacing: -0.02em;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: @h4-xs-size;
+        line-height: @h4-xs-lineheight;
+        letter-spacing: unset;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: @h4-xs-size;
+        line-height: @h4-xs-lineheight;
+    }
+}

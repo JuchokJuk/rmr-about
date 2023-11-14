@@ -1,0 +1,53 @@
+@import '~@styles/variables.less';
+
+// h5 settings
+
+@h5-xl-size: 36px;
+@h5-lg-size: 28px;
+@h5-md-size: 24px;
+@h5-sm-size: 22px;
+@h5-xs-size: 22px;
+
+@h5-xl-lineheight: 44px;
+@h5-lg-lineheight: 32px;
+@h5-md-lineheight: 28px;
+@h5-sm-lineheight: 24px;
+@h5-xs-lineheight: 24px;
+
+.h5_c {
+    padding: 0;
+    margin: 0;
+    letter-spacing: -0.01em;
+    position: relative;
+    word-break: break-word;
+
+    @media (min-width: @break-point-xl) {
+        font-size: @h5-xl-size;
+        line-height: @h5-xl-lineheight;
+        letter-spacing: -0.01em;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: @h5-lg-size;
+        line-height: @h5-lg-lineheight;
+        letter-spacing: -0.01em;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: @h5-md-size;
+        line-height: @h5-md-lineheight;
+        letter-spacing: -0.01em;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: @h5-sm-size;
+        line-height: @h5-sm-lineheight;
+        letter-spacing: normal;
+    }
+    
+    @media (max-width: @break-point-sm) {
+        font-size: @h5-xs-size;
+        line-height: @h5-xs-lineheight;
+        letter-spacing: normal;
+    }
+}

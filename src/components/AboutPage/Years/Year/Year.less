@@ -1,0 +1,141 @@
+@import "@styles/variables.less";
+.year {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid @white;
+        @media (min-width: @break-point-xl) {
+            padding-bottom: 68px;
+        }
+        @media (max-width: @break-point-xl) {
+            padding-bottom: 57px;
+        }
+        @media (max-width: @break-point-lg) {
+            padding-bottom: 50px;
+        }
+        @media (max-width: @break-point-md) {
+            padding-bottom: 48px;
+        }
+        @media (max-width: @break-point-sm) {
+            padding-bottom: 19px;
+        }
+    }
+    &__name {
+        font-family: "CoFo Pixel";
+        letter-spacing: -0.02em;
+        color: @white;
+        @media (min-width: @break-point-xl) {
+            font-size: 186px;
+            line-height: 232px;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 144px;
+            line-height: 152px;
+            margin-top: -5px;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 104px;
+            line-height: 104px;
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 88px;
+            line-height: 88px;
+            letter-spacing: -0.002em;
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 56px;
+            line-height: 56px;
+            letter-spacing: -0.02em;
+        }
+    }
+    .circle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__body {
+            background: @white;
+            border-radius: 50%;
+            @media (min-width: @break-point-xl) {
+                width: 176px;
+                height: 176px;
+            }
+            @media (max-width: @break-point-xl) {
+                width: 120px;
+                height: 120px;
+            }
+            @media (max-width: @break-point-lg) {
+                width: 68px;
+                height: 68px;
+            }
+            @media (max-width: @break-point-md) {
+                width: 68px;
+                height: 68px;
+            }
+            @media (max-width: @break-point-sm) {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        &__text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            color: @white;
+            font-size: 24px;
+            line-height: 32px;
+            margin-top: 20px;
+            @media (min-width: @break-point-xl) {
+                font-size: 24px;
+                line-height: 32px;
+                margin-top: 20px;
+            }
+            @media (max-width: @break-point-xl) {
+                font-size: 14px;
+                line-height: 20px;
+                margin-top: 16px;
+            }
+            @media (max-width: @break-point-lg) {
+                font-size: 12px;
+                line-height: 16px;
+                margin-top: 16px;
+            }
+            @media (max-width: @break-point-md) {
+                font-size: 12px;
+                line-height: 16px;
+                margin-top: 12px;
+            }
+            @media (max-width: @break-point-sm) {
+                flex-direction: row;
+                min-width: 100px;
+                white-space: nowrap;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+        @media (max-width: @break-point-sm) {
+            position: absolute;
+            bottom: -158px;
+            left: 50%;
+            right: 50%;
+        }
+    }
+    @media (min-width: @break-point-xl) {
+    }
+    @media (max-width: @break-point-xl) {
+        max-width: 1086px;
+    }
+    @media (max-width: @break-point-lg) {
+        max-width: 824px;
+    }
+    @media (max-width: @break-point-md) {
+        max-width: 648px;
+    }
+    @media (max-width: @break-point-sm) {
+        max-width: 328px;
+    }
+}

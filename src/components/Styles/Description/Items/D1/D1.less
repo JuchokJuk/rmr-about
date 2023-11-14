@@ -1,0 +1,36 @@
+@import '~@styles/variables.less';
+
+@d1-xl-size: 18px;
+@d1-lg-size: 16px;
+@d1-md-size: 14px;
+@d1-sm-size: 14px;
+
+@d1-xl-lineheight: 24px;
+@d1-lg-lineheight: 20px;
+@d1-md-lineheight: 20px;
+@d1-sm-lineheight: 20px;
+
+.description-1 {
+    margin: 0px;
+    padding: 0px;
+
+    @media (min-width: @break-point-xl) {
+        font-size: @d1-xl-size;
+        line-height: @d1-xl-lineheight; 
+        letter-spacing: 0.01em;
+    }
+    @media (max-width: @break-point-xl) {
+        font-size: @d1-lg-size;
+        line-height: @d1-lg-lineheight;  
+        letter-spacing: 0.01em;
+    }
+    @media (max-width: @break-point-lg) {
+        font-size: @d1-md-size;
+        line-height: @d1-md-lineheight;
+    }
+    @media (max-width: @break-point-md) {
+        font-size: @d1-sm-size;
+        line-height: @d1-sm-lineheight;
+        letter-spacing: normal;
+    }
+}

@@ -1,0 +1,29 @@
+@import '~@styles/variables.less';
+
+.officeBlock {
+
+  @media (min-width: @break-point-xl) {
+    margin-bottom: @padding-yellow_1920;
+  }
+
+  @media (max-width: @break-point-xl) {
+    margin-bottom: @padding-yellow_1366;
+  }
+
+  @media (max-width: @break-point-lg) {
+    margin-bottom: @padding-yellow_1024;
+  }
+
+  @media (max-width: @break-point-md) {
+    margin-bottom: @padding-green_375;
+    width: 327px;
+  }
+  
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
+
+  p {
+    z-index: 1;
+  }
+}

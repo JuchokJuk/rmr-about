@@ -1,0 +1,76 @@
+@import '~@styles/variables.less';
+
+.style-slider__arrows {
+    font-family: 'CoFo Pixel';
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    .noHighlight();
+
+
+    @media (min-width: @break-point-xl) {
+        margin-right: 40px;
+        display: flex;
+    }
+    
+    @media (max-width: @break-point-xl) {
+        margin-right: 23px;
+        display: flex;
+    }
+    
+    @media (max-width: @break-point-lg) {
+        margin-right: 23px;
+        display: flex;
+    }
+    
+    @media (max-width: @break-point-md) {
+        display: none;
+    }
+    
+    @media (max-width: @break-point-sm) {
+        display: none;
+    }
+}
+
+.style-slider__arrow-left {
+    margin-right: 22px;
+}
+
+.style-slider__arrow-left,
+.style-slider__arrow-right {
+    width: 18px;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.2s ease;
+    .noHighlight();
+
+    svg {
+        transition: transform 0.2s ease-in;
+    }
+
+    &{#hover({
+        opacity: 0.5;});
+    }
+}
+
+.style-slider__arrow-right {
+    &{#hover({
+        svg {
+            transform: translateX(5px);
+        }});
+    }
+}
+
+.style-slider__arrow-left {
+    &{#hover({
+        svg {
+            transform: translateX(-5px);
+        }});
+    }
+}
+
+.style-slider__arrow-left svg:hover,
+.style-slider__arrow-right svg{#hover({
+    fill: @black});
+}

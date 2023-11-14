@@ -1,0 +1,57 @@
+@import '~@styles/variables.less';
+
+// SLIDER
+.p-block-slider__controls {
+    background: @red;
+    position: absolute;
+    z-index: 100;
+    user-select: none;
+    
+    /// 
+    @media (min-width: @break-point-xl) {
+        width: 624px;
+        max-height: 624px;
+        left: -32px;
+        bottom: -32px;
+
+        padding: 48px 0px;
+
+    }
+    @media (max-width: @break-point-xl) {
+        width: 444px;
+        max-height: 448px;
+        left: -24px;
+        bottom: -24px;
+
+        padding: 32px 0px;
+    }
+    @media (max-width: @break-point-lg) {
+        width: 336px;
+        max-height: 336px;
+        left: -16px;
+        bottom: -16px;
+        position: absolute;
+
+        padding: 24px 0px;
+    }
+
+    @media (max-width: @break-point-md) {
+        width: 328px;
+        max-height: 344px;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+
+        padding: 24px 0px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        width: 328px;
+
+        left: 0px;
+        bottom: 0px;
+        position: relative; 
+
+        padding: 24px 0px;
+    }
+}

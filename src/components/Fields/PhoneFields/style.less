@@ -1,0 +1,228 @@
+@import "~@styles/variables.less";
+
+.fieldPhone {
+    border-bottom: 1px solid #ffffff80;
+    transition: border-color ease-in 0.3s;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @media (min-width: @break-point-xl) {
+        height: 76px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        height: 64px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        height: 56px;
+    }
+
+    @media (max-width: @break-point-md) {
+        height: 52px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        height: 52px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        @media (min-width: @break-point-xl) {
+            margin-top: auto;
+
+            margin-bottom: 13px;
+
+            svg {
+                width: 36px;
+                height: 36px;
+            }
+        }
+
+        @media (max-width: @break-point-xl) {
+            margin-top: auto;
+
+            margin-bottom: 11px;
+
+            svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        @media (max-width: @break-point-lg) {
+            margin-top: auto;
+
+            margin-bottom: 12px;
+
+            svg {
+                margin-bottom: -2px;
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        @media (max-width: @break-point-md) {
+            margin-top: auto;
+
+            margin-bottom: 8px;
+
+            svg {
+                margin-top: -2px;
+            }
+        }
+
+        @media (max-width: @break-point-sm) {
+            margin-top: auto;
+
+            margin-bottom: 10px;
+
+            svg {
+                margin-bottom: -4px;
+            }
+        }
+    }
+
+    &__input {
+        width: 100%;
+        color: @white;
+        border: none;
+        padding: 0;
+        .P1-long();
+        background: inherit;
+    }
+
+    .fieldPhone__label {
+        position: absolute;
+        color: #ffffff80;
+        .P1-long();
+        pointer-events: none;
+        transition: 0.3s ease-in-out;
+
+        @media (min-width: @break-point-xl) {
+            bottom: 13px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            bottom: 11px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            bottom: 12px;
+        }
+
+        @media (max-width: @break-point-md) {
+            bottom: 8px;
+        }
+
+        @media (max-width: @break-point-sm) {
+            bottom: 10px;
+        }
+
+        &--focus {
+            .D2();
+
+            @media (min-width: @break-point-xl) {
+                transform: translate(1px, -35px);
+            }
+
+            @media (max-width: @break-point-xl) {
+                letter-spacing: 0.01em;
+                transform: translate(0px, -30px);
+            }
+
+            @media (max-width: @break-point-lg) {
+                letter-spacing: 0;
+                transform: translate(0px, -27px);
+            }
+
+            @media (max-width: @break-point-md) {
+                transform: translate(0px, -27px);
+            }
+
+            @media (max-width: @break-point-sm) {
+                transform: translate(0px, -19px);
+            }
+        }
+    }
+
+    & {
+        #hover({
+            .fieldPhone__label {
+                color: @white;
+            }
+
+            border-color: @white;
+        });
+}
+
+&--error {
+    border-color: @red;
+
+    & {
+        #hover({
+            .fieldPhone__label {
+                color: #ffffff80;
+            }
+
+            border-color: @red;
+        });
+}
+}
+
+&--focus {
+    border-color: @white;
+
+    & {
+        #hover({
+            .fieldPhone__label {
+                color: #ffffff80;
+            }
+        });
+}
+}
+}
+
+.fieldPhone__error,
+.fieldPhone__toggle {
+    color: @red;
+    .D2();
+
+    @media (min-width: @break-point-xl) {
+        margin-top: 3px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        letter-spacing: 0.01em;
+        margin-top: 5px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-top: 4px;
+        letter-spacing: 0;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-top: 4px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        margin-top: 5px;
+    }
+}
+
+.fieldPhone__toggle {
+    color: @white;
+    cursor: pointer;
+    transition: color ease-in 0.2s;
+
+    & {
+        #hover({
+            color: @red;
+        });
+}
+}

@@ -1,0 +1,54 @@
+@import '~@styles/variables.less';
+
+.stylepage-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background: #D0DBD7;
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    z-index: 5;
+
+    // NEW
+    @media (min-width: @break-point-xl) {
+        width: 576px;
+        height: 96px;
+        right: 32px;
+        bottom: 32px;
+    }
+    @media (max-width: @break-point-xl) {
+        width: 408px;
+        height: 64px;
+        right: 24px;
+        bottom: 24px;
+    }
+    @media (max-width: @break-point-lg) {
+        width: 312px;
+        height: 48px;
+        right: 16px;
+        bottom: 16px;
+        left: auto;
+        background: #D0DBD7;
+    }
+
+    @media (max-width: @break-point-md) {
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        right: auto;
+        left: 16px;
+        bottom: 16px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        right: auto;
+        left: 16px;
+        bottom: 16px;
+    }
+
+}

@@ -1,0 +1,6 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="48" cy="48" r="48" fill="#FEDE42"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M42 38H34V42H42V38ZM62 38H54V42H62V38Z" fill="black"/>
+    <rect x="28" y="54" width="40" height="4" fill="black"/>
+</svg>

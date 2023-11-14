@@ -1,0 +1,225 @@
+@import "~@styles/variables.less";
+.mailing {
+    width: 100%;
+    background: @blue;
+    color: @white;
+    @media (min-width: @break-point-xl) {
+        padding: 115px 284px 112px 140px;
+    }
+    @media (max-width: @break-point-xl) {
+        padding: 81px 184px 80px 92px;
+    }
+    @media (max-width: @break-point-lg) {
+        padding: 65px 70px 64px 70px;
+    }
+    @media (max-width: @break-point-md) {
+        padding: 65px 56px 64px 56px;
+    }
+    @media (max-width: @break-point-sm) {
+        padding: 53px 24px 52px 24px;
+    }
+    &__name {
+        .H3-medium();
+        @media (min-width: @break-point-xl) {
+            margin-bottom: 27px;
+        }
+        @media (max-width: @break-point-xl) {
+            margin-bottom: 23px;
+            letter-spacing: -0.02em;
+        }
+        @media (max-width: @break-point-lg) {
+            margin-bottom: 17px;
+            letter-spacing: -0.01em;
+        }
+        @media (max-width: @break-point-md) {
+            margin-bottom: 22px;
+            letter-spacing: 0;
+        }
+        @media (max-width: @break-point-sm) {
+            margin-bottom: 20px;
+        }
+    }
+    &__description {
+        .P1-long();
+        @media (min-width: @break-point-xl) {
+            margin-bottom: 26px;
+        }
+        @media (max-width: @break-point-xl) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: @break-point-lg) {
+            margin-bottom: 13px;
+        }
+        @media (max-width: @break-point-md) {
+            margin-bottom: 17px;
+        }
+        @media (max-width: @break-point-sm) {
+            margin-bottom: 19px;
+        }
+    }
+    &__input {
+        @media (min-width: @break-point-xl) {
+            margin-bottom: 46px;
+        }
+        @media (max-width: @break-point-xl) {
+            margin-bottom: 36px;
+        }
+        @media (max-width: @break-point-lg) {
+            margin-bottom: 31px;
+        }
+        @media (max-width: @break-point-md) {
+            margin-bottom: 34px;
+        }
+        @media (max-width: @break-point-sm) {
+            margin-bottom: 32px;
+        }
+    }
+    &__checkbox {
+        @media (min-width: @break-point-xl) {
+            margin-bottom: 46px;
+        }
+        @media (max-width: @break-point-xl) {
+            margin-bottom: 36px;
+        }
+        @media (max-width: @break-point-lg) {
+            margin-bottom: 29px;
+        }
+        @media (max-width: @break-point-md) {
+            margin-bottom: 32px;
+        }
+        @media (max-width: @break-point-sm) {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.successful {
+    width: 100%;
+    background: @blue;
+    color: @white;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: @break-point-xl) {
+        padding: 112px 284px 114px 140px;
+    }
+    @media (max-width: @break-point-xl) {
+        padding: 80px 92px 80px 92px;
+    }
+    @media (max-width: @break-point-lg) {
+        padding: 64px 70px 65px 70px;
+    }
+    @media (max-width: @break-point-md) {
+        padding: 64px 56px 65px 56px;
+    }
+    @media (max-width: @break-point-sm) {
+        padding: 24px 24px 27px 24px;
+    }
+    &__arrow {
+        fill: @white;
+        cursor: pointer;
+        position: relative;
+        left: 0;
+        transition: left 0.2s ease-in, fill ease-in 0.2s;
+
+        cursor: pointer;
+        @media (min-width: @break-point-xl) {
+            width: 40px;
+        }
+        @media (max-width: @break-point-xl) {
+            width: 32px;
+        }
+        @media (max-width: @break-point-lg) {
+            width: 28px;
+        }
+        @media (max-width: @break-point-md) {
+            width: 28px;
+        }
+        @media (max-width: @break-point-sm) {
+            width: 32px;
+        }
+        & {
+            #hover({
+            fill: @red;
+            left: -5px;});
+        }
+    }
+    &__thanks {
+        display: flex;
+        align-items: center;
+        @media (min-width: @break-point-xl) {
+            margin: 259px 0 27px 0;
+        }
+        @media (max-width: @break-point-xl) {
+            margin: 233px 0 23px 0;
+        }
+        @media (max-width: @break-point-lg) {
+            margin: 183px 0 10px 0;
+        }
+        @media (max-width: @break-point-md) {
+            margin: 195px 0 15px 0;
+        }
+        @media (max-width: @break-point-sm) {
+            margin: 258px 0 11px 0;
+        }
+        &--text {
+            .H3-medium();
+            @media (max-width: @break-point-xl) {
+                letter-spacing: -0.02em;
+            }
+            @media (max-width: @break-point-lg) {
+                letter-spacing: -0.01em;
+            }
+            @media (max-width: @break-point-md) {
+                letter-spacing: 0;
+            }
+            @media (max-width: @break-point-sm) {
+            }
+        }
+        &--heart {
+            @media (min-width: @break-point-xl) {
+                width: 40px;
+                margin: 2px 0 0 8px;
+            }
+            @media (max-width: @break-point-xl) {
+                width: 32px;
+                margin: 4px 0 0 9px;
+            }
+            @media (max-width: @break-point-lg) {
+                width: 28px;
+                margin: 4px 0 0 9px;
+            }
+            @media (max-width: @break-point-md) {
+                width: 28px;
+                margin: 3px 0 0 8px;
+            }
+            @media (max-width: @break-point-sm) {
+                width: 32px;
+                margin: 2px 0 0 4px;
+            }
+        }
+    }
+    &__description {
+        .P1-long();
+    }
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-enter-active {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+}
+
+.fade-enter-active,
+.fade-exit-active {
+    transition: opacity 0.3s;
+}

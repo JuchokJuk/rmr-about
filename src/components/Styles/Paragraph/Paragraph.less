@@ -1,0 +1,39 @@
+@import '~@styles/variables.less';
+
+@import './Items/P1/P1.less';
+@import './Items/P2/P2.less';
+@import './Items/P3/P3.less';
+@import './Items/P4/P4.less';
+@import './Items/P5/P5.less';
+@import './Items/P6/P6.less';
+
+.paragraph-block {
+    position: relative;
+
+    & > .paragraph-1:first-child {
+        margin-top: 0;
+    }
+
+    & > .paragraph-1:last-child {
+        margin-bottom: 0;
+    }
+    
+    & > .paragraph-1 {
+
+        @media (min-width: @break-point-xl) {
+            margin-bottom: @padding-yellow_1920;
+        }
+
+        @media (max-width: @break-point-xl) {
+            margin-bottom: @padding-yellow_1366;
+        }
+
+        @media (max-width: @break-point-lg) {
+            margin-bottom: @padding-yellow_1024;
+        }
+
+        @media (max-width: @break-point-md) {
+            margin-bottom: @padding-yellow_375;
+        }
+    }
+}

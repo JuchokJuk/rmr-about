@@ -1,0 +1,385 @@
+@import "~@styles/variables.less";
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @break-point-xl) {
+        margin-bottom: 0px;
+        // height: 76px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-bottom: 0px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-bottom: 0px;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-bottom: 0px;
+        flex-direction: column;
+    }
+
+    &--file {
+        @media (min-width: @break-point-xl) {
+            padding-top: 16px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            margin-top: 24px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            margin-top: 24px;
+        }
+
+        @media (max-width: @break-point-md) {
+            margin-top: 24px;
+        }
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &--short {
+        @media (min-width: @break-point-xl) {
+            max-width: 576px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            max-width: 408px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            max-width: 312px;
+        }
+
+        @media (max-width: @break-point-md) {
+            max-width: 100%;
+        }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus {
+        color: @white;
+        border: none;
+        border-bottom: 1px solid;
+        border-color: @white_opacity_3;
+        outline: none;
+        background: transparent;
+        caret-color: @white;
+        -webkit-text-fill-color: @white;
+        box-shadow: 0 0 0px 1000px transparent inset;
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+    .input {
+        padding: 0;
+        width: 100%;
+        color: @white;
+        border: none;
+        border-bottom: 1px solid;
+        border-color: @white_opacity_3;
+        transition: border-color 0.3s ease-in;
+        outline: none;
+        background: transparent;
+
+        @media (min-width: @break-point-xl) {
+            padding-right: 32px;
+            margin-top: 25px;
+            padding-bottom: 13px;
+            font-size: 24px;
+            line-height: 36px;
+        }
+        @media (max-width: @break-point-xl) {
+            padding-right: 32px;
+            margin-top: 24px;
+            padding-bottom: 11px;
+            font-size: 18px;
+            line-height: 28px;
+        }
+        @media (max-width: @break-point-lg) {
+            padding-right: 28px;
+            margin-top: 19px;
+            padding-bottom: 12px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @media (max-width: @break-point-md) {
+            padding-right: 32px;
+            margin-top: 20px;
+            padding-bottom: 7px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @media (max-width: @break-point-sm) {
+            margin-top: 21px;
+            padding-bottom: 10px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &:disabled {
+            pointer-events: none;
+        }
+
+        &{#hover({
+            border-color: @white;
+
+            & ~ label {
+                color: @white;
+            }});
+        }
+
+        &:focus {
+            border-color: @white;
+        }
+
+        &:focus ~ label,
+        &.dirty ~ label {
+            color: rgba(255, 255, 255, 0.5);
+
+            @media (min-width: @break-point-xl) {
+                font-size: 16px;
+                line-height: 24px;
+                transform: translate(1px, -24px);
+            }
+
+            @media (max-width: @break-point-xl) {
+                font-size: 14px;
+                line-height: 20px;
+                transform: translate(0px, -21px);
+            }
+
+            @media (max-width: @break-point-lg) {
+                font-size: 12px;
+                line-height: 16px;
+                transform: translate(0px, -19px);
+            }
+
+            @media (max-width: @break-point-md) {
+                font-size: 12px;
+                line-height: 16px;
+                transform: translate(0px, -20px);
+            }
+            @media (max-width: @break-point-sm) {
+                font-size: 14px;
+                line-height: 20px;
+                transform: translate(0px, -19px);
+            }
+        }
+
+        &.text {
+            resize: none;
+            min-width: 100%;
+            max-width: 100%;
+        }
+
+        &.error {
+            border-color: @red;
+
+            & ~ .svg {
+                display: block;
+
+                @media (min-width: @break-point-xl) {
+                    width: 24.5px;
+                    height: 24.5px;
+                }
+
+                @media (max-width: @break-point-xl) {
+                    width: 19.25px;
+                    height: 19.25px;
+                }
+
+                @media (max-width: @break-point-lg) {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                @media (max-width: @break-point-md) {
+                    width: 19.25px;
+                    height: 19.25px;
+                }
+
+                @media (max-width: @break-point-sm) {
+                    width: 18.5px;
+                    height: 18.5px;
+                }
+            }
+        }
+    }
+
+    .under-label,
+    .under-label--phone,
+    .error-label {
+        @media (min-width: @break-point-xl) {
+            margin-top: 3px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            margin-top: 5px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            margin-top: 4px;
+        }
+
+        @media (max-width: @break-point-md) {
+            margin-top: 4px;
+        }
+        @media (max-width: @break-point-sm) {
+            margin-top: 5px;
+        }
+        &--phone {
+            cursor: pointer;
+            color: @white;
+            transition: color ease-in 0.2s;
+            cursor: pointer;
+            &{#hover({
+                color: @red;});
+            }
+        }
+    }
+
+    .under-label {
+        color: @white_opacity;
+    }
+
+    .error-label {
+        color: @red;
+    }
+
+    label {
+        position: absolute;
+        left: 0;
+        color: rgba(255, 255, 255, 0.5);
+        pointer-events: none;
+        transition: 0.3s ease-in-out;
+
+        @media (min-width: @break-point-xl) {
+            top: 26px;
+            font-size: 24px;
+            line-height: 36px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            top: 24px;
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            top: 19px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @media (max-width: @break-point-md) {
+            top: 19px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        @media (max-width: @break-point-sm) {
+            top: 21px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    .svg,
+    .email_svg,
+    .email_suc {
+        display: none;
+        position: absolute;
+        bottom: 16px;
+
+        @media (min-width: @break-point-xl) {
+            bottom: 24px;
+        }
+    }
+
+    .email_svg,
+    .email_suc {
+        @media (max-width: @break-point-md) {
+            transform: scale(0.75);
+        }
+    }
+
+    .svg {
+        @media (min-width: @break-point-xl) {
+            right: 5px;
+            top: 29px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            right: 5px;
+            top: 27px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            right: 4px;
+            top: 22px;
+        }
+
+        @media (max-width: @break-point-md) {
+            right: 4px;
+            top: 25px;
+        }
+        @media (max-width: @break-point-sm) {
+            right: 4px;
+            top: 21px;
+        }
+    }
+
+    .email_svg {
+        right: 14px;
+    }
+
+    .email_suc {
+        right: 20px;
+    }
+
+    &.email_sub {
+        .email_svg {
+            display: block;
+        }
+
+        .input.error {
+            & ~ .svg {
+                display: none;
+            }
+
+            color: @red;
+            border-color: @white_opacity_3;
+        }
+
+        .input.success {
+            & ~ .email_svg {
+                display: none;
+            }
+
+            & ~ .email_suc {
+                display: block;
+            }
+
+            & ~ label {
+                color: @white;
+            }
+        }
+    }
+
+    &.disabled {
+        opacity: 0.5;
+    }
+}

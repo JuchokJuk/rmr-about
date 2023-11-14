@@ -1,0 +1,91 @@
+@import "~@styles/variables.less";
+.digital-products__text {
+    width: 1381px;
+
+    @media (max-width: @break-point-xl) {
+        width: 902px;
+    }
+    @media (max-width: @break-point-lg) {
+        width: 683px;
+    }
+    @media (max-width: @break-point-md) {
+        width: 537px;
+    }
+    @media (max-width: @break-point-sm) {
+        width: auto;
+    }
+    color: @white;
+
+    &_indented {
+        margin-top: 56px;
+        margin-bottom: 116px;
+
+        @media (max-width: @break-point-xl) {
+            margin-bottom: 54px;
+        }
+        @media (max-width: @break-point-lg) {
+            margin-top: -20px;
+            margin-bottom: 57px;
+        }
+        @media (max-width: @break-point-md) {
+            margin-top: 88px;
+            margin-bottom: 46px;
+        }
+        @media (max-width: @break-point-sm) {
+            margin-top: 41px;
+            line-height: 28px;
+        }
+    }
+    .heading {
+        @media (max-width: @break-point-md) {
+            font-size: 32px;
+            line-height: 36px;
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+    &__p {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+
+        @media (max-width: @break-point-xl) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        &_indented {
+            margin-top: 40px;
+
+            @media (max-width: @break-point-xl) {
+                margin-top: 23px;
+            }
+            @media (max-width: @break-point-lg) {
+                margin-top: 38px;
+            }
+            @media (max-width: @break-point-md) {
+                margin-top: 27px;
+            }
+            @media (max-width: @break-point-sm) {
+                margin-top: 23px;
+            }
+        }
+    }
+    .red {
+        color: @red;
+        font-family: "CoFo Pixel";
+        letter-spacing: -0.02em;
+        @media (max-width: @break-point-md) {
+            letter-spacing: -0.002em;
+        }
+    }
+}

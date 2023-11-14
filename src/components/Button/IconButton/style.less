@@ -1,0 +1,31 @@
+@import "~@styles/variables.less";
+
+.icon-button {
+    cursor: pointer;
+    svg {
+        @media (min-width: @break-point-xl) {
+            width: 40px;
+            height: 40px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            width: 32px;
+            height: 32px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            width: 28px;
+            height: 28px;
+        }
+
+        @media (max-width: @break-point-md) {
+            width: 28px;
+            height: 28px;
+        }
+
+        @media (max-width: @break-point-sm) {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

@@ -1,0 +1,279 @@
+@import "~@styles/variables.less";
+
+.tags__tag {
+    cursor: pointer;
+    box-shadow: inset 0 0 0 1px @black;
+    display: flex;
+    width: fit-content;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+
+    .noHighlight();
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+
+    span {
+        position: relative;
+    }
+
+    @media (min-width: @break-point-md) {
+        &:not(.tag_disabled) {
+            &{
+                #hover({
+                    box-shadow: inset 0 0 0 1px @black;
+                    background: @black;
+                    color: @white;
+                });
+            }
+            &:active {
+                box-shadow: inset 0 0 0 1px @black;
+                background: @black;
+                color: @white;
+            }
+        }
+    }
+
+    &.active {
+        box-shadow: inset 0 0 0 1px @black;
+        background: @black;
+        color: @white;
+    }
+
+    &.tag_disabled {
+        color: @black_3;
+        box-shadow: inset 0 0 0 1px @black_3;
+
+        &{#hover({
+            color: @black_3;
+            box-shadow: inset 0 0 0 1px @black_3;
+            cursor: not-allowed;});
+        }
+    }
+
+    &.tag_always_active {
+        box-shadow: inset 0 0 0 1px @black;
+        color: @white;
+    }
+}
+
+.tags__tag_large {
+    @media (min-width: @break-point-xl) {
+        border-radius: 128px;
+        padding: 8px 30px;
+    }
+    
+    @media (max-width: @break-point-xl) {
+        border-radius: 128px;
+        padding: 8px 24px;
+    }
+    
+    @media (max-width: @break-point-lg) {
+        border-radius: 128px;
+        padding: 4px 20px;
+    }
+    
+    @media (max-width: @break-point-md) {
+        border-radius: 40px;
+        padding: 4px 12px;
+    }
+}
+
+.tags__tag_medium {
+    @media (min-width: @break-point-xl) {
+        border-radius: 128px;
+        padding: 6px 18px;
+
+        span {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+
+    @media (max-width: @break-point-xl) {
+        border-radius: 128px;
+        padding: 6px 14px;
+
+        span {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    @media (max-width: @break-point-lg) {
+        border-radius: 128px;
+        padding: 2.5px 10px;
+
+        span {
+            font-size: 16px;
+            line-height: 23px;
+        }
+    }
+
+    @media (max-width: @break-point-md) {
+        border-radius: 40px;
+        padding: 6px 14px;
+
+        span {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+
+.tags__tag_small {
+    @media (min-width: @break-point-xl) {
+        border-radius: 32px;
+        padding: 6px 16px;
+    }
+    
+    @media (max-width: @break-point-xl) {
+        border-radius: 32px;
+        padding: 4px 12px;
+    }
+    
+    @media (max-width: @break-point-lg) {
+        border-radius: 32px;
+        padding: 4px 10px;
+    }
+    
+    @media (max-width: @break-point-md) {
+        border-radius: 40px;
+        padding: 4px 12px;
+    }
+}
+
+.tags__tag_tiny {
+    @media (min-width: @break-point-xl) {
+        border-radius: 20px;
+        padding: 6px 16px;
+
+        span {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    
+    @media (max-width: @break-point-xl) {
+        border-radius: 32px;
+        padding: 4px 12px;
+
+        span {
+            font-size: 16px;
+            line-height: 24px; 
+        }
+    }
+    
+    @media (max-width: @break-point-lg) {
+        border-radius: 32px;
+        padding: 4px 10px;
+
+        span {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+    
+    @media (max-width: @break-point-md) {
+        border-radius: 40px;
+        padding: 4px 12px;
+
+        span {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+.tags__tag_search {
+    @media (min-width: @break-point-xl) {
+        border-radius: 32px;
+        padding: 6px 16px;
+
+        span {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    @media (max-width: @break-point-xl) {
+        border-radius: 32px;
+        padding: 4px 12px;
+
+        span {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    @media (max-width: @break-point-lg) {
+        border-radius: 32px;
+        padding: 4px 10px;
+
+        span {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+    @media (max-width: @break-point-md) {
+        border-radius: 40px;
+        padding: 4px 12px;
+
+        span {
+            font-size: 12px;
+            line-height: 24px;
+        }
+    }
+}
+
+.tags__tag_career {
+
+    @media (min-width: @break-point-xl) {
+        border-radius: 32px;
+        padding: 2.5px 10px;
+
+        span {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    @media (max-width: @break-point-xl) {
+        border-radius: 32px;
+        padding: 2.5px 10px;
+
+        span {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    @media (max-width: @break-point-lg) {
+        border-radius: 32px;
+        padding: 2.5px 10px;
+
+        span {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    @media (max-width: @break-point-md) {
+        border-radius: 40px;
+        padding: 2.5px 10px;
+
+        span {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    @media (max-width: @break-point-sm) {
+        border-radius: 40px;
+        padding: 2.5px 10px;
+
+        span {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}

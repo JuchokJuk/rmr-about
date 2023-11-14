@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@styles/*": ["./shared/styles/*"],
+      "@assets/*": ["./public/images/*"],
+      "@api/*" : ["./src/api/*"],
+      "@actions/*" : ["./src/redux/actions/*"],
+      "@helpers/*": ["./src/helpers/*"],
+      "@store/*": ["./src/store/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@stories/*": ["./src/stories/*"],
+      "data/*":["./src/assets/*"]
+    }
+  },
+  "exclude": ["node_modules", "build"]
+}

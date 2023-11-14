@@ -1,0 +1,51 @@
+@import '~@styles/variables.less';
+
+// Heading
+.link-slider__header {
+
+    display: block;
+    overflow: hidden;
+    
+    @media (min-width: @break-point-xl) {
+        margin-top: 32px;
+        max-height: 125px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-top: 24px;
+        max-height: 100px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-top: 16px;
+        max-height: 75px;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-top: 16px;
+        max-height: 100px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        margin-top: 16px;
+    }
+}
+
+.link-slider__heading {
+    margin: 0px;
+    padding: 0px;
+}
+
+.link-slider__heading{#hover({
+    color: @gray_3});
+}
+
+.link-slider__link {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.1s ease;
+
+    &{#hover({
+        opacity: 0.8;});
+    }
+}

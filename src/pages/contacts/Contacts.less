@@ -1,0 +1,307 @@
+@import "~@styles/variables.less";
+
+.contacts-page {
+    @media (min-width: @break-point-xl) {
+        padding-top: 80px;
+    }
+    @media (max-width: @break-point-xl) {
+        padding-top: 79px;
+    }
+    @media (max-width: @break-point-lg) {
+        padding-top: 68px;
+    }
+    @media (max-width: @break-point-md) {
+        padding-top: 72px;
+    }
+    @media (max-width: @break-point-sm) {
+        padding-top: 60px;
+    }
+    &__main {
+        @media (min-width: @break-point-xl) {
+            margin: 96px 0 110px;
+        }
+        @media (max-width: @break-point-xl) {
+            margin: 65px 0 82px;
+        }
+        @media (max-width: @break-point-lg) {
+            margin: 62px 0 71px;
+        }
+        @media (max-width: @break-point-md) {
+            margin: 44px 0 68px;
+        }
+        @media (max-width: @break-point-sm) {
+            margin: 27px 0 67px;
+        }
+    }
+    .main-contact--name {
+        .H1();
+        @media (min-width: @break-point-xl) {
+            margin-bottom: 62px;
+        }
+        @media (max-width: @break-point-xl) {
+            margin-bottom: 49px;
+            letter-spacing: -0.02em;
+        }
+        @media (max-width: @break-point-lg) {
+            margin-bottom: 33px;
+        }
+        @media (max-width: @break-point-md) {
+            margin-bottom: 29px;
+            letter-spacing: 0;
+        }
+        @media (max-width: @break-point-sm) {
+            margin-bottom: 22px;
+            letter-spacing: -0.02em;
+        }
+    }
+    .blockInfo {
+        display: flex;
+        @media (max-width: @break-point-sm) {
+            flex-direction: column;
+        }
+
+        &__description {
+            .SH3();
+            @media (min-width: @break-point-xl) {
+                width: 957px;
+                margin-right: 174px;
+            }
+            @media (max-width: @break-point-xl) {
+                width: 627px;
+                margin-right: 108px;
+                letter-spacing: -0.01em;
+            }
+            @media (max-width: @break-point-lg) {
+                width: 472px;
+                letter-spacing: 0;
+                margin-right: 91px;
+            }
+            @media (max-width: @break-point-md) {
+                width: 380px;
+                margin-right: 65px;
+            }
+            @media (max-width: @break-point-sm) {
+                width: 100%;
+            }
+        }
+        &__contacts {
+            &--block {
+                &:first-child {
+                    @media (min-width: @break-point-xl) {
+                        margin-bottom: 38px;
+                    }
+                    @media (max-width: @break-point-xl) {
+                        margin-bottom: 25px;
+                    }
+                    @media (max-width: @break-point-lg) {
+                        margin-bottom: 29px;
+                    }
+                    @media (max-width: @break-point-md) {
+                        margin-bottom: 20px;
+                    }
+                    @media (max-width: @break-point-sm) {
+                        margin: 28px 0 20px 0;
+                    }
+                }
+                @media (min-width: @break-point-xl) {
+                    max-width: 533px;
+                }
+                @media (max-width: @break-point-xl) {
+                    max-width: 344px;
+                }
+                @media (max-width: @break-point-lg) {
+                    max-width: 254px;
+                }
+                @media (max-width: @break-point-md) {
+                    max-width: 203px;
+                }
+                @media (max-width: @break-point-sm) {
+                    max-width: 288px;
+                }
+            }
+            &--item {
+                display: flex;
+                align-items: center;
+                .SH3();
+                @media (min-width: @break-point-xl) {
+                    margin-bottom: 14px;
+                }
+                @media (max-width: @break-point-xl) {
+                    margin-bottom: 15px;
+                    letter-spacing: -0.01em;
+                }
+                @media (max-width: @break-point-lg) {
+                    margin-bottom: 7px;
+                    letter-spacing: 0;
+                }
+                @media (max-width: @break-point-md) {
+                    margin-bottom: 8px;
+                    letter-spacing: 0;
+                }
+                .blockInfo__email {
+                    text-decoration: underline;
+                    cursor: pointer;
+                    transition: color ease-in 0.2s;
+                    & {
+                        #hover({
+                        color: @red;});
+                    }
+                }
+            }
+
+            &--description {
+                .P1-short();
+            }
+        }
+    }
+    &__line {
+        border-bottom: 1px solid #333;
+        margin: 0;
+    }
+    &__iconCopy {
+        fill: @black;
+        transition: fill ease-in 0.2s;
+        cursor: pointer;
+        & {
+            #hover({
+            fill: @red;});
+        }
+        @media (min-width: @break-point-xl) {
+            width: 30px;
+            margin-left: 17.3px;
+        }
+        @media (max-width: @break-point-xl) {
+            width: 22.5px;
+            margin-left: 12.7px;
+            margin-top: -3px;
+        }
+        @media (max-width: @break-point-lg) {
+            width: 19px;
+            margin-left: 11px;
+        }
+        @media (max-width: @break-point-md) {
+            width: 18px;
+            margin-left: 6.1px;
+        }
+        @media (max-width: @break-point-sm) {
+            width: 16px;
+            margin-left: 14px;
+        }
+    }
+    &__iconCopyCard {
+        @media (min-width: @break-point-xl) {
+            width: 23.5px;
+            height: 35px;
+            margin-left: 13.5px;
+        }
+        @media (max-width: @break-point-xl) {
+            width: 16px;
+            margin-left: 10.3px;
+            margin-top: 1px;
+            height: 27px;
+        }
+        @media (max-width: @break-point-lg) {
+            width: 17px;
+            height: 23px;
+            margin: 0 0 2px 11px;
+        }
+        @media (max-width: @break-point-md) {
+            width: 17px;
+            margin-left: 10px;
+            margin-top: 3px;
+            height: 18.7px;
+        }
+        @media (max-width: @break-point-sm) {
+            width: 16px;
+            height: 20px;
+            margin: 0 0 0 15px;
+        }
+    }
+    //Изменение стилей блока Мир сквозь призму окуляров
+    .width-control-wrapper {
+        @media (max-width: @break-point-lg) {
+            padding-top: 0;
+        }
+        @media (max-width: @break-point-md) {
+            padding-top: 0;
+        }
+    }
+    .prism__name {
+        color: @black;
+    }
+    .prism__aboutCart {
+        color: @black;
+    }
+    .prism__content {
+        @media (min-width: @break-point-xl) {
+            margin: 0 0 110px 0;
+        }
+        @media (max-width: @break-point-xl) {
+            margin: 2px 0 81px 0;
+        }
+        @media (max-width: @break-point-lg) {
+            margin: 0 0 69px 0;
+        }
+        @media (max-width: @break-point-md) {
+            margin: 0 0 67px 0;
+        }
+        @media (max-width: @break-point-sm) {
+            margin: 4px 0 67px 0;
+        }
+    }
+
+    // Рассылка
+    &__mailingList {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background: none;
+        margin: 0;
+        @media (max-width: @break-point-sm) {
+            background: @blue;
+        }
+        &--content {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            background: @blue;
+            @media (min-width: @break-point-xl) {
+                margin-bottom: 108px;
+                max-width: 1664px;
+            }
+            @media (max-width: @break-point-xl) {
+                max-width: 1086px;
+                margin-bottom: 80px;
+            }
+            @media (max-width: @break-point-lg) {
+                max-width: 824px;
+                margin-bottom: 92px;
+            }
+            @media (max-width: @break-point-md) {
+                max-width: 648px;
+                margin-bottom: 74px;
+            }
+            @media (max-width: @break-point-sm) {
+                max-width: 375px;
+                margin: 0;
+            }
+        }
+    }
+}
+.contacts-page-show-mailing-header {
+    @media (min-width: @break-point-xl) {
+        padding-top: 168px;
+    }
+    @media (max-width: @break-point-xl) {
+        padding-top: 140px;
+    }
+    @media (max-width: @break-point-lg) {
+        padding-top: 116px;
+    }
+    @media (max-width: @break-point-md) {
+        padding-top: 112px;
+    }
+    @media (max-width: @break-point-sm) {
+        padding-top: 132px;
+    }
+}

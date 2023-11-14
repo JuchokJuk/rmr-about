@@ -1,0 +1,46 @@
+@import "~@styles/variables.less";
+
+.new-tag {
+    display: flex;
+    align-items: center;
+    color: @gray;
+    transition: color 0.2s ease-in-out;
+
+    &:after {
+        content: " ";
+        background-color: @gray;
+        transition: background-color 0.2s ease-in-out;
+
+        mask-image: url(/images/tagDot.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+
+        -webkit-mask-image: url(/images/tagDot.svg);
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+
+        margin-left: 8px;
+
+        @media (min-width: @break-point-xl) {
+            width: 12px;
+            height: 12px;
+            
+        }
+
+        @media (max-width: @break-point-xl) {
+            width: 12px;
+            height: 12px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+}

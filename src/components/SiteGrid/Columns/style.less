@@ -1,0 +1,19 @@
+@import "~@styles/variables.less";
+
+.layout-columns{
+    width: 100%;
+    display: grid;
+    column-gap: 32px;
+    @media (max-width: @break-point-xl) {
+        column-gap: 16px;
+    }
+    @media (max-width: @break-point-lg) {
+        column-gap: 20px;
+    }
+    @media (max-width: @break-point-md) {
+        column-gap: 20px;
+    }
+    @media (max-width: @break-point-sm) {
+        column-gap: 24px;
+    }
+}

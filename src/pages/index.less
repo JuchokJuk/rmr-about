@@ -1,0 +1,95 @@
+@import "~@styles/variables.less";
+.main-page__mailingList {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: none;
+    margin: 0;
+    @media (max-width: @break-point-sm) {
+        background: @blue;
+    }
+    &--content {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        background: @blue;
+        @media (min-width: @break-point-xl) {
+            max-width: 1248px;
+        }
+        @media (max-width: @break-point-xl) {
+            max-width: 888px;
+        }
+        @media (max-width: @break-point-lg) {
+            max-width: 672px;
+        }
+        @media (max-width: @break-point-md) {
+            max-width: 648px;
+        }
+        @media (max-width: @break-point-sm) {
+            max-width: 375px;
+            margin: 0;
+        }
+    }
+    .mailing {
+        @media (min-width: @break-point-xl) {
+            padding: 83px 80px 80px 80px;
+        }
+        @media (max-width: @break-point-xl) {
+            padding: 65px 64px 64px 64px;
+        }
+        @media (max-width: @break-point-lg) {
+            padding: 49px 48px 48px 48px;
+        }
+        @media (max-width: @break-point-md) {
+            padding: 25px 24px 24px 24px;
+        }
+        @media (max-width: @break-point-sm) {
+            padding: 53px 24px 52px 24px;
+        }
+    }
+    .successful {
+        @media (min-width: @break-point-xl) {
+            padding: 80px 80px 82px 80px;
+        }
+        @media (max-width: @break-point-xl) {
+            padding: 64px;
+        }
+        @media (max-width: @break-point-lg) {
+            padding: 48px 48px 49px 48px;
+        }
+        @media (max-width: @break-point-md) {
+            padding: 24px 24px 25px 24px;
+        }
+        @media (max-width: @break-point-sm) {
+            padding: 24px 24px 25px 24px;
+        }
+        &__thanks {
+            @media (min-width: @break-point-xl) {
+                margin: 293px 0 27px 0;
+            }
+            @media (max-width: @break-point-xl) {
+                margin: 233px 0 22px 0;
+            }
+            @media (max-width: @break-point-lg) {
+                margin: 183px 0 10px 0;
+            }
+            @media (max-width: @break-point-md) {
+                margin: 195px 0 12px 0;
+            }
+            @media (max-width: @break-point-sm) {
+                margin: 258px 0 11px 0;
+            }
+            &--text {
+                @media (max-width: @break-point-xl) {
+                    letter-spacing: -0.02em;
+                }
+                @media (max-width: @break-point-lg) {
+                    letter-spacing: -0.01em;
+                }
+                @media (max-width: @break-point-md) {
+                    letter-spacing: 0;
+                }
+            }
+        }
+    }
+}

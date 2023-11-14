@@ -1,0 +1,38 @@
+@import '~@styles/variables.less';
+
+.x2 {
+    white-space: pre-line;
+    word-break: break-word;
+
+    @media (min-width: @break-point-xl) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    @media (max-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    
+    @media (max-width: @break-point-lg) {
+        font-size: 16px;
+        line-height: 24px;
+        
+        letter-spacing: unset;
+    }
+    
+    @media (max-width: @break-point-md) {
+        font-size: 22px;
+        line-height: 32px;
+        
+        letter-spacing: -0.02em;
+        
+    }
+    
+    @media (max-width: @break-point-sm) {
+        font-size: 22px;
+        line-height: 32px;
+        
+        letter-spacing: -0.02em;        
+    }
+}

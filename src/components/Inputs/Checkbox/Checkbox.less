@@ -1,0 +1,173 @@
+@import "~@styles/variables.less";
+
+.checkbox {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+
+    path {
+        transition: fill 0.2s ease-in-out;
+    }
+
+    &__marker {
+        border: 2px solid @white;
+        transition: border-color 0.2s ease-in-out;
+        width: 20px;
+        height: 20px;
+
+        @media (min-width: @break-point-xl) {
+            margin-top: 8px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            margin-top: 5px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            margin-top: 4px;
+        }
+
+        @media (max-width: @break-point-md) {
+            margin-top: 4px;
+        }
+        @media (max-width: @break-point-sm) {
+            margin-top: 0px;
+        }
+    }
+
+    .checkbox__marker-icon--svg {
+        width: 16px;
+        height: 15px;
+        background-color: @blue;
+        mask-image: url("/images/tikSmall.svg");
+        -webkit-mask-image: url("/images/tikSmall.svg");
+        transition: background-color 0.2s ease-in-out;
+        margin-bottom: 5px;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &{#hover({
+            .checkbox__marker {
+                border-color: @red;
+            }
+
+            .checkbox__control:checked {
+                ~ .checkbox__marker {
+                    .checkbox__marker-icon {
+                        &--svg {
+                            background-color: @white;
+                        }
+                    }
+                    border-color: @white;
+                }
+            }});
+        }
+    }
+
+    &__control {
+        display: none;
+
+        &:checked {
+            ~ .checkbox__marker {
+                .checkbox__marker-icon {
+                    &--svg {
+                        background-color: @red;
+                    }
+                }
+                border-color: @red;
+            }
+        }
+
+        &:disabled {
+            pointer-events: none;
+        }
+    }
+
+    &__label {
+        margin-left: 16px;
+        color: @white;
+
+        white-space: normal;
+
+        .p3_font();
+
+        @media (min-width: @break-point-xl) {
+            margin-bottom: 2px;
+            margin-top: 2px;
+        }
+        @media (max-width: @break-point-lg) {
+            margin-left: 12px;
+            margin-bottom: 1px;
+            margin-top: 3px;
+        }
+        @media (max-width: @break-point-sm) {
+            margin-left: 16px;
+            margin-bottom: 3px;
+            margin-top: 1px;
+        }
+
+        &--link {
+            white-space: normal;
+            color: @white;
+            transition: color 0.2s ease-in-out;
+            margin-left: 0;
+
+            // bg gradient to underline
+            text-decoration: underline;
+            text-underline-offset: 1px;
+            text-decoration-thickness: 1px;
+                            
+            &{#hover({
+                color: @red;});
+            }
+        }
+    }
+
+    &-wrap {
+        width: 100%;
+
+        @media (min-width: @break-point-xl) {
+            margin-bottom: @padding-red_1920;
+        }
+
+        @media (max-width: @break-point-xl) {
+            margin-bottom: @padding-red_1366;
+        }
+
+        @media (max-width: @break-point-lg) {
+            margin-bottom: @padding-red_1024;
+        }
+
+        @media (max-width: @break-point-md) {
+            margin-bottom: @padding-red_375;
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        &.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+}
+
+.checks-wrapper {
+    @media (min-width: @break-point-xl) {
+        margin-bottom: @padding-yellow_1920;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-bottom: @padding-yellow_1366;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-bottom: @padding-yellow_1024;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-bottom: @padding-green_375;
+    }
+}

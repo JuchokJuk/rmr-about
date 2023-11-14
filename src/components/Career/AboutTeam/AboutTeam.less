@@ -1,0 +1,94 @@
+@import '~@styles/variables.less';
+
+.about-team {
+
+    @media (min-width: @break-point-xl) {
+        margin-top: @padding-pink_1920;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-top: @padding-pink_1366;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-top: @padding-pink_1024;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-top: @padding-violet_375;
+    }
+
+    @media (max-width: @break-point-sm) {}
+
+    & &__header {
+        @media (min-width: @break-point-xl) {
+            margin-bottom: @padding-green_1920;
+        }
+
+        @media (max-width: @break-point-xl) {
+            margin-bottom: @padding-green_1366;
+        }
+
+        @media (max-width: @break-point-lg) {
+            margin-bottom: @padding-green_1024;
+        }
+
+        @media (max-width: @break-point-md) {
+            margin-bottom: @padding-green_375;
+        }
+    }
+
+    & &__content {
+        display: flex;
+        flex-direction: row;
+
+        @media (max-width: @break-point-sm) {
+            flex-direction: column;
+        }
+
+        &__image {
+            width: 576px;
+            height: 632px;
+            margin-right: 99px;
+
+            @media (max-width: @break-point-xl) {
+                width: 408px;
+                height: 444px;
+                margin-right: 72px;
+            }
+
+            @media (max-width: @break-point-lg) {
+                width: 312px;
+                height: 349px;
+                margin-right: 48px;
+            }
+
+            @media (max-width: @break-point-md) {
+                width: 328px;
+                height: 357px;
+                margin-right: 24px;
+            }
+
+            @media (max-width: @break-point-sm) {
+                width: 335px;
+                height: 357px;
+                margin-right: 0;
+                margin-bottom: @padding-green_375;
+            }
+
+            span {
+                width: inherit;
+                height: inherit;
+
+                img{
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+
+.about-team__content__text{
+    display: flex;
+    flex-direction: column;
+}

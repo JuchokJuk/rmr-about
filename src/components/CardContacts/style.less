@@ -1,0 +1,228 @@
+@import "~@styles/variables.less";
+.contacts-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media (min-width: @break-point-xl) {
+        margin: 39px 0 107px 0;
+        gap: 0px 30px;
+    }
+    @media (max-width: @break-point-xl) {
+        margin: 38px 0 82px 0;
+        gap: 0px 15px;
+    }
+    @media (max-width: @break-point-lg) {
+        margin: 17px 0 71px 0;
+        gap: 0px 20px;
+    }
+    @media (max-width: @break-point-md) {
+        margin: 21px 0 67px 0;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    @media (max-width: @break-point-sm) {
+        margin: 19px 0 67.5px 0;
+    }
+    &__emailAndSite {
+        @media (max-width: @break-point-md) {
+            display: flex;
+        }
+        @media (max-width: @break-point-sm) {
+            flex-direction: column;
+        }
+    }
+    &__info {
+        &--name {
+            .H2-small();
+            letter-spacing: -0.02em;
+            @media (max-width: @break-point-sm) {
+                letter-spacing: 0;
+            }
+        }
+        &--description {
+            .P1-short();
+            @media (min-width: @break-point-xl) {
+                margin: 24px 0 30px 0;
+            }
+            @media (max-width: @break-point-xl) {
+                margin: 23px 0 26px 0;
+            }
+            @media (max-width: @break-point-lg) {
+                margin: 15px 0 22px 0;
+            }
+            @media (max-width: @break-point-md) {
+                margin: 19px 0 18px 0;
+            }
+            @media (max-width: @break-point-sm) {
+                margin: 16px 0 28px 0;
+            }
+        }
+
+        &--emailBlock {
+            display: flex;
+            @media (max-width: @break-point-md) {
+                width: 50%;
+            }
+            @media (max-width: @break-point-sm) {
+                width: auto;
+            }
+            .info__email {
+                cursor: pointer;
+                .P1-long();
+                text-decoration: underline;
+                transition: color ease-in 0.2s;
+                &{#hover({
+                    color: @red;});
+                }
+            }
+        }
+        &--site {
+            display: flex;
+            @media (min-width: @break-point-xl) {
+                margin-top: 14px;
+            }
+            @media (max-width: @break-point-xl) {
+                margin-top: 10px;
+            }
+            @media (max-width: @break-point-lg) {
+                margin-top: 13px;
+            }
+            @media (max-width: @break-point-md) {
+                margin-top: 0;
+            }
+            @media (max-width: @break-point-sm) {
+                margin-top: 16px;
+            }
+        }
+        &--siteText {
+            color: @red;
+            .P1-short();
+            cursor: pointer;
+            &{#hover({
+                .contacts-card__info--iconArrow {
+                    transform: translateX(6px);
+                }});
+            }
+            @media (min-width: @break-point-xl) {
+                padding-bottom: 8px;
+            }
+            @media (max-width: @break-point-xl) {
+                padding-bottom: 4px;
+            }
+            @media (max-width: @break-point-lg) {
+                padding-bottom: 5px;
+            }
+            @media (max-width: @break-point-md) {
+                margin: 2px 0 0 10px;
+                padding-bottom: 0;
+            }
+            @media (max-width: @break-point-sm) {
+                margin: 0;
+            }
+        }
+        &--iconArrow {
+            transition: transform 0.2s ease;
+            @media (min-width: @break-point-xl) {
+                width: 21.5px;
+                margin-left: 14px;
+            }
+            @media (max-width: @break-point-xl) {
+                width: 16.5px;
+                margin-left: 10.7px;
+            }
+            @media (max-width: @break-point-lg) {
+                width: 16px;
+                margin-top: 3px;
+                margin-left: 10.5px;
+            }
+            @media (max-width: @break-point-md) {
+                margin-bottom: -3px;
+                width: 16.5px;
+                margin-left: 11px;
+            }
+            @media (max-width: @break-point-sm) {
+                width: 16.5px;
+                margin: 0 0 -1px 14px;
+                padding: 0 0 0 0;
+            }
+        }
+        @media (min-width: @break-point-xl) {
+            width: 675px;
+        }
+        @media (max-width: @break-point-xl) {
+            width: 443px;
+        }
+        @media (max-width: @break-point-lg) {
+            width: 332px;
+        }
+        @media (max-width: @break-point-md) {
+            width: 100%;
+        }
+        @media (max-width: @break-point-sm) {
+            width: 100%;
+        }
+    }
+    &__office {
+        &--name {
+            .H3-medium();
+            @media (min-width: @break-point-xl) {
+                margin: 15px 0 19px 0;
+            }
+            @media (max-width: @break-point-xl) {
+                letter-spacing: -0.01em;
+                margin: 10px 0 17px 0;
+            }
+            @media (max-width: @break-point-lg) {
+                margin: 15px 0 16px 0;
+            }
+            @media (max-width: @break-point-md) {
+                margin: 27px 0 11px 0;
+            }
+            @media (max-width: @break-point-sm) {
+                margin: 33px 0 11px 0;
+            }
+        }
+        .officeBlock {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            @media (min-width: @break-point-xl) {
+                gap: 22px 32px;
+            }
+            @media (max-width: @break-point-xl) {
+                gap: 16px 19px;
+            }
+            @media (max-width: @break-point-lg) {
+                gap: 16px 21px;
+            }
+            @media (max-width: @break-point-md) {
+                gap: 12px 21px;
+                width: 100%;
+            }
+            @media (max-width: @break-point-sm) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            &__item--name {
+                .SH3();
+                @media (min-width: @break-point-xl) {
+                    margin: 0 0 6px 0;
+                }
+                @media (max-width: @break-point-xl) {
+                    margin: 0 0 8px 0;
+                    letter-spacing: -0.01em;
+                }
+                @media (max-width: @break-point-lg) {
+                    margin: 0 0 4px 0;
+                    letter-spacing: 0;
+                }
+                @media (max-width: @break-point-md) {
+                    margin: 0 0 4px 0;
+                }
+                @media (max-width: @break-point-sm) {
+                    margin: 0 0 4px 0;
+                }
+            }
+            &__item--address {
+                .P1-short();
+            }
+        }
+    }
+}

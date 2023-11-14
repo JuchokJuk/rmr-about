@@ -1,0 +1,25 @@
+@import './_vars.less';
+
+.flow-ft {
+    font-family: "CoFo Pixel";
+
+    @media (min-width: @break-point-xl) {
+        font-size: @ft-xl-font-size;
+        line-height: @ft-xl-lineheight;
+    }
+    @media (max-width: @break-point-xl) {
+        font-size: @ft-lg-font-size;
+        line-height: @ft-lg-lineheight;
+    }
+    @media (max-width: @break-point-lg) {
+        font-size: @ft-md-font-size;
+        line-height: @ft-md-lineheight;
+        display: block;
+    }
+    @media (max-width: @break-point-md) {
+        display: none;
+    }
+    @media (max-width: @break-point-sm) {
+        display: none;
+    }
+}

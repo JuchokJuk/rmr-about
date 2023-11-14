@@ -1,0 +1,30 @@
+@import "~@styles/variables.less";
+.big-business {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    @media (max-width: @break-point-md) {
+        justify-content: unset;
+        align-items: flex-end;
+        height: 100vh;
+    }
+    .header-container {
+        color: @white;
+        width: 1099px;
+        @media (max-width: @break-point-xl) {
+            width: 719px;
+        }
+        @media (max-width: @break-point-lg) {
+            width: 541px;
+        }
+
+        @media (max-width: @break-point-md) {
+            width: 100%;
+            margin-bottom: 159px;
+        }
+
+        @media (max-width: @break-point-sm) {
+            margin-bottom: 126px;
+        }
+    }
+}

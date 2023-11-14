@@ -1,0 +1,30 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect x="9" y="19" width="2" height="2" fill="black"/>
+    <rect x="9" y="21" width="2" height="2" fill="black"/>
+    <rect x="11" y="21" width="2" height="2" fill="black"/>
+    <rect x="13" y="23" width="2" height="2" fill="black"/>
+    <rect x="17" y="23" width="2" height="2" fill="black"/>
+    <rect x="15" y="23" width="2" height="2" fill="black"/>
+    <rect x="19" y="21" width="2" height="2" fill="black"/>
+    <rect x="21" y="21" width="2" height="2" fill="black"/>
+    <rect x="21" y="19" width="2" height="2" fill="black"/>
+    <rect x="23" y="17" width="2" height="2" fill="black"/>
+    <rect x="23" y="15" width="2" height="2" fill="black"/>
+    <rect x="7" y="13" width="2" height="2" fill="black"/>
+    <rect x="9" y="11" width="2" height="2" fill="black"/>
+    <rect x="9" y="9" width="2" height="2" fill="black"/>
+    <rect x="11" y="9" width="2" height="2" fill="black"/>
+    <rect x="13" y="7" width="2" height="2" fill="black"/>
+    <rect x="13" y="21" width="2" height="2" transform="rotate(-90 13 21)" fill="black"/>
+    <rect x="9" y="25" width="2" height="2" transform="rotate(-90 9 25)" fill="black"/>
+    <rect x="9" y="23" width="2" height="2" transform="rotate(-90 9 23)" fill="black"/>
+    <rect x="9" y="21" width="2" height="2" transform="rotate(-90 9 21)" fill="black"/>
+    <rect x="11" y="21" width="2" height="2" transform="rotate(-90 11 21)" fill="black"/>
+    <rect x="21" y="11" width="2" height="2" fill="black"/>
+    <rect x="23" y="13" width="2" height="2" fill="black"/>
+    <rect x="21" y="9" width="2" height="2" fill="black"/>
+    <rect x="19" y="9" width="2" height="2" fill="black"/>
+    <rect x="17" y="7" width="2" height="2" fill="black"/>
+    <rect x="15" y="7" width="2" height="2" fill="black"/>
+</svg>

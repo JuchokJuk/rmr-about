@@ -1,0 +1,54 @@
+@import '~@styles/variables.less';
+@import './Search/Search.less';
+@import './Search/DropList/DropList.less';
+@import './Search/NoResults/NoResults.less';
+
+.search_modal {
+    outline: none;
+    transition: opacity 0.3s ease-in;
+    opacity: 0;
+    background-color: @white;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: @break-point-md) {
+        position: initial;
+        transform: none;
+    }
+
+    &--overlay {
+        z-index: 200;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        height: 100%;
+        overflow-y: scroll;
+        background-color: @white;
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.ReactModal__Overlay--after-open.search_modal--overlay {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.ReactModal__Overlay--before-close.search_modal--overlay {
+    background-color: rgba(255, 255, 255, 0,5);
+}
+
+.search_modal.ReactModal__Content--after-open {
+    opacity: 1;
+}
+
+.search_modal.ReactModal__Content--before-close  {
+    opacity: 0;
+}

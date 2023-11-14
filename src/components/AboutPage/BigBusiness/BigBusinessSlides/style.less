@@ -1,0 +1,22 @@
+@import "~@styles/variables.less";
+
+.big-business {
+    .slide-content-wrapper {
+        height: 370px;
+
+        @media (max-width: @break-point-xl) {
+            height: 286px;
+        }
+        @media (max-width: @break-point-lg) {
+            height: 273px;
+        }
+        @media (max-width: @break-point-md) {
+            height: 100%;
+            padding-top: 204px;
+        }
+        @media (max-width: @break-point-sm) {
+            height: 100%;
+            padding-top: 126px;
+        }
+    }
+}

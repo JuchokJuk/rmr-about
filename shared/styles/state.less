@@ -1,0 +1,56 @@
+@import '~@styles/variables.less';
+
+.paragraph-1, 
+.paragraph-2, 
+.paragraph-3 {
+
+    & > a {
+        color: @red;
+        text-decoration: none;
+        background-image: linear-gradient(
+            to bottom,
+            transparent 0px,
+            @link_border 0px
+        );
+              
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size 0.2s ease-in-out 0.2s;
+    }
+
+    & > a{#hover({
+        background-size: 100% 2px;
+        background-position: 0% 100%;
+
+        transition-delay: 0.1s;});
+    }
+
+    & > b { 
+        font-weight: 700;
+    }
+}
+
+.footer__container__content__email.enlarged {
+    & > a {
+        color: @black;
+        text-decoration: none;
+        background-image: linear-gradient(
+            to bottom,
+            transparent 0px,
+            @black_5 0px
+        );
+
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size 0.2s, color 0.2s ease-in-out;
+    }
+    
+    & > a{#hover({
+        background-size: 100% 2px;
+        background-position: 0% 100%;
+
+        transition-delay: 0.1s;});
+    }
+}

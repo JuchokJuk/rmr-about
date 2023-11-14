@@ -1,0 +1,75 @@
+@import "@styles/variables.less";
+
+.item-list {
+    display: flex;
+    color: @white;
+    &__number {
+        color: @red;
+        @media (min-width: @break-point-xl) {
+            font-size: 100px;
+            line-height: 100px;
+            margin-right: 46px;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 72px;
+            line-height: 76px;
+            margin-right: 15px;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 60px;
+            line-height: 60px;
+            margin-right: 8px;
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 48px;
+            line-height: 48px;
+            margin-right: 18px;
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 32px;
+            line-height: 36px;
+            margin-right: 8px;
+        }
+    }
+    &__body {
+        margin: 0;
+
+        letter-spacing: -0.02em;
+        @media (min-width: @break-point-xl) {
+            font-size: 100px;
+            line-height: 100px;
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 72px;
+            line-height: 76px;
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 60px;
+            line-height: 60px;
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 48px;
+            line-height: 48px;
+            letter-spacing: 0em;
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 32px;
+            line-height: 36px;
+        }
+    }
+    @media (min-width: @break-point-xl) {
+        width: 1664px;
+    }
+    @media (max-width: @break-point-xl) {
+        width: 994px;
+    }
+    @media (max-width: @break-point-lg) {
+        width: 820px;
+    }
+    @media (max-width: @break-point-md) {
+        width: 648px;
+    }
+    @media (max-width: @break-point-sm) {
+        width: 328px;
+    }
+}

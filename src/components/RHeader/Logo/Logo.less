@@ -1,0 +1,125 @@
+@import "~@styles/variables.less";
+.r-logo {
+    display: flex;
+    @media (min-width: @break-point-xl) {
+        font-size: 32px;
+        line-height: 32px;
+    }
+    @media (max-width: @break-point-xl) {
+        font-size: 26px;
+        line-height: 26px;
+    }
+    @media (max-width: @break-point-lg) {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    @media (max-width: @break-point-md) {
+        font-size: 24px;
+    }
+    @media (max-width: @break-point-sm) {
+        font-size: 24px;
+    }
+
+    &__name {
+        color: @white;
+        font-family: "CoFo Pixel";
+        cursor: pointer;
+        &--span {
+            color: @red;
+            font-family: "CoFo Sans";
+            mix-blend-mode: difference;
+        }
+    }
+    .domain {
+        font-family: "CoFo Pixel";
+        color: @white;
+        position: relative;
+       /*  cursor: pointer; */
+
+        &__name {
+            display: flex;
+            align-items: center;
+            padding-left: 8px;
+        }
+        &__icon {
+            fill: @white;
+            transform: rotate(0deg);
+            transition: fill 0.2s ease-in;
+            transition: 0.2s;
+            &{#hover({
+                fill: @red;
+                mix-blend-mode: difference;});
+            }
+            &--active {
+                transform: rotate(180deg);
+            }
+            @media (min-width: @break-point-xl) {
+                width: 13.75px;
+                margin-left: 15px;
+                margin-top: 4px;
+            }
+            @media (max-width: @break-point-xl) {
+                width: 10px;
+                margin-left: 11px;
+                margin-top: 4px;
+            }
+            @media (max-width: @break-point-lg) {
+                width: 8.75px;
+                margin-left: 13.63px;
+                margin-top: 4px;
+            }
+            @media (max-width: @break-point-md) {
+                margin-left: 11px;
+            }
+            @media (max-width: @break-point-sm) {
+                width: 10px;
+                margin-left: 11px;
+                margin-top: 4px;
+            }
+        }
+        &__block {
+            // position: absolute;
+            overflow: hidden;
+            position: fixed;
+            // for coloring on red block
+
+            background: @black;
+            padding: 8px;
+            fill: red;
+            opacity: 0;
+            transition-duration: 0.2s;
+            transform-origin: top;
+            transform: scaleY(0);
+            will-change: transform;
+            &--active {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+        }
+
+        &__option {
+            cursor: pointer;
+            transition: color 0.2s ease-in;
+            list-style: none;
+            &{#hover({
+                color: @red;
+                mix-blend-mode: difference;});
+            }
+        }
+        @media (min-width: @break-point-xl) {
+            margin-left: 12px;
+        }
+        @media (max-width: @break-point-xl) {
+            margin-left: 12px;
+        }
+        @media (max-width: @break-point-lg) {
+            margin-left: 9px;
+        }
+        @media (max-width: @break-point-md) {
+            margin-left: 10px;
+        }
+        @media (max-width: @break-point-sm) {
+            margin-left: 5px;
+        }
+    }
+}

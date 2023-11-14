@@ -1,0 +1,32 @@
+@import './variables.less';
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+    .header {
+        justify-content: space-around;
+    }
+
+    .page__body__content__main {
+        flex-basis: auto !important;
+    }
+
+    .side-card {
+        flex-direction: row;
+    }
+
+    .ie-flow_image-wrapper {
+        position: relative;
+        span {
+            position: relative;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .header-scrolled-wrapp .header__sidebar--opened .header__sidebar__arrow__box {
+        top: 18px;
+    }
+
+}

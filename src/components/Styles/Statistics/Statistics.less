@@ -1,0 +1,67 @@
+@import '~@styles/variables.less';
+
+// Показатели
+.achievements-block {
+    position: relative;
+    @media (max-width: @break-point-lg) {
+        //1024-1365.98
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        //768-1023.98
+        margin-bottom: 24px;
+    }
+    
+    @media (max-width: @break-point-sm) {
+        margin-bottom: 24px;
+    }
+}
+
+.achievements-block:last-child {
+
+    @media (max-width: @break-point-lg) {
+        //1024-1365.98
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        //768-1023.98
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+.statistic__title {
+    color: red;
+    position: relative;
+    ///
+    @media (min-width: @break-point-xl) {
+        margin-bottom: @padding-red_1920;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-bottom: @padding-red_1366;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-bottom: @padding-orange_1024;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-bottom: @padding-red_375;
+    }
+}
+
+.statistic__label {
+    position: relative;
+}
+
+.statistic__value {
+    color: #7F7F7F;
+}

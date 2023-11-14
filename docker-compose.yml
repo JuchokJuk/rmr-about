@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+
+  &app-service  rmr_front:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+#    volumes:
+#      - ./app:/app/:rw
+    hostname: *app-service
+    container_name: *app-service
+    env_file: ./.env.docker
+    command: /scripts/run-node-cluster.sh
+    ports:
+      - 3000:3000
+

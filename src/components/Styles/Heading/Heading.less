@@ -1,0 +1,71 @@
+@import '~@styles/variables';
+
+@import './Items/H1/H1.less';
+@import './Items/H2/H2.less';
+@import './Items/H3/H3.less';
+@import './Items/H4/H4.less';
+@import './Items/H5/H5.less';
+@import './Items/HA1/HA1.less';
+@import './Items/HA2/HA2.less';
+@import './Items/HA3/HA3.less';
+
+.h1_c {
+    word-break: break-word;
+}
+
+.h2_c,
+.h3_c,
+.h4_c,
+.h5_c
+{
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.ha1_c,
+.ha2_c,
+.ha3_c {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.card-home_case {
+    .card-home__heading {
+        .heading_hover {
+            cursor: pointer;
+            transition: color 0.2s ease-in-out;
+            
+            &{#hover({
+                color: @black_3;});
+            }
+        }
+    }
+}
+
+.heading_hover {
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+
+    &{#hover({
+
+        @media (min-width: @break-point-xl) {
+            color: @red;
+        }
+    
+        // 1366
+        @media (max-width: @break-point-xl) {
+            color: @red;
+        }
+    
+        // 1024
+        @media (max-width: @break-point-lg) {
+            color: @red;
+        }
+    
+        // 375
+        @media (max-width: @break-point-sm) {
+            color: @black;
+        }});
+        
+    }
+}

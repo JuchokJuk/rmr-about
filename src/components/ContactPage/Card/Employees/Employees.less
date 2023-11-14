@@ -1,0 +1,58 @@
+@import '~@styles/variables.less';
+
+.employees {
+  height: 70px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+
+  @media (max-width: @break-point-xl) {
+    height: 56px;
+  }
+  @media (max-width: @break-point-lg) {
+    height: 38px;
+  }
+  //@media (max-width: @break-point-md) {  }
+  @media (max-width: @break-point-sm) {
+    height: 56px;
+  }
+
+  &__wrapper {
+    display: inline-flex;
+    flex-shrink: 0;
+    // для наложения иконок друг на друга
+    max-width: 39px;
+
+    @media (max-width: @break-point-xl) {
+      max-width: 32px;
+    }
+    @media (max-width: @break-point-lg) {
+      max-width: 20px;
+    }
+    //@media (max-width: @break-point-md) {  }
+    @media (max-width: @break-point-sm) {
+      max-width: 32px;
+    }
+
+    transition: max-width .25s ease-in-out;
+
+    &:first-child:last-child {
+      & .personalCard .personalInfo {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &{#hover({
+      //width: fit-content;
+      max-width: 250px;
+      margin-right: 24px;
+
+      .personalInfo {
+        visibility: visible;
+        opacity: 1;
+      }});
+    }
+  }
+
+}

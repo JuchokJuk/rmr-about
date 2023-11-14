@@ -1,0 +1,55 @@
+@import '~@styles/variables.less';
+
+// Heading
+.card-slider__header {
+
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Добавляем многоточие */
+    
+    @media (min-width: @break-point-xl) {
+        margin-top: 32px;
+        max-height: 160px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        margin-top: 24px;
+        max-height: 130px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        margin-top: 16px;
+        max-height: 120px;
+    }
+
+    @media (max-width: @break-point-md) {
+        margin-top: 16px;
+        max-height: 125px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        margin-top: 16px;
+    }
+}
+
+.card-slider__heading {
+    margin: 0px;
+    padding: 0px;
+    color: @white;
+    overflow: hidden;
+}
+
+.card-slider__heading{#hover({
+    color: @gray_3});
+}
+
+.card-slider__link {
+    color: @white;
+    text-decoration: none;
+    transition: color 0.1s ease;
+
+    &{#hover({
+        color: @gray_3;});
+    }
+}

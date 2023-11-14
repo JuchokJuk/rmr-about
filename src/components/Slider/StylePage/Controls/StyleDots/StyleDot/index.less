@@ -1,0 +1,37 @@
+@import '~@styles/variables.less';
+
+
+.stylepage-slider__dot:first-child {
+    margin-left: 0px;
+}
+
+.stylepage-slider__dot:last-child {
+    margin-right: 0px;
+}
+
+.stylepage-slider__dot {
+    
+    width: 8px;
+    height: 8px;
+    border: 1px solid @black;
+    border-radius: 50%;
+    box-sizing: border-box;   
+    margin: 0px 12px 0px 0px;
+    cursor: pointer;
+    .noHighlight();
+
+}
+
+.stylepage-slider__dot{#hover({
+    border: 1px solid @black;});
+}
+
+
+.stylepage-slider__dot_active{#hover({
+    background-color: @black;
+    border: 1px solid @black;});
+}
+
+.stylepage-slider__dot_active {
+    background: @black;
+}

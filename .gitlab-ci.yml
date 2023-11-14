@@ -1,0 +1,152 @@
+image: docker
+
+variables:
+  DOCKER_HOST: tcp://docker:2375/
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+
+stages:
+  - build
+  - deploy
+
+build dev:
+  stage: build
+  services:
+    - docker:dind
+  only:
+    refs:
+      - development
+      - feature/srmr-181-videos-debug
+  environment:
+    name: staging
+  variables:
+    ENV: staging
+  script:
+    - docker login -u "gitlab-ci-token" -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker system prune -a -f
+    - apk add gettext
+    - rm -f ./.env
+    - envsubst < ./.env.ci >./.env
+    - cat ./.env
+    - cat ./config/stage/robots.stage.txt > ./public/static/robots.txt
+    - cat ./public/static/robots.txt
+    - docker build -f ./Dockerfile -t $CI_REGISTRY_IMAGE:$CI_ENVIRONMENT_NAME .
+    - docker push $CI_REGISTRY_IMAGE:$CI_ENVIRONMENT_NAME
+
+deploy to dev:
+  stage: deploy
+  image: git.develophost.ru:56789/backend/dind:latest
+  only:
+    refs:
+      - development
+      - feature/srmr-181-videos-debug
+  environment:
+    name: staging
+  variables:
+    SWARM_INSTANCE_COUNT: 1
+    ENV: staging
+  script:
+    - echo "Deploy to dev - $CI_PROJECT_NAMESPACE"
+    - echo "$GITLAB_ID_RSA" >~/.ssh/id_rsa; ssh -oStrictHostKeyChecking=no px2x@$DOCKER_HOST_IP hostname
+    - export DOCKER_HOST=ssh://px2x@$DOCKER_HOST_IP
+    - docker login -u $CI_DEPLOY_USER -p $CI_DEPLOY_PASSWORD $CI_REGISTRY
+    - mkdir tmp_artf; envsubst < ./.env.ci >tmp_artf/.env
+    - envsubst < docker-swarm.tmpl >docker-swarm.yml
+    - cat docker-swarm.yml
+    - cat tmp_artf/.env
+    - docker stack deploy -c docker-swarm.yml --with-registry-auth $CI_PROJECT_NAMESPACE
+
+build prod:
+  stage: build
+  when: manual
+  services:
+    - docker:dind
+  only:
+    refs:
+      - master
+  environment:
+    name: production
+  variables:
+    ENV: production
+  script:
+    - docker login -u "gitlab-ci-token" -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker system prune -a -f
+    - apk add gettext
+    - rm -f ./.env
+    - envsubst < ./.env.ci >./.env
+    - cat ./.env
+    - cat ./config/prod/robots.prod.txt > ./public/static/robots.txt
+    - cat ./public/static/robots.txt
+    - docker build -f ./Dockerfile -t $CI_REGISTRY_IMAGE:$CI_ENVIRONMENT_NAME .
+    - docker push $CI_REGISTRY_IMAGE:$CI_ENVIRONMENT_NAME
+
+deploy to prod:
+  stage: deploy
+  image: git.develophost.ru:56789/backend/dind:latest
+  when: manual
+  only:
+    refs:
+      - master
+  environment:
+    name: production
+  variables:
+    SWARM_INSTANCE_COUNT: 1
+    ENV: production
+  script:
+    - echo "Deploy to dev - $CI_PROJECT_NAMESPACE"
+    - echo "$GITLAB_ID_RSA" >~/.ssh/id_rsa; ssh -oStrictHostKeyChecking=no root@$DOCKER_HOST_IP hostname
+    - export DOCKER_HOST=ssh://root@$DOCKER_HOST_IP
+    - docker login -u $CI_DEPLOY_USER -p $CI_DEPLOY_PASSWORD $CI_REGISTRY
+    - mkdir tmp_artf; envsubst < ./.env.ci >tmp_artf/.env
+    - envsubst < docker-swarm.tmpl >docker-swarm.yml
+    - cat docker-swarm.yml
+    - cat tmp_artf/.env
+    - docker stack deploy -c docker-swarm.yml --with-registry-auth $CI_PROJECT_NAMESPACE
+
+
+
+
+build dev v2:
+  stage: build
+  services:
+    - docker:dind
+  only:
+    refs:
+      - new-about-page
+  environment:
+    name: staging_v2
+  variables:
+    ENV: staging_v2
+  script:
+    - docker login -u "gitlab-ci-token" -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker system prune -a -f
+    - apk add gettext
+    - rm -f ./.env
+    - envsubst < ./.env.ci >./.env
+    - cat ./.env
+    - cat ./config/stage/robots.stage.txt > ./public/static/robots.txt
+    - cat ./public/static/robots.txt
+    - docker build -f ./Dockerfile -t $CI_REGISTRY_IMAGE:$CI_ENVIRONMENT_NAME .
+    - docker push $CI_REGISTRY_IMAGE:$CI_ENVIRONMENT_NAME
+
+deploy to dev v2:
+  stage: deploy
+  image: git.develophost.ru:56789/backend/dind:latest
+  only:
+    refs:
+      - new-about-page
+  environment:
+    name: staging_v2
+  variables:
+    SWARM_INSTANCE_COUNT: 1
+    ENV: staging
+  script:
+    - echo "Deploy to dev - $CI_PROJECT_NAMESPACE"
+    - echo "$GITLAB_ID_RSA" >~/.ssh/id_rsa; ssh -oStrictHostKeyChecking=no px2x@$DOCKER_HOST_IP hostname
+    - export DOCKER_HOST=ssh://px2x@$DOCKER_HOST_IP
+    - docker login -u $CI_DEPLOY_USER -p $CI_DEPLOY_PASSWORD $CI_REGISTRY
+    - mkdir tmp_artf; envsubst < ./.env.ci >tmp_artf/.env
+    - envsubst < docker-swarm-v2.tmpl >docker-swarm.yml
+    - cat docker-swarm.yml
+    - cat tmp_artf/.env
+    - docker stack deploy -c docker-swarm.yml --with-registry-auth $CI_PROJECT_NAMESPACE

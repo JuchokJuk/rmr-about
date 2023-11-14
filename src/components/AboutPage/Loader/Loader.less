@@ -1,0 +1,85 @@
+@import "~@styles/variables.less";
+.full-screen-loader {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: @black;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 12;
+    color: @white;
+    @media (min-width: @break-point-xl) {
+        top: 80px;
+    }
+    @media (max-width: @break-point-xl) {
+        top: 80px;
+    }
+    @media (max-width: @break-point-lg) {
+        top: 68px;
+    }
+    @media (max-width: @break-point-md) {
+        top: 72px;
+    }
+    @media (max-width: @break-point-sm) {
+        top: 60px;
+    }
+    &__count {
+        font-family: "CoFo Pixel";
+        @media (min-width: @break-point-xl) {
+            font-size: 100px;
+            line-height: 100px;
+            margin-bottom: 52px;
+           /*  margin-top: 500px; */
+        }
+        @media (max-width: @break-point-xl) {
+            font-size: 72px;
+            line-height: 76px;
+            margin-bottom: 36px;
+            /* margin-top: 265px; */
+        }
+        @media (max-width: @break-point-lg) {
+            font-size: 60px;
+            line-height: 60px;
+            margin-bottom: 28px;
+           /*  margin-top: 272px; */
+        }
+        @media (max-width: @break-point-md) {
+            font-size: 48px;
+            line-height: 48px;
+            margin-bottom: 24px;
+           /*  margin-top: 404px; */
+        }
+        @media (max-width: @break-point-sm) {
+            font-size: 32px;
+            line-height: 36px;
+            margin-bottom: 16px;
+            /* margin-top: 247px; */
+        }
+    }
+    &__wrapper {
+        height: 1px;
+        background: @gray_5;
+        @media (min-width: @break-point-xl) {
+            width: 1664px;
+        }
+        @media (max-width: @break-point-xl) {
+            width: 1086px;
+        }
+        @media (max-width: @break-point-lg) {
+            width: 824px;
+        }
+        @media (max-width: @break-point-md) {
+            width: 648px;
+        }
+        @media (max-width: @break-point-sm) {
+            width: 328px;
+        }
+    }
+    &__progress {
+        height: 100%;
+        background: @white;
+    }
+}

@@ -1,0 +1,1353 @@
+@break-point-xl: 2199.02px;
+@break-point-lg: 1365.98px;
+@break-point-md: 1023.98px;
+@break-point-sm-min: 768px;
+@break-point-sm: 767.98px;
+@break-point-xs-max: 375px;
+@break-point-xs: 359.98px;
+
+// XL GRID
+@xl-column-width: 192px;
+@xl-paddings: 32px;
+@xl-gutter: 32px;
+
+// LG GRID
+@lg-column-width: 136px;
+@lg-paddings: 24px;
+@lg-gutter: 24px;
+
+// MD GRID
+@md-column-width: 104px;
+@md-paddings: 16px;
+@md-gutter: 16px;
+
+// SM GRID
+@sm-column-width: 152px;
+@sm-paddings: 0px;
+@sm-gutter: 24px;
+
+// XS GRID
+@xs-column-width: 152px;
+@xs-paddings: 0px;
+@xs-gutter: 24px;
+
+@white_opacity: rgba(255, 255, 255, 0.5);
+@white_opacity_3: rgba(255, 255, 255, 0.3);
+@white_opacity_6: rgba(255, 255, 255, 0.6);
+@white_opacity_7: rgba(255, 255, 255, 0.7);
+@white: #fff;
+@black: #000;
+@link_border: #ffa6a6;
+@visited: #900060;
+@light_gray: #f7f7f7;
+@gray: #7f7f7f;
+@gray_1: #e5e5e5;
+@gray_2: #cccccc;
+@gray_3: #4c4c4c;
+@gray_4: #c4c4c4;
+@gray_5: #1a1a1a;
+@black_3: #b5b5b5;
+@black_5: #7f7f7f;
+@red: #ff0000;
+@blue: #06163e;
+@gray_inactive: #b5b5b5;
+@default-border: solid 1px @gray_2;
+@default-border-btn: solid 3px #000;
+@green_gray: #d0dbd7;
+
+// Controls Hovers
+@link_controls_color: #d0dbd7;
+@link_controls_active_color: @black;
+
+// Paddings
+// 1920+
+@padding-red_1920: 16px;
+@padding-orange_1920: 24px;
+@padding-yellow_1920: 36px;
+@padding-green_1920: 44px;
+@padding-cyan_1920: 64px;
+@padding-violet_1920: 80px;
+@padding-pink_1920: 108px;
+
+// 1366
+@padding-red_1366: 12px;
+@padding-orange_1366: 20px;
+@padding-yellow_1366: 28px;
+@padding-green_1366: 36px;
+@padding-cyan_1366: 48px;
+@padding-violet_1366: 60px;
+@padding-pink_1366: 80px;
+
+// 1024
+@padding-red_1024: 8px;
+@padding-orange_1024: 12px;
+@padding-yellow_1024: 20px;
+@padding-green_1024: 28px;
+@padding-cyan_1024: 36px;
+@padding-violet_1024: 52px;
+@padding-pink_1024: 68px;
+
+// 768\375
+@padding-red_375: 8px;
+@padding-yellow_375: 16px;
+@padding-orange_375: 24px;
+@padding-green_375: 32px;
+@padding-violet_375: 64px;
+
+// Mixins
+
+.noHighlight {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+// Fonts
+
+// Header
+
+.h1_font {
+    letter-spacing: -0.02em;
+
+    @media (min-width: @break-point-xl) {
+        font-size: 72px;
+        line-height: 84px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 56px;
+        line-height: 64px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 44px;
+        line-height: 48px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 34px;
+        line-height: 40px;
+    }
+}
+
+.h2_font {
+    letter-spacing: -0.02em;
+
+    @media (min-width: @break-point-xl) {
+        font-size: 60px;
+        line-height: 72px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: normal;
+    }
+}
+
+.h3_font {
+    letter-spacing: -0.02em;
+
+    @media (min-width: @break-point-xl) {
+        font-size: 52px;
+        line-height: 64px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: normal;
+    }
+}
+
+.h4_font {
+    letter-spacing: -0.02em;
+
+    @media (min-width: @break-point-xl) {
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: normal;
+    }
+}
+
+.h5_font {
+    letter-spacing: -0.01em;
+
+    @media (min-width: @break-point-xl) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: normal;
+    }
+}
+
+// Paragraph
+
+.p1_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 28px;
+        line-height: 44px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 26px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: normal;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+.p2_font {
+    letter-spacing: -0.02em;
+
+    @media (min-width: @break-point-xl) {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: normal;
+    }
+}
+
+.p3_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+// Description
+
+.d1_font {
+    letter-spacing: 0.01em;
+
+    @media (min-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: normal;
+    }
+}
+
+.d2_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.01em;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: normal;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+// Quote
+
+.q1_font {
+    letter-spacing: -0.02em;
+
+    @media (min-width: @break-point-xl) {
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 26px;
+        line-height: 32px;
+        letter-spacing: normal;
+    }
+}
+
+// X2
+
+.x2_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: -0.02em;
+    }
+}
+
+// Header Article
+
+.ha1_font {
+    letter-spacing: -0.01em;
+
+    @media (min-width: @break-point-xl) {
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: normal;
+    }
+}
+
+.ha2_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+.ha3_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 22px;
+        line-height: 28px;
+    }
+}
+
+// Menu tags
+
+.ht_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 32px;
+        line-height: 56px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 20px;
+        line-height: 36px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+// Footer
+
+.f1_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 36px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+.f2_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 22px;
+        line-height: 36px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+.f3_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+// Sidebar (Flow)
+
+// F1 / FT in figma
+.fl1_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 36px;
+        line-height: 60px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 36px;
+        line-height: 60px;
+    }
+}
+
+// F2 / FL1 - figma
+.fl2_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+// F3 / FL2 - figma
+.fl3_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+// Buttons
+.btn_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.01em;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: normal;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: normal;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+.btn1_font {
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    font-size: 24px;
+    line-height: 32px;
+
+    @media (max-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: unset;
+    }
+    @media (max-width: @break-point-lg) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+.btn2_font {
+    @media (min-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+//****************************************************************
+//******************     НОВЫЕ СТИЛИ     *************************
+//****************************************************************
+
+//Заголовки
+.H1 {
+    @media (min-width: @break-point-xl) {
+        font-size: 100px;
+        line-height: 100px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 72px;
+        line-height: 76px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+.H1-pixel {
+    font-family: "CoFo Pixel";
+    @media (min-width: @break-point-xl) {
+        font-size: 100px;
+        line-height: 100px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 72px;
+        line-height: 76px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+.H2-big {
+    @media (min-width: @break-point-xl) {
+        font-size: 100px;
+        line-height: 100px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 72px;
+        line-height: 76px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+.H2-big-pixel {
+    font-family: "CoFo Pixel";
+    @media (min-width: @break-point-xl) {
+        font-size: 100px;
+        line-height: 100px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 72px;
+        line-height: 76px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+.H2-small {
+    @media (min-width: @break-point-xl) {
+        font-size: 60px;
+        line-height: 72px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 30px;
+        line-height: 36px;
+    }
+}
+
+.H3-large {
+    @media (min-width: @break-point-xl) {
+        font-size: 60px;
+        line-height: 72px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+.H3-medium {
+    @media (min-width: @break-point-xl) {
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.H3-big {
+    @media (min-width: @break-point-xl) {
+        font-size: 52px;
+        line-height: 64px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 28px;
+        line-height: 32px;
+    }
+}
+
+.H3-small {
+    @media (min-width: @break-point-xl) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+//Подзаголовки
+
+.SH1 {
+    @media (min-width: @break-point-xl) {
+        font-size: 52px;
+        line-height: 64px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+.SH1-pixel {
+    font-family: "CoFo Pixel";
+    @media (min-width: @break-point-xl) {
+        font-size: 52px;
+        line-height: 64px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+.SH2 {
+    @media (min-width: @break-point-xl) {
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+.SH3 {
+    @media (min-width: @break-point-xl) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+.SH3-pixel {
+    font-family: "CoFo Pixel";
+    @media (min-width: @break-point-xl) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+//Наборный текст
+
+.P1-short {
+    @media (min-width: @break-point-xl) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+.P1-long {
+    @media (min-width: @break-point-xl) {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+.P1-long-underline {
+    text-decoration: underline;
+    @media (min-width: @break-point-xl) {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+//Дополнительные описание/пояснения
+
+.D1 {
+    @media (min-width: @break-point-xl) {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.D2 {
+    @media (min-width: @break-point-xl) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+//Акцентные стили
+
+.AC {
+    font-family: "CoFo Pixel";
+    @media (min-width: @break-point-xl) {
+        font-size: 184px;
+        line-height: 232.94px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 144px;
+        line-height: 152px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 104px;
+        line-height: 104px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 88px;
+        line-height: 88px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 56px;
+        line-height: 56px;
+    }
+}
+
+//Футер
+.F1 {
+    @media (min-width: @break-point-xl) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+//Хэдер
+
+.T {
+    @media (min-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+//Кнопки
+.BTN {
+    @media (min-width: @break-point-xl) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    @media (max-width: @break-point-xl) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-md) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @media (max-width: @break-point-sm) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+#hover(@styles){
+    @media(hover: hover) and (pointer: fine) {
+        &:hover {
+            @styles();
+        }
+    }
+}

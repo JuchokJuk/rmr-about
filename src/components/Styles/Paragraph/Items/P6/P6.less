@@ -1,0 +1,42 @@
+@import '~@styles/variables.less';
+
+@p5-xl-font-size: 36px;
+@p5-lg-font-size: 28px;
+@p5-md-font-size: 20px;
+@p5-sm-font-size: 16px;
+@p5-xs-font-size: 16px;
+
+@p5-xl-lineheight: 44px;
+@p5-lg-lineheight: 32px;
+@p5-md-lineheight: 24px;
+@p5-sm-lineheight: 20px;
+@p5-xs-lineheight: 20px;
+
+.paragraph-6 {
+  display: block;
+  padding: 0;
+  margin: 0;
+  word-break: break-word;
+  letter-spacing: 0.01em;
+
+  @media (min-width: @break-point-xl) {
+    font-size: @p5-xl-font-size;
+    line-height: @p5-xl-lineheight;
+  }
+  @media (max-width: @break-point-xl) {
+    font-size: @p5-lg-font-size;
+    line-height: @p5-lg-lineheight;
+  }
+  @media (max-width: @break-point-lg) {
+    font-size: @p5-md-font-size;
+    line-height: @p5-md-lineheight;
+  }
+  @media (max-width: @break-point-md) {
+    font-size: @p5-sm-font-size;
+    line-height: @p5-sm-lineheight;
+  }
+  @media (max-width: @break-point-sm) {
+    font-size: @p5-xs-font-size;
+    line-height: @p5-xs-lineheight;
+  }
+}

@@ -1,0 +1,40 @@
+@import '~@styles/variables.less';
+
+@ha2-xl-font-size: 32px;
+@ha2-lg-font-size: 24px;
+@ha2-md-font-size: 18px;
+@ha2-sm-font-size: 26px;
+@ha2-xs-font-size: 26px;
+
+@ha2-xl-lineheight: 40px;
+@ha2-lg-lineheight: 28px;
+@ha2-md-lineheight: 24px;
+@ha2-sm-lineheight: 32px;
+@ha2-xs-lineheight: 32px;
+
+.ha2_c {
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: @break-point-xl) {
+        font-size: @ha2-xl-font-size;
+        line-height: @ha2-xl-lineheight;
+    }
+    @media (max-width: @break-point-xl) {
+        font-size: @ha2-lg-font-size;
+        line-height: @ha2-lg-lineheight;
+    }
+    @media (max-width: @break-point-lg) {
+        font-size: @ha2-md-font-size;
+        line-height: @ha2-md-lineheight;
+    }
+    @media (max-width: @break-point-md) {
+        font-size: @ha2-sm-font-size;
+        line-height: @ha2-sm-lineheight;
+    }
+    @media (max-width: @break-point-sm) {
+        font-size: @ha2-xs-font-size;
+        line-height: @ha2-xs-lineheight;
+    }
+    
+}

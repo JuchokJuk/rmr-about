@@ -1,0 +1,129 @@
+@import './Tag/Tag.less';
+@import './TagNew/TagNew.less';
+
+.tags {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .noHighlight();
+
+    a {
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+
+    &_large {
+        @media (min-width: @break-point-xl) {
+            gap: @padding-orange_1920;
+        }
+
+        @media (max-width: @break-point-xl) {
+            gap: @padding-orange_1366;
+        }
+
+        @media (max-width: @break-point-lg) {
+            gap: @padding-orange_1024;
+        }
+
+        @media (max-width: @break-point-md) {
+            gap: @padding-red_375;
+        }
+    }
+
+    &_medium {
+        @media (min-width: @break-point-xl) {
+            gap: 16px;
+
+        }
+
+        @media (max-width: @break-point-xl) {
+            gap: 8px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            gap: 8px;
+        }
+
+        @media (max-width: @break-point-md) {
+            gap: 8px;
+        }
+    }
+
+    &_small {
+        @media (min-width: @break-point-xl) {
+            gap: 12px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            gap: 8px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            gap: 8px;
+        }
+
+        @media (max-width: @break-point-md) {
+            gap: 8px;
+        }
+    }
+
+    &_tiny {
+        @media (min-width: @break-point-xl) {
+            gap: 12px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            gap: 8px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            gap: 8px;
+        }
+
+        @media (max-width: @break-point-md) {
+            gap: 8px;
+        }
+    }
+
+    &_search {
+        @media (min-width: @break-point-xl) {
+            gap: 12px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            gap: 8px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            gap: 8px;
+        }
+
+        @media (max-width: @break-point-md) {
+            gap: 8px;
+        }
+    }
+
+    &_career {
+        @media (min-width: @break-point-xl) {
+            gap: 8px;
+        }
+
+        @media (max-width: @break-point-xl) {
+            gap: 8px;
+        }
+
+        @media (max-width: @break-point-lg) {
+            gap: 8px;
+        }
+
+        @media (max-width: @break-point-md) {
+            gap: 8px;
+        }
+    }
+
+    &_dots {
+        gap: 0 8px;
+    }
+}
